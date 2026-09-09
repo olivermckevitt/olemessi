@@ -1,3 +1,5 @@
+import { readFileSync } from "fs";
+import path from "path";
 import { describe, expect, it } from "vitest";
 import { addBusinessDays, parseToIsoDate } from "../lib/dates";
 import { generateIcs } from "../lib/generate-ics";
@@ -112,6 +114,8 @@ describe("generateReminders", () => {
     expect(events[2]?.date).toBe("2026-11-19");
     expect(events[0]?.checklist.length).toBeGreaterThan(2);
     expect(events[0]?.title).toMatch(/^CHASE SUBS:/);
+    expect(events[0]?.notes).toMatch(/Framer/);
+    expect(events[0]?.notes).not.toMatch(/Call City/);
   });
 
   it("drops events that are already in the past", () => {
@@ -123,6 +127,31 @@ describe("generateReminders", () => {
       today: "2026-11-18",
     });
     expect(events.map((event) => event.kind)).toEqual(["inspection"]);
+  });
+});
+
+describe("sample look-ahead", () => {
+  it("builds 27 calendar events and does not chase the city as if they were a sub", () => {
+    const csv = readFileSync(path.resolve("public/sample-lookahead.csv"), "utf8");
+    const inspections = detectInspections(parseCsvText(csv)).filter((row) => row.included);
+    expect(inspections).toHaveLength(9);
+    const events = generateReminders(inspections, {
+      chaseBusinessDaysBefore: 5,
+      readinessBusinessDaysBefore: 2,
+      inspectionHour: 7,
+      skipPast: false,
+      today: "2026-09-09",
+    });
+    expect(events).toHaveLength(27);
+    const ics = generateIcs(events, "Sample", new Date("2026-09-09T12:00:00Z"));
+    expect(ics.match(/BEGIN:VEVENT/g)?.length).toBe(27);
+    expect(ics).toContain("CHASE SUBS:");
+    expect(ics).toContain("READY CHECK:");
+    expect(ics).toContain("INSPECTION:");
+    expect(ics).not.toMatch(/Call City/);
+    expect(ics).not.toMatch(/Call AHJ/);
+    expect(ics).toContain("Call Framer");
+    expect(ics).toContain("Call Electrician");
   });
 });
 

@@ -251,8 +251,12 @@ export const CHECKLISTS: Record<InspectionKind, { chase: string[]; readiness: st
   },
 };
 
+const INSPECTOR_SIDE = /^(city|county|ahj|inspector|building|municipal|jurisdiction)/i;
+
 export function tradeForKind(kind: InspectionKind, fallback?: string | null): string {
-  if (fallback && fallback.trim()) return fallback.trim();
+  if (fallback && fallback.trim() && !INSPECTOR_SIDE.test(fallback.trim())) {
+    return fallback.trim();
+  }
   const map: Record<InspectionKind, string> = {
     foundation: "Concrete / geotech",
     framing: "Framer",
