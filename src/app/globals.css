@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-ibm-sans), "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-ibm-mono), "IBM Plex Mono", ui-monospace, SFMono-Regular, monospace;
+  --color-ink: #16140f;
+  --color-paper: #f3eee3;
+  --color-card: #fffaf1;
+  --color-rule: #d8d0c0;
+  --color-mark: #e0ae00;
+  --color-ok: #2c6b3c;
+  --color-warn: #9a4f12;
+  --color-bad: #8f2d1f;
+}
+
+html {
+  background: var(--color-paper);
+  color: var(--color-ink);
+}
+
+body {
+  font-family: var(--font-sans);
+  min-height: 100vh;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+::selection {
+  background: #e0ae00;
+  color: #16140f;
+}
