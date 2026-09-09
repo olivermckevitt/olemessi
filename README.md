@@ -2,11 +2,13 @@
 
 Jobsite note classifier for a retail construction superintendent.
 
-Whisper Flow text goes to an Apple Shortcut. The Shortcut posts it here. This classifies the note into one folder, saves it to Notion, and returns the folder name.
+Whisper Flow text, plus an optional photo from the Shortcut, posts here. This classifies the note, saves it to Notion, and returns JSON.
 
-No website. No dashboard. No search. One dictation becomes one Notion row.
+One dictation becomes one active Notion row. Long-term insights are copied to Lessons Learned. No website. No search.
 
 ## Folders
+
+Still the original 10:
 
 - Contacts
 - Lessons Learned
@@ -19,17 +21,35 @@ No website. No dashboard. No search. One dictation becomes one Notion row.
 - to-do list
 - General Notes
 
-Primary intent only. If a note covers two things, it files under one folder. Wrong folder: change it in Notion.
+Kanban types sit on top of the folder:
+
+- Daily Log / Site Progress
+- Subcontractor Deficiency / Punch List
+- RFI / Site Clarification
+- Safety Issues and Inspections
+
+Primary intent only. Wrong folder: change it in Notion.
 
 Contacts also extract phone and email when they are in the transcript. To-dos are a normal note. No checkbox.
 
+Photo is optional. Text-only still works. If you send a photo, it is analyzed with the transcript and attached to the Notion page. JPEG, PNG, WebP, or GIF. Max 4 MB. Convert iPhone HEIC to JPEG in the Shortcut.
+
 ## Notion
 
-Private database: [Jobsite Field Notes](https://www.notion.so/7220342e572d4484af6148271cc87164)
+Private databases:
 
-Properties: Name, Category, Project, Captured, Phone, Email. Transcript is the page body.
+- Active Kanban: [Jobsite Field Notes](https://www.notion.so/7220342e572d4484af6148271cc87164)
+- Knowledge base: [Jobsite Lessons Learned](https://www.notion.so/491eeab2dd974f1eb6a9a9eafdb08a8d)
 
-Move this database wherever you want. Tell me the destination if you want it moved.
+Both are private drafts. Say where they should live if you want them moved.
+
+Active board views: **Kanban** (by Status, hides Logged) and **By type** (by Kanban Type).
+
+New active items with `route.kanban = true` land in **To Do**. Notes that are not kanban work land as **Logged** and stay off the board.
+
+`route.knowledge_base = true` copies the same note into Jobsite Lessons Learned, with a Source link back to the active row.
+
+Red flags stay off until you connect a Retail Construction Skill Base page. I will not invent codes.
 
 ## One-time setup
 
@@ -38,12 +58,13 @@ Move this database wherever you want. Tell me the destination if you want it mov
 1. Open [notion.so/my-integrations](https://www.notion.so/my-integrations)
 2. Create an internal integration
 3. Copy the token
-4. Open Jobsite Field Notes → `...` → Connections → add that integration
+4. Connect it to **Jobsite Field Notes** and **Jobsite Lessons Learned**
+5. When you have a skill base page, connect that page too
 
 ### 2. Netlify
 
 1. Create or link a Netlify site on this repo
-2. Enable AI on the site (Project configuration → AI)
+2. Enable AI on the site
 3. Deploy to production once. The AI Gateway does not work until that first production deploy.
 4. Set environment variables:
 
@@ -51,36 +72,35 @@ Move this database wherever you want. Tell me the destination if you want it mov
 CLASSIFY_SECRET=<long random string>
 NOTION_TOKEN=<integration token>
 NOTION_DATABASE_ID=7220342e572d4484af6148271cc87164
+NOTION_LESSONS_DATABASE_ID=491eeab2dd974f1eb6a9a9eafdb08a8d
+NOTION_SKILL_BASE_PAGE_ID=<optional, from the skill base page URL>
 ```
 
 Do not set `OPENAI_API_KEY`. Netlify injects the gateway key.
+
+Paste or link the skill base and I will wire `NOTION_SKILL_BASE_PAGE_ID`. Until then, `red_flag` is always false.
 
 ### 3. Apple Shortcut
 
 Name: **File jobsite note**
 
 1. New Shortcut
-2. Add **Receive** → Text, from Share Sheet
-3. If input is empty, **Get Clipboard**
-4. Add **Get Contents of URL**
+2. Add **Receive** → Text, from Share Sheet. Also allow Images if you want the camera/photo path
+3. If text is empty, **Get Clipboard**
+4. Optional: **Take Photo** or **Select Photos**, then **Convert Image** to JPEG
+5. Add **Get Contents of URL**
    - URL: `https://<your-site>.netlify.app/api/classify`
    - Method: POST
    - Headers:
-     - `Content-Type`: `application/json`
      - `X-Classify-Secret`: the same value as `CLASSIFY_SECRET`
-   - Request Body: JSON
-     - `text`: Shortcut Input
-     - `project`: your job name, for example `Store 1184` (optional, but this is how notes stay on the right project)
-5. Add **Get Dictionary Value** `folder` from the response
-6. Add **Show Notification** with that folder
-7. Add **Get Dictionary Value** `url`
-8. Add **Open URLs**
+   - Request Body: Form
+     - `text`: the transcript
+     - `project`: your job name, for example `Store 1184`
+     - `image`: the JPEG file, if you have one
+6. Show the `category` from the response
+7. Open the `url`
 
-In Whisper Flow, share the transcript to this Shortcut. It autosaves. You do not confirm the folder first.
-
-## API
-
-`POST /api/classify`
+Text-only JSON still works if you skip the photo:
 
 ```json
 {
@@ -89,17 +109,45 @@ In Whisper Flow, share the transcript to this Shortcut. It autosaves. You do not
 }
 ```
 
-`project` is optional.
+Autosave. You do not confirm the folder first.
+
+## API
+
+`POST /api/classify`
+
+Form fields: `text`, `project` (optional), `image` (optional file).
+
+Or JSON:
+
+```json
+{
+  "text": "open shaft at grid B, no rail",
+  "project": "Store 1184",
+  "image_base64": "<optional>",
+  "image_mime": "image/jpeg"
+}
+```
 
 Response:
 
 ```json
 {
-  "folder": "Logistics and Deliveries",
-  "title": "Paint delivery 7am",
-  "url": "https://www.notion.so/..."
+  "category": "Safety Issues and Inspections",
+  "title": "Open shaft no rail",
+  "location": "Grid B stair",
+  "subcontractor_or_trade": "Framing",
+  "urgency": "critical",
+  "daily_log_summary": "Photo confirms the stair shaft has no guardrail.",
+  "route": { "kanban": true, "knowledge_base": false },
+  "red_flag": false,
+  "alert_status": null,
+  "skill_assessment": null,
+  "url": "https://www.notion.so/...",
+  "folder": "Safety and Inspections"
 }
 ```
+
+`folder` is one of the 10 folders. `category` is one of the 4 Kanban types.
 
 ## Local tests
 

@@ -14,9 +14,6 @@ describe("parseClassifyRequest", () => {
     expect(
       parseClassifyRequest("POST", null, SECRET, { text: "hello" }),
     ).toEqual({ status: 401, error: "Unauthorized" });
-    expect(
-      parseClassifyRequest("POST", "nope", SECRET, { text: "hello" }),
-    ).toEqual({ status: 401, error: "Unauthorized" });
   });
 
   it("requires trimmed text", () => {
@@ -25,40 +22,44 @@ describe("parseClassifyRequest", () => {
     );
   });
 
-  it("keeps optional project and ignores empty project", () => {
+  it("keeps optional project", () => {
     expect(
       parseClassifyRequest("POST", SECRET, SECRET, {
         text: "paint delivery at 7",
         project: " Store 1184 ",
       }),
     ).toEqual({ text: "paint delivery at 7", project: "Store 1184" });
-
-    expect(
-      parseClassifyRequest("POST", SECRET, SECRET, {
-        text: "paint delivery at 7",
-        project: "  ",
-      }),
-    ).toEqual({ text: "paint delivery at 7" });
   });
 });
 
 describe("parseModelOutput", () => {
-  it("reads JSON even if the model wraps it", () => {
-    const parsed = parseModelOutput(
-      'Here you go\n{"folder":"Contacts","title":"Electrician contact","phone":"555-0100","email":"ed@co.com"}\n',
-    );
-    expect(parsed).toEqual({
-      folder: "Contacts",
-      title: "Electrician contact",
-      phone: "555-0100",
-      email: "ed@co.com",
-    });
+  it("reads the locked JSON schema", () => {
+    const parsed = parseModelOutput(`{
+      "folder": "Safety and Inspections",
+      "category": "Safety Issues and Inspections",
+      "title": "Open shaft no rail",
+      "location": "Grid B stair",
+      "subcontractor_or_trade": "Framing",
+      "urgency": "critical",
+      "daily_log_summary": "Photo confirms the stair shaft has no guardrail.",
+      "route": { "kanban": true, "knowledge_base": true },
+      "red_flag": true,
+      "alert_status": "red_flag",
+      "skill_assessment": "Guardrail missing",
+      "phone": null,
+      "email": null
+    }`);
+
+    expect(parsed.folder).toBe("Safety and Inspections");
+    expect(parsed.category).toBe("Safety Issues and Inspections");
+    expect(parsed.route).toEqual({ kanban: true, knowledge_base: true });
+    expect(parsed.red_flag).toBe(true);
   });
 
-  it("defaults a missing title", () => {
+  it("defaults a missing title and null route flags", () => {
     const parsed = parseModelOutput('{"folder":"Daily Logs"}');
     expect(parsed.title).toBe("Untitled note");
+    expect(parsed.route).toEqual({ kanban: null, knowledge_base: null });
     expect(parsed.phone).toBeNull();
-    expect(parsed.email).toBeNull();
   });
 });

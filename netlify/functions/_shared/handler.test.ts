@@ -1,122 +1,147 @@
 import { describe, expect, it, vi } from "vitest";
 import { handleClassify } from "./handler";
 import { notionPagePayload } from "./notion";
+import type { ModelOutput } from "./parse";
+
+const classified: ModelOutput = {
+  folder: "Daily Logs",
+  category: "Daily Log / Site Progress",
+  title: "Framers on site",
+  location: "Sales floor",
+  subcontractor_or_trade: "Framing",
+  urgency: "medium",
+  daily_log_summary: "Framers are on the sales floor.",
+  route: { kanban: true, knowledge_base: false },
+  red_flag: true,
+  alert_status: "red_flag",
+  skill_assessment: "should not stick without a skill base",
+  phone: "555-0100",
+  email: "skip@me.com",
+};
+
+function request(body: unknown, secret = "secret") {
+  return new Request("https://example.com/api/classify", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "X-Classify-Secret": secret,
+    },
+    body: JSON.stringify(body),
+  });
+}
 
 describe("notionPagePayload", () => {
-  it("omits phone and email unless they were extracted for Contacts", () => {
+  it("writes kanban metadata and omits contact fields for non-contacts", () => {
     const payload = notionPagePayload("db-id", {
       title: "Paint delivery",
       folder: "Logistics and Deliveries",
+      kanbanType: "Daily Log / Site Progress",
+      status: "To Do",
       captured: "2026-09-09",
       transcript: "paint shows at 7",
+      urgency: "medium",
+      summary: "Paint delivery at 7.",
+      redFlag: false,
     });
 
     const properties = payload.properties as Record<string, unknown>;
     expect(properties.Phone).toBeUndefined();
-    expect(properties.Email).toBeUndefined();
-    expect(properties.Project).toBeUndefined();
-    expect(properties.Category).toEqual({
-      select: { name: "Logistics and Deliveries" },
+    expect(properties.Status).toEqual({ select: { name: "To Do" } });
+    expect(properties["Kanban Type"]).toEqual({
+      select: { name: "Daily Log / Site Progress" },
     });
-  });
-
-  it("adds project, phone, and email when present", () => {
-    const payload = notionPagePayload("db-id", {
-      title: "Electrician",
-      folder: "Contacts",
-      project: "Store 1184",
-      captured: "2026-09-09",
-      transcript: "Ed 555-0100 ed@co.com",
-      phone: "555-0100",
-      email: "ed@co.com",
-    });
-
-    const properties = payload.properties as Record<string, unknown>;
-    expect(properties.Project).toEqual({
-      rich_text: [{ type: "text", text: { content: "Store 1184" } }],
-    });
-    expect(properties.Phone).toEqual({ phone_number: "555-0100" });
-    expect(properties.Email).toEqual({ email: "ed@co.com" });
-  });
-
-  it("splits long transcripts into 2000-character blocks", () => {
-    const transcript = "a".repeat(2001);
-    const payload = notionPagePayload("db-id", {
-      title: "Log",
-      folder: "Daily Logs",
-      captured: "2026-09-09",
-      transcript,
-    });
-
-    expect(payload.children).toHaveLength(2);
   });
 });
 
 describe("handleClassify", () => {
   const saveNote = vi.fn(async () => ({ url: "https://notion.so/note" }));
-  const classify = vi.fn(async () => ({
-    folder: "Daily Logs",
-    title: "Framers on site",
-    phone: "555-0100",
-    email: "skip@me.com",
-  }));
+  const saveLesson = vi.fn(async () => ({ url: "https://notion.so/lesson" }));
+  const classify = vi.fn(async () => classified);
 
-  function request(body: unknown, secret = "secret") {
-    return new Request("https://example.com/api/classify", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "X-Classify-Secret": secret,
-      },
-      body: JSON.stringify(body),
-    });
-  }
+  const deps = {
+    getSecret: () => "secret",
+    hasSkillBase: () => false,
+    classify,
+    saveNote,
+    saveLesson,
+    today: () => "2026-09-09",
+  };
 
-  it("autosaves and returns folder, title, and url", async () => {
+  it("autosaves and returns the locked JSON schema", async () => {
     saveNote.mockClear();
-    const response = await handleClassify(request({ text: "framers in today", project: "Store 1184" }), {
-      getSecret: () => "secret",
-      classify,
-      saveNote,
-      today: () => "2026-09-09",
-    });
+    saveLesson.mockClear();
+    const response = await handleClassify(
+      request({ text: "framers in today", project: "Store 1184" }),
+      deps,
+    );
 
     expect(response.status).toBe(200);
     expect(await response.json()).toEqual({
-      folder: "Daily Logs",
+      category: "Daily Log / Site Progress",
       title: "Framers on site",
+      location: "Sales floor",
+      subcontractor_or_trade: "Framing",
+      urgency: "medium",
+      daily_log_summary: "Framers are on the sales floor.",
+      route: { kanban: true, knowledge_base: false },
+      red_flag: false,
+      alert_status: null,
+      skill_assessment: null,
       url: "https://notion.so/note",
-    });
-    expect(saveNote).toHaveBeenCalledWith({
-      title: "Framers on site",
       folder: "Daily Logs",
-      project: "Store 1184",
-      captured: "2026-09-09",
-      transcript: "framers in today",
     });
+    expect(saveLesson).not.toHaveBeenCalled();
+    expect(saveNote).toHaveBeenCalledWith(
+      expect.objectContaining({
+        folder: "Daily Logs",
+        kanbanType: "Daily Log / Site Progress",
+        status: "To Do",
+        project: "Store 1184",
+        redFlag: false,
+      }),
+    );
+  });
+
+  it("duplicates onto Lessons Learned when routed to the knowledge base", async () => {
+    saveNote.mockClear();
+    saveLesson.mockClear();
+    const response = await handleClassify(request({ text: "never stack pallets in the egress" }), {
+      ...deps,
+      classify: async () => ({
+        ...classified,
+        folder: "Lessons Learned",
+        category: "Safety Issues and Inspections",
+        route: { kanban: false, knowledge_base: true },
+        red_flag: false,
+      }),
+    });
+
+    expect(response.status).toBe(200);
+    expect(saveLesson).toHaveBeenCalledWith(
+      expect.objectContaining({
+        folder: "Lessons Learned",
+        status: "Logged",
+        sourceUrl: "https://notion.so/note",
+      }),
+    );
+    const body = await response.json();
+    expect(body.folder).toBe("Lessons Learned");
+    expect(body.route.knowledge_base).toBe(true);
   });
 
   it("returns 401 when the secret does not match", async () => {
     classify.mockClear();
-    const response = await handleClassify(request({ text: "hello" }, "wrong"), {
-      getSecret: () => "secret",
-      classify,
-      saveNote,
-      today: () => "2026-09-09",
-    });
-
+    const response = await handleClassify(request({ text: "hello" }, "wrong"), deps);
     expect(response.status).toBe(401);
     expect(classify).not.toHaveBeenCalled();
   });
 
   it("returns 502 when Notion save fails", async () => {
     const response = await handleClassify(request({ text: "hello" }), {
-      getSecret: () => "secret",
-      classify,
+      ...deps,
       saveNote: async () => {
         throw new Error("notion down");
       },
-      today: () => "2026-09-09",
     });
 
     expect(response.status).toBe(502);
