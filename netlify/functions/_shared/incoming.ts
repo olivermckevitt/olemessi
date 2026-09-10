@@ -64,7 +64,7 @@ async function readForm(
   }
 
   const fields: Record<string, unknown> = {};
-  for (const key of ["text", "project", "secret"]) {
+  for (const key of ["text", "project", "secret", "CLASSIFY_SECRET", "CLASSIFY_KEY"]) {
     const value = form.get(key);
     if (typeof value === "string") {
       fields[key] = value;
@@ -97,11 +97,29 @@ function firstFile(form: FormData, names: string[]): File | undefined {
   return undefined;
 }
 
+const SECRET_HEADERS = [
+  "X-Classify-Secret",
+  "Classify-Secret",
+  "CLASSIFY_SECRET",
+  "CLASSIFY_KEY",
+];
+
+const SECRET_FIELDS = ["secret", "CLASSIFY_SECRET", "CLASSIFY_KEY"];
+
 export function secretFromRequest(req: Request, fields: Record<string, unknown>): string | null {
-  const header = req.headers.get("X-Classify-Secret");
-  if (header) {
-    return header;
+  for (const name of SECRET_HEADERS) {
+    const header = req.headers.get(name);
+    if (header) {
+      return header;
+    }
   }
 
-  return typeof fields.secret === "string" ? fields.secret : null;
+  for (const name of SECRET_FIELDS) {
+    const value = fields[name];
+    if (typeof value === "string" && value.trim().length > 0) {
+      return value;
+    }
+  }
+
+  return null;
 }

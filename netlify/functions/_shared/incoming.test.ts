@@ -45,4 +45,12 @@ describe("secretFromRequest", () => {
     const req = new Request("https://example.com/api/classify", { method: "POST" });
     expect(secretFromRequest(req, { secret: "from-form" })).toBe("from-form");
   });
+
+  it("accepts a CLASSIFY_SECRET header from Shortcuts", () => {
+    const req = new Request("https://example.com/api/classify", {
+      method: "POST",
+      headers: { CLASSIFY_SECRET: "from-header" },
+    });
+    expect(secretFromRequest(req, {})).toBe("from-header");
+  });
 });
