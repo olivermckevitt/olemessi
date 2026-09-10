@@ -6,7 +6,7 @@ import {
   normalizeUrgency,
   resolveRoute,
 } from "./folders";
-import { readPayload } from "./incoming";
+import { readPayload, secretFromRequest } from "./incoming";
 import type { NotionNote } from "./notion";
 import {
   parseClassifyRequest,
@@ -32,7 +32,7 @@ export async function handleClassify(req: Request, deps: ClassifyDeps): Promise<
 
   const parsed = parseClassifyRequest(
     req.method,
-    req.headers.get("X-Classify-Secret"),
+    secretFromRequest(req, payload.fields),
     deps.getSecret(),
     payload.fields,
     payload.image,

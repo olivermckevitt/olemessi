@@ -7,6 +7,13 @@ import { publicPhotoUrl, storePhoto } from "./_shared/photos";
 import { CLASSIFY_SYSTEM_PROMPT, classifyUserMessage } from "./_shared/prompt";
 
 export default async (req: Request, context: Context) => {
+  if (req.method === "GET") {
+    return Response.json({
+      ok: true,
+      post: "/api/classify",
+    });
+  }
+
   const token = Netlify.env.get("NOTION_TOKEN");
   const databaseId = Netlify.env.get("NOTION_DATABASE_ID");
   const lessonsId = Netlify.env.get("NOTION_LESSONS_DATABASE_ID");
@@ -50,8 +57,8 @@ export default async (req: Request, context: Context) => {
 };
 
 export const config: Config = {
-  path: "/api/classify",
-  method: "POST",
+  path: ["/api/classify", "/.netlify/functions/classify"],
+  method: ["GET", "POST"],
 };
 
 async function classifyWithGateway(

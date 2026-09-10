@@ -82,23 +82,31 @@ Paste or link the skill base and I will wire `NOTION_SKILL_BASE_PAGE_ID`. Until 
 
 ### 3. Apple Shortcut
 
+The live URL is:
+
+`https://superb-halva-c3d71d.netlify.app/api/classify`
+
+Not `/.netlify/functions/classify`. Open that URL in Safari. You should see `{"ok":true,"post":"/api/classify"}`. If Safari says Not Found, Netlify is still deploying `main`. Set the production branch to this PR branch, or merge the PR, then redeploy.
+
 Name: **File jobsite note**
 
 1. New Shortcut
-2. Add **Receive** → Text, from Share Sheet. Also allow Images if you want the camera/photo path
-3. If text is empty, **Get Clipboard**
-4. Optional: **Take Photo** or **Select Photos**, then **Convert Image** to JPEG
+2. Add **Receive** → Text, from Share Sheet
+3. If input is empty, **Get Clipboard** → Set variable `Transcript`
+4. Optional photo: **Select Photos** → **Convert Image** JPEG → Set variable `Photo`
 5. Add **Get Contents of URL**
-   - URL: `https://<your-site>.netlify.app/api/classify`
+   - URL: `https://superb-halva-c3d71d.netlify.app/api/classify` as plain text. No markdown.
    - Method: POST
-   - Headers:
-     - `X-Classify-Secret`: the same value as `CLASSIFY_SECRET`
+   - Headers: key must be exactly `X-Classify-Secret`
    - Request Body: Form
-     - `text`: the transcript
-     - `project`: your job name, for example `Store 1184`
-     - `image`: the JPEG file, if you have one
-6. Show the `category` from the response
-7. Open the `url`
+     - `text` = `Transcript`
+     - `project` = `Store 1184`
+     - `image` = `Photo` as a File. Not `photo`.
+6. **Get Dictionary from Input** using Contents of URL
+7. **Get Dictionary Value** `category` → Show Notification
+8. **Get Dictionary Value** `url` → Open URLs
+
+If the header keeps getting truncated, add a Form field `secret` with the same value as `CLASSIFY_SECRET`.
 
 Text-only JSON still works if you skip the photo:
 

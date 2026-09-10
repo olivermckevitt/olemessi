@@ -165,7 +165,9 @@ export function imageFromBase64(base64: string, mime: string, filename: string):
 }
 
 export async function imageFromFile(file: File): Promise<ImageInput | RequestParseError> {
-  const mime = (file.type || "").toLowerCase();
+  const rawType = (file.type || "").toLowerCase();
+  const mime =
+    !rawType || rawType === "application/octet-stream" ? "image/jpeg" : rawType;
   if (!ALLOWED_IMAGE_TYPES.includes(mime)) {
     return { status: 400, error: "image must be jpeg, png, webp, or gif" };
   }

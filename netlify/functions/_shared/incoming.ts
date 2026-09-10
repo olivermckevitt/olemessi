@@ -12,9 +12,12 @@ export async function readPayload(
   | { ok: true; fields: Record<string, unknown>; image?: ImageInput }
   | { ok: false; error: RequestParseError }
 > {
-  const contentType = req.headers.get("content-type") ?? "";
+  const contentType = (req.headers.get("content-type") ?? "").toLowerCase();
 
-  if (contentType.includes("multipart/form-data")) {
+  if (
+    contentType.includes("multipart/form-data") ||
+    contentType.includes("application/x-www-form-urlencoded")
+  ) {
     return readForm(req);
   }
 
@@ -61,18 +64,17 @@ async function readForm(
   }
 
   const fields: Record<string, unknown> = {};
-  const text = form.get("text");
-  if (typeof text === "string") {
-    fields.text = text;
-  }
-  const project = form.get("project");
-  if (typeof project === "string") {
-    fields.project = project;
+  for (const key of ["text", "project", "secret"]) {
+    const value = form.get(key);
+    if (typeof value === "string") {
+      fields[key] = value;
+    }
   }
 
-  const file = form.get("image");
-  if (file instanceof File && file.size > 0) {
-    if (!ALLOWED_IMAGE_TYPES.includes((file.type || "").toLowerCase())) {
+  const file = firstFile(form, ["image", "photo"]);
+  if (file) {
+    const mime = (file.type || "").toLowerCase();
+    if (mime && !ALLOWED_IMAGE_TYPES.includes(mime)) {
       return { ok: false, error: { status: 400, error: "image must be jpeg, png, webp, or gif" } };
     }
     const parsed = await imageFromFile(file);
@@ -83,4 +85,23 @@ async function readForm(
   }
 
   return { ok: true, fields };
+}
+
+function firstFile(form: FormData, names: string[]): File | undefined {
+  for (const name of names) {
+    const value = form.get(name);
+    if (value instanceof File && value.size > 0) {
+      return value;
+    }
+  }
+  return undefined;
+}
+
+export function secretFromRequest(req: Request, fields: Record<string, unknown>): string | null {
+  const header = req.headers.get("X-Classify-Secret");
+  if (header) {
+    return header;
+  }
+
+  return typeof fields.secret === "string" ? fields.secret : null;
 }
