@@ -201,6 +201,17 @@ function pageChildren(note: NotionNote) {
     });
   }
 
+  if (note.photoUrl) {
+    children.push({
+      object: "block",
+      type: "image",
+      image: {
+        type: "external",
+        external: { url: note.photoUrl },
+      },
+    });
+  }
+
   for (const content of chunks) {
     children.push({
       object: "block",

@@ -51,6 +51,44 @@ describe("notionPagePayload", () => {
       select: { name: "Daily Log / Site Progress" },
     });
   });
+
+  it("puts the photo on the page and in the Photo property", () => {
+    const payload = notionPagePayload("db-id", {
+      title: "Open shaft",
+      folder: "Safety and Inspections",
+      kanbanType: "Safety Issues and Inspections",
+      status: "To Do",
+      captured: "2026-09-10",
+      transcript: "no rail",
+      urgency: "high",
+      summary: "Open shaft, no rail.",
+      redFlag: false,
+      photoUrl: "https://example.com/uploads/shot.jpg",
+      photoName: "shot.jpg",
+    });
+
+    const properties = payload.properties as Record<string, unknown>;
+    expect(properties.Photo).toEqual({
+      files: [
+        {
+          name: "shot.jpg",
+          type: "external",
+          external: { url: "https://example.com/uploads/shot.jpg" },
+        },
+      ],
+    });
+    expect(payload.children).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({
+          type: "image",
+          image: {
+            type: "external",
+            external: { url: "https://example.com/uploads/shot.jpg" },
+          },
+        }),
+      ]),
+    );
+  });
 });
 
 describe("handleClassify", () => {
