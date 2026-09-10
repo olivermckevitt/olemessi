@@ -1,6 +1,6 @@
 import type { Config, Context } from "@netlify/functions";
 import OpenAI from "openai";
-import { envGet, envPresent } from "./_shared/env";
+import { classifySecret, envGet, envPresent } from "./_shared/env";
 import { handleClassify } from "./_shared/handler";
 import { createNotionPage, fetchSkillBaseText, lessonsPagePayload, notionPagePayload } from "./_shared/notion";
 import { parseModelOutput, type ImageInput } from "./_shared/parse";
@@ -33,7 +33,7 @@ export default async (req: Request, context: Context) => {
   }
 
   return handleClassify(req, {
-    getSecret: () => envGet("CLASSIFY_SECRET"),
+    getSecret: () => classifySecret(),
     hasSkillBase: () => Boolean(skillBase),
     classify: (input) => classifyWithGateway(input, skillBase),
     storePhoto: siteUrl
