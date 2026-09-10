@@ -1,5 +1,6 @@
 import type { Config, Context } from "@netlify/functions";
 import OpenAI from "openai";
+import { envGet, envPresent } from "./_shared/env";
 import { handleClassify } from "./_shared/handler";
 import { createNotionPage, fetchSkillBaseText, lessonsPagePayload, notionPagePayload } from "./_shared/notion";
 import { parseModelOutput, type ImageInput } from "./_shared/parse";
@@ -11,13 +12,14 @@ export default async (req: Request, context: Context) => {
     return Response.json({
       ok: true,
       post: "/api/classify",
+      env: envPresent(),
     });
   }
 
-  const token = Netlify.env.get("NOTION_TOKEN");
-  const databaseId = Netlify.env.get("NOTION_DATABASE_ID");
-  const lessonsId = Netlify.env.get("NOTION_LESSONS_DATABASE_ID");
-  const skillPageId = Netlify.env.get("NOTION_SKILL_BASE_PAGE_ID");
+  const token = envGet("NOTION_TOKEN");
+  const databaseId = envGet("NOTION_DATABASE_ID");
+  const lessonsId = envGet("NOTION_LESSONS_DATABASE_ID");
+  const skillPageId = envGet("NOTION_SKILL_BASE_PAGE_ID");
   const siteUrl = context.site?.url ?? "";
 
   let skillBase: string | null = null;
@@ -31,7 +33,7 @@ export default async (req: Request, context: Context) => {
   }
 
   return handleClassify(req, {
-    getSecret: () => Netlify.env.get("CLASSIFY_SECRET"),
+    getSecret: () => envGet("CLASSIFY_SECRET"),
     hasSkillBase: () => Boolean(skillBase),
     classify: (input) => classifyWithGateway(input, skillBase),
     storePhoto: siteUrl
