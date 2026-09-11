@@ -4,7 +4,7 @@ import { classifySecret, envGet, envPresent } from "./_shared/env";
 import { handleClassify } from "./_shared/handler";
 import { createNotionPage, fetchSkillBaseText, lessonsPagePayload, notionPagePayload } from "./_shared/notion";
 import { parseModelOutput, type ImageInput } from "./_shared/parse";
-import { publicPhotoUrl, storePhoto } from "./_shared/photos";
+import { publicPhotoUrl, resolvePublicBaseUrl, storePhoto } from "./_shared/photos";
 import { CLASSIFY_SYSTEM_PROMPT, classifyUserMessage } from "./_shared/prompt";
 
 export default async (req: Request, context: Context) => {
@@ -20,7 +20,12 @@ export default async (req: Request, context: Context) => {
   const databaseId = envGet("NOTION_DATABASE_ID");
   const lessonsId = envGet("NOTION_LESSONS_DATABASE_ID");
   const skillPageId = envGet("NOTION_SKILL_BASE_PAGE_ID");
-  const siteUrl = context.site?.url ?? "";
+  const siteUrl = resolvePublicBaseUrl({
+    requestUrl: req.url,
+    deployPrimeUrl: envGet("DEPLOY_PRIME_URL"),
+    url: envGet("URL"),
+    siteUrl: context.site?.url,
+  });
 
   let skillBase: string | null = null;
   if (token && skillPageId) {

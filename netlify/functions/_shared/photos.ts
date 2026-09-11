@@ -21,8 +21,37 @@ export async function storePhoto(image: ImageInput): Promise<{ key: string }> {
   return { key };
 }
 
+export function resolvePublicBaseUrl(input: {
+  requestUrl?: string;
+  deployPrimeUrl?: string;
+  url?: string;
+  siteUrl?: string;
+}): string {
+  const fromRequest = originOf(input.requestUrl);
+  const candidates = [fromRequest, input.deployPrimeUrl, input.url, input.siteUrl];
+  for (const candidate of candidates) {
+    const trimmed = candidate?.trim().replace(/\/$/, "");
+    if (trimmed) {
+      return trimmed;
+    }
+  }
+  return "";
+}
+
 export function publicPhotoUrl(baseUrl: string, key: string): string {
   return `${baseUrl.replace(/\/$/, "")}/uploads/${key}`;
+}
+
+function originOf(requestUrl?: string): string | undefined {
+  if (!requestUrl) {
+    return undefined;
+  }
+
+  try {
+    return new URL(requestUrl).origin;
+  } catch {
+    return undefined;
+  }
 }
 
 function extensionFor(mime: string): string {

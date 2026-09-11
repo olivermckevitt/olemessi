@@ -174,6 +174,33 @@ describe("handleClassify", () => {
     expect(classify).not.toHaveBeenCalled();
   });
 
+  it("attaches a stored photo URL to the Notion note", async () => {
+    saveNote.mockClear();
+    const storePhoto = vi.fn(async () => ({ url: "https://preview.example/uploads/shot.jpg" }));
+
+    const form = new FormData();
+    form.set("text", "painter bucket on the floor");
+    form.set("photo", new File(["jpeg-bytes"], "shot.jpg", { type: "image/jpeg" }));
+
+    const response = await handleClassify(
+      new Request("https://example.com/api/classify", {
+        method: "POST",
+        headers: { "X-Classify-Secret": "secret" },
+        body: form,
+      }),
+      { ...deps, storePhoto },
+    );
+
+    expect(response.status).toBe(200);
+    expect(storePhoto).toHaveBeenCalled();
+    expect(saveNote).toHaveBeenCalledWith(
+      expect.objectContaining({
+        photoUrl: "https://preview.example/uploads/shot.jpg",
+        photoName: "shot.jpg",
+      }),
+    );
+  });
+
   it("returns 502 when Notion save fails", async () => {
     const response = await handleClassify(request({ text: "hello" }), {
       ...deps,
