@@ -20,7 +20,8 @@ The book is **22 colouring pages** (20 to 25). Eleven intro pages would be half 
 
 ## Character lock
 
-Source: `references/kody-character-v1.jpg`
+Source: `references/kody-character-locked.png` (option D, five-digit hands)
+Original ChatGPT look: `references/kody-character-v1.jpg`
 
 If a page does not look like this kid, throw it out.
 
@@ -38,7 +39,7 @@ If a page does not look like this kid, throw it out.
 - Short-sleeve t-shirt. Not overalls. Not a tank. Not bare-chested.
 - Work pants. Simple front. One back pocket is enough. No cargo-pocket clutter.
 - Chunky work boots. Thick sole, round toe, visible laces. Tread is 3 to 4 big rectangles, not a realistic tire pattern.
-- Soft round hands. Four fingers plus thumb. No knuckles. No nails.
+- Soft round hands. **Five digits:** four fingers plus a thumb. No cartoon three-finger gloves. No knuckles. No nails. On a wave or thumbs-up, all five digits must be readable.
 
 ### Hard hat
 

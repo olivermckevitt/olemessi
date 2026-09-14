@@ -10,8 +10,9 @@ This folder is the design kit for the book. Use it to keep every page looking li
 - `PAGE-MAP.md` — 22 pages, in order, with caption and art direction
 - `PROMPT-KIT.md` — copy-paste prompts so AI art stays consistent
 - `TOOLS.md` — free ways to generate more character options
+- `references/kody-character-locked.png` — locked look (option D, five-digit hands)
 - `references/kody-character-v1.jpg` — original ChatGPT look
-- `references/options/` — four new line-art variants to pick from
+- `references/options/` — variants, including D with five fingers
 
 ## Locked decisions
 

@@ -39,7 +39,7 @@ Do not install Ideogram or OpenAI image MCPs for this. They need paid API keys. 
 
 ## Free, no Cursor (fastest for several looks)
 
-Use these in a browser. Attach `kody-character-v1.jpg` every time. Paste the locked prompt from `PROMPT-KIT.md`.
+Use these in a browser. Attach `kody-character-locked.png` every time. Paste the locked prompt from `PROMPT-KIT.md`.
 
 1. [Gemini](https://gemini.google.com) — best free image-to-image right now. Google account. Ask for "colouring book line art, black outline, white fill, no grey."
 2. [Microsoft Designer](https://designer.microsoft.com) / Bing Image Creator — daily free boosts. Weaker at keeping the same kid.

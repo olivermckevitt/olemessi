@@ -2,7 +2,7 @@
 
 Use this with ChatGPT image gen, or any line-art model. Generate **one page at a time**. Paste the locked character block every time. If you skip it, the hair and clothes will drift.
 
-Reference image: `references/kody-character-v1.jpg`. Attach it on every generation.
+Reference image: `references/kody-character-locked.png`. Attach it on every generation. That is option D with five-digit hands.
 
 ## Locked character block (paste every time)
 
@@ -13,13 +13,13 @@ Character: Kody, a cute cartoon boy about 5 years old. Big round head, small chi
 
 Clothes: short-sleeve t-shirt (NOT overalls, NOT sleeveless), simple work pants, chunky lace-up work boots with thick soles. A carpenter tool belt with a square buckle, tape measure in the left pouch, carpenter pencil and a small spirit level in the right pouch.
 
-Hard hat is ALWAYS on. Friendly, not realistic. Four fingers plus thumb. Thick clean outlines, large colour-in shapes, very little inner detail. Full figure unless the page says close-up. Looking at the viewer. Print-ready colouring book illustration, single character, lots of white space, no background clutter, no text, no watermark, no logo.
+Hard hat is ALWAYS on. Friendly, not realistic. Hands have FIVE digits: four fingers plus a thumb. No cartoon three-finger gloves. Thick clean outlines, large colour-in shapes, very little inner detail. Full figure unless the page says close-up. Looking at the viewer. Print-ready colouring book illustration, single character, lots of white space, no background clutter, no text, no watermark, no logo.
 ```
 
 ## Negative block (paste every time)
 
 ```
-Do not: color, grey shading, crosshatching, tiny texture, realistic anatomy, adult face, overalls, bare chest, tank top, circular saw, table saw, mitre saw, nail gun, blood, injury, extra kids, parents, photorealism, 3D render, busy background, written words, brand logos, extra pouches, skinny fashion legs, small un-colourable details in the hair.
+Do not: color, grey shading, crosshatching, tiny texture, realistic anatomy, adult face, overalls, bare chest, tank top, three-finger cartoon hands, circular saw, table saw, mitre saw, nail gun, blood, injury, extra kids, parents, photorealism, 3D render, busy background, written words, brand logos, extra pouches, skinny fashion legs, small un-colourable details in the hair.
 ```
 
 ## How to run it
@@ -119,3 +119,4 @@ Rerun if any of these show up:
 - Extra people
 - Text baked into the image (except the lemonade sign and the optional "LEMONADE" outlines)
 - Tiny unreadable tools on the belt
+- Three-finger cartoon hands. Need four fingers plus a thumb.
