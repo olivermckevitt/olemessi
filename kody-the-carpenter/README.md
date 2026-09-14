@@ -11,7 +11,7 @@ This folder is the design kit for the book. Use it to keep every page looking li
 - `PROMPT-KIT.md` — copy-paste prompts so AI art stays consistent
 - `TOOLS.md` — free ways to generate more character options
 - `pages/opening/` — first 8 colouring pages
-- `pages/builds/` — picnic table (15), well (18), extra doghouse
+- `pages/builds/` — picnic table (15), well with ladder and shingles (18), extra doghouse, extra kneeling well
 - `references/kody-character-locked.png` — locked look (option D, five-digit hands)
 - `references/kody-crouch-pickup.png` — action pose study (crouch, pick up a board)
 - `references/kody-character-v1.jpg` — original ChatGPT look
@@ -30,7 +30,7 @@ This folder is the design kit for the book. Use it to keep every page looking li
 
 ## Drawn so far
 
-Opening 1 to 8. Picnic table. Well. Crouch pose study. Doghouse (unslotted). Square (unslotted).
+Opening 1 to 8. Picnic table. Well with ladder and shingles. Crouch pose study. Doghouse, kneeling well, and square stay extra.
 
 Still needed: birdhouse, planter, stool, frame, toy box, bookshelf, lemonade, fort, close 19 to 22, coloured cover.
 

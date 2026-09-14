@@ -84,6 +84,7 @@ Good poses:
 - Crouching to pick up a board
 - Bending over a table, nailing
 - Kneeling to hammer or measure
+- On a short step ladder, nailing shingles
 - Carrying lumber
 - Sawing on two horses
 - Checking a level
@@ -145,9 +146,9 @@ Ramp difficulty. Start small. Fort is 9. Well is 10. Each one is something a kid
 | 7 | Picnic table | Outdoor. Two benches. Drawn: Kody bending, nailing. |
 | 8 | Lemonade stand | Sign, pitcher, cups. Kids go wild colouring this. |
 | 9 | Fort | The dream build. Boards, window, flag. No ta-da. |
-| 10 | Well | Confirmed. Kid wishing well, bucket, roof. Drawn: Kody kneeling, hammering. |
+| 10 | Well | Confirmed. Kid wishing well. Drawn: Kody on a short step ladder, nailing shingles on the roof. |
 
-Drawn but **not slotted:** doghouse (`pages/builds/extra-doghouse.png`), carpenter's square (`pages/opening/square-mark.png`). Crouch/pickup is a pose study, not a numbered page.
+Drawn but **not slotted:** doghouse (`pages/builds/extra-doghouse.png`), kneeling well (`pages/builds/extra-well-kneel.png`), carpenter's square (`pages/opening/square-mark.png`). Crouch/pickup is a pose study, not a numbered page.
 
 Each build is **one page.** Kody plus the object, mid-build or just finished, big enough to colour. Safety glasses on. Do not split Plan / Build / Done at this page count.
 
@@ -212,5 +213,5 @@ A page is done when all of these are true:
 - A 4-year-old has at least five big shapes to colour.
 - About 70 to 80% of the page is empty white.
 - The caption can be read in one breath.
-- Nothing on the page would get a kid in trouble if they copied it for real (no climbing on roofs, no power saws, no "don't need goggles").
+- Nothing on the page would get a kid in trouble if they copied it for real (no standing on a house roof, no power saws, no "don't need goggles"). A short step ladder beside a kid-sized well is OK.
 - It still looks like a colouring page in a cheap photocopy. If the photocopy turns to mud, there is too much detail.

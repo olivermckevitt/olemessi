@@ -70,9 +70,9 @@ Each page: Kody building it, object big enough to colour, 70 to 80% white space.
 | 15 | Picnic table | **drawn** `15-picnic.png` | "Kody builds a picnic table." | Bending over, nailing the tabletop. Two benches. |
 | 16 | Lemonade stand | not drawn | "Cold lemonade! Come and get it!" | Stand, outline letters LEMONADE, pitcher, 2 cups. |
 | 17 | Fort | not drawn | "Kody built a fort!" | Kid-sized fort, one square window, blank flag. Working pose, not ta-da. |
-| 18 | Well | **drawn** `18-well.png` | "Kody builds a well." | Kneeling, hammering the well wall. Roof, rope, bucket. |
+| 18 | Well | **drawn** `18-well.png` | "Kody puts the roof on." | Short A-frame step ladder. Kody stands on the ladder, nailing shingles onto the well roof. Spare shingles on the grass. Bucket still hanging. |
 
-No roof-climbing. Step stool only on the fort page.
+No house-roof climbing. Short step ladder is OK on the well page. He stands on the ladder, not on the roof. Step stool OK on the fort page.
 
 ---
 
@@ -103,6 +103,7 @@ Not drawn yet.
 | File | What | Why it is extra |
 | --- | --- | --- |
 | `pages/builds/extra-doghouse.png` | Doghouse with a watching dog | Drawn before the 10th build was locked as the well |
+| `pages/builds/extra-well-kneel.png` | Kneeling, hammering the well wall | First well pass. Replaced by the ladder/shingles page. |
 | `pages/opening/square-mark.png` | Carpenter's square | Tool study. Not an opening page. |
 | `references/kody-crouch-pickup.png` | Crouching, picking up a board | Pose lock for later pages. Not a numbered colouring page. |
 
@@ -127,7 +128,7 @@ Not drawn yet.
 15. Kody builds a picnic table.
 16. Cold lemonade! Come and get it!
 17. Kody built a fort!
-18. Kody builds a well.
+18. Kody puts the roof on.
 19. Build, then clean up.
 20. Every tool back in its place.
 21. Your turn. What will you build?
