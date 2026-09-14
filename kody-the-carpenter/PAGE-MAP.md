@@ -17,38 +17,38 @@ Kody full-body, hard hat, tool belt, hammer up, thumbs up. Colour the hat yellow
 
 ## Opening (pages 1 to 8)
 
-Eleven intro pages was half a 22-page book. This is the same ritual, compressed. Every page has a simple colourable background (floor, wall, window, bench). Not a white void.
+The opening is a workday, not a pose reel. Kody arrives, plans, hammers, cuts, measures, loads his belt, puts on safety gear, then carries the wood. Different body positions each page. Simple colourable environments (yard, garage, workshop). Almost no waving.
 
 ### Page 1 — Meet Kody
-**Visual:** Full body, ta-da or thumbs up. Hat on. Belt on. No workshop.
+**Visual:** Kody walks up the driveway toward his open garage, a board under his arm. House, tree, fence, clouds.
 **Caption:** "This is Kody. Kody loves to build!"
 
 ### Page 2 — Workshop
-**Visual:** Workbench, pegboard with empty tool outlines, little stool, one window.
+**Visual:** Inside, he leans over a plan on the workbench. Pegboard, lumber, open door to the yard.
 **Caption:** "This is where Kody builds."
 
 ### Page 3 — Hammer
-**Visual:** Claw hammer up. Optional nail and scrap of wood.
+**Visual:** Hammering a nail into a board on the bench. Other hand steadies the wood.
 **Caption:** "Kody's hammer. Bang, bang, bang!"
 
 ### Page 4 — Saw
-**Visual:** Handsaw on a plank on a sawhorse. A few big sawdust dots.
+**Visual:** A long timber sits on TWO sawhorses. Handsaw blade is in the wood, mid-cut, sawdust falling. Backyard fence and tree.
 **Caption:** "Kody's saw cuts the wood."
 
 ### Page 5 — Tape measure
-**Visual:** Tape across a board. Numbers 1, 2, 3 only.
+**Visual:** Kneeling, stretching the tape along the board on the horses. Numbers 1, 2, 3. Yard through the open door.
 **Caption:** "Kody always measures first."
 
 ### Page 6 — Tool belt
-**Visual:** Belt close-up. Tape, screwdriver, pencil, level. Hammer in a loop. Drill can sit on the bench beside him, not in a tiny pouch.
+**Visual:** Looking down, sliding the hammer into his belt. Drill on the bench. Pegboard behind him.
 **Caption:** "Everything Kody needs is on his belt."
 
 ### Page 7 — Safety
-**Visual:** One gear-up page. Glasses on. Ear muffs on. Gloves going on or already on. Hat already on. No "put on the hard hat."
+**Visual:** Pulling on a glove. Glasses and ear muffs already on. Drill on the bench. Lumber rack behind.
 **Caption:** "Glasses, ears, gloves. Safety first!"
 
 ### Page 8 — Ready
-**Visual:** Full gear. Stack of 4 to 6 boards. Excited pose.
+**Visual:** Carrying a stack of cut boards toward the open garage door, both hands on the wood. Yard beyond.
 **Caption:** "Kody is ready. Let's build something!"
 
 ---

@@ -73,14 +73,15 @@ These are colouring pages. They fail if a crayon has nowhere to go.
 
 1. **Black line, white fill. No grey. No beige. No hatching.**
 2. **Thick outer contour.** About 4 to 6 pt at 8.5 x 11. Inner details thinner, but still crayon-friendly.
-3. **One hero per page.** Kody, or Kody plus one object. Backgrounds stay simple: a workbench edge, a sawhorse, a pegboard, a stack of boards. No full workshops stuffed with junk.
-4. **Big colour-in shapes.** Shirt, pants, hat, boots, wood, sky. If a shape is smaller than a thumbnail, delete it.
-5. **Leave skin unshaded.** Kids choose the colour.
-6. **No text inside the drawing** except a tiny workshop sign if needed. Captions sit below the art, in a clear print font, not hand-lettered inside the picture.
-7. **No scary tools.** Handsaw only. Cordless drill OK. No circular saw, mitre saw, table saw, nail gun, angle grinder, utility knife.
-8. **No injury gags.** No smashed thumbs. No sparks in eyes. Safety is calm and happy.
-9. **Same Kody every time.** Same hair, same hat, same belt, same boots. Do not "improve" him page to page.
-10. **Single character.** No extra kids, no parent, no talking animals. The book is Kody. (A bird on the birdhouse page and a dog on the doghouse page are OK. They are props, not costars.)
+3. **One hero per page, actually working.** Kody hammers, saws, measures, carries. Do not default to waving or thumbs-up. Different pose every page.
+4. **Colourable environments.** Yard, garage, workshop. Floor, walls, trees, windows. Kids need big background shapes, not a white void.
+5. **Big colour-in shapes.** Shirt, pants, hat, boots, wood, sky. If a shape is smaller than a thumbnail, delete it.
+6. **Leave skin unshaded.** Kids choose the colour.
+7. **No text inside the drawing** except a tiny workshop sign if needed. Captions sit below the art, in a clear print font, not hand-lettered inside the picture.
+8. **No scary tools.** Handsaw only. Cordless drill OK. No circular saw, mitre saw, table saw, nail gun, angle grinder, utility knife.
+9. **No injury gags.** No smashed thumbs. No sparks in eyes. Safety is calm and happy.
+10. **Same Kody every time.** Same hair, same hat, same belt, same boots. Do not "improve" him page to page.
+11. **Single character.** No extra kids, no parent, no talking animals. The book is Kody. (A bird on the birdhouse page and a dog on the doghouse page are OK. They are props, not costars.)
 
 ## Caption voice
 
