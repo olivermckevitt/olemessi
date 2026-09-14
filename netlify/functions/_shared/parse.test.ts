@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { parseClassifyRequest, parseModelOutput } from "./parse";
+import { imageFromFile, parseClassifyRequest, parseModelOutput } from "./parse";
 
 const SECRET = "test-secret";
 
@@ -29,6 +29,21 @@ describe("parseClassifyRequest", () => {
         project: " Store 1184 ",
       }),
     ).toEqual({ text: "paint delivery at 7", project: "Store 1184" });
+  });
+});
+
+describe("imageFromFile", () => {
+  it("treats image/jpg as jpeg", async () => {
+    const parsed = await imageFromFile(
+      new File(["jpeg-bytes"], "shot.jpg", { type: "image/jpg" }),
+    );
+
+    expect(parsed).toEqual(
+      expect.objectContaining({
+        mime: "image/jpeg",
+        filename: "shot.jpg",
+      }),
+    );
   });
 });
 

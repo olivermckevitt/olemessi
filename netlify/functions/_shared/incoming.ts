@@ -1,5 +1,4 @@
 import {
-  ALLOWED_IMAGE_TYPES,
   imageFromBase64,
   imageFromFile,
   type ImageInput,
@@ -71,12 +70,8 @@ async function readForm(
     }
   }
 
-  const file = firstFile(form, ["image", "photo"]);
+  const file = firstFile(form);
   if (file) {
-    const mime = (file.type || "").toLowerCase();
-    if (mime && !ALLOWED_IMAGE_TYPES.includes(mime)) {
-      return { ok: false, error: { status: 400, error: "image must be jpeg, png, webp, or gif" } };
-    }
     const parsed = await imageFromFile(file);
     if ("error" in parsed) {
       return { ok: false, error: parsed };
@@ -87,14 +82,25 @@ async function readForm(
   return { ok: true, fields };
 }
 
-function firstFile(form: FormData, names: string[]): File | undefined {
-  for (const name of names) {
-    const value = form.get(name);
-    if (value instanceof File && value.size > 0) {
+const FILE_FIELD_NAMES = ["image", "photo", "file", "jpeg", "picture"];
+
+function firstFile(form: FormData): File | undefined {
+  const preferred = new Set(FILE_FIELD_NAMES);
+  let fallback: File | undefined;
+
+  for (const [key, value] of form.entries()) {
+    if (!(value instanceof File) || value.size === 0) {
+      continue;
+    }
+
+    if (preferred.has(key.toLowerCase())) {
       return value;
     }
+
+    fallback ??= value;
   }
-  return undefined;
+
+  return fallback;
 }
 
 const SECRET_HEADERS = [

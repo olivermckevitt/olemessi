@@ -89,6 +89,44 @@ describe("notionPagePayload", () => {
       ]),
     );
   });
+
+  it("attaches a Notion file upload so the photo renders in Notion", () => {
+    const payload = notionPagePayload("db-id", {
+      title: "Painters on Site",
+      folder: "Daily Logs",
+      kanbanType: "Daily Log / Site Progress",
+      status: "To Do",
+      captured: "2026-09-14",
+      transcript: "Painters on site",
+      urgency: "medium",
+      summary: "Painters were present on site today.",
+      redFlag: false,
+      photoFileId: "file-upload-id",
+      photoName: "photo.jpg",
+    });
+
+    const properties = payload.properties as Record<string, unknown>;
+    expect(properties.Photo).toEqual({
+      files: [
+        {
+          name: "photo.jpg",
+          type: "file_upload",
+          file_upload: { id: "file-upload-id" },
+        },
+      ],
+    });
+    expect(payload.children).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({
+          type: "image",
+          image: {
+            type: "file_upload",
+            file_upload: { id: "file-upload-id" },
+          },
+        }),
+      ]),
+    );
+  });
 });
 
 describe("handleClassify", () => {
@@ -197,6 +235,32 @@ describe("handleClassify", () => {
       expect.objectContaining({
         photoUrl: "https://preview.example/uploads/shot.jpg",
         photoName: "shot.jpg",
+      }),
+    );
+  });
+
+  it("attaches a Notion-hosted photo when storePhoto returns a file id", async () => {
+    saveNote.mockClear();
+    const storePhoto = vi.fn(async () => ({ fileId: "file-upload-id" }));
+
+    const form = new FormData();
+    form.set("text", "painters on site");
+    form.set("JPEG", new File(["jpeg-bytes"], "photo.jpg", { type: "image/jpeg" }));
+
+    const response = await handleClassify(
+      new Request("https://example.com/api/classify", {
+        method: "POST",
+        headers: { "X-Classify-Secret": "secret" },
+        body: form,
+      }),
+      { ...deps, storePhoto },
+    );
+
+    expect(response.status).toBe(200);
+    expect(saveNote).toHaveBeenCalledWith(
+      expect.objectContaining({
+        photoFileId: "file-upload-id",
+        photoName: "photo.jpg",
       }),
     );
   });
