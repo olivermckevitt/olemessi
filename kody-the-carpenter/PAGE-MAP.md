@@ -6,52 +6,49 @@ Print file: **A5, 50 pages, single-sided** (25 art + 25 blank backs).
 
 ---
 
-## Pick the 25
+## Review set (use this to pick)
 
-Reply with 25 numbers, in book order. Drawn pages can go in now. Not-drawn pages get made after you pick.
+All 31 remade with the new lock: sparse white space, both-cheek dimples in the prompt, five-finger prompt, hat, curls, belt. Folder: `pages/review/`. Old pages stay as backups.
 
-### Drawn
+Lock sheet: `references/kody-character-locked-v2.png`
 
-| # | Page | File | Dimples |
-| --- | --- | --- | --- |
-| 1 | This book belongs to | `pages/front/belongs-to.png` | FAIL |
-| 2 | Meet Kody | `pages/opening/01-meet.png` | FAIL |
-| 3 | Workshop | `pages/opening/02-workshop.png` | FAIL |
-| 4 | Hammer | `pages/opening/03-hammer.png` | FAIL |
-| 5 | Saw | `pages/opening/04-saw.png` | FAIL |
-| 6 | Tape measure | `pages/opening/05-tape.png` | FAIL |
-| 7 | Level | `pages/opening/06-level.png` | FAIL |
-| 8 | Safety | `pages/opening/07-safety.png` | FAIL |
-| 9 | Carry boards | `pages/opening/08-ready.png` | FAIL |
-| 10 | Carpenter’s square | `pages/opening/square-mark.png` | FAIL |
-| 11 | Picnic table | `pages/builds/15-picnic.png` | FAIL |
-| 12 | Well, shingles on ladder | `pages/builds/18-well.png` | FAIL |
-| 13 | Well, kneeling | `pages/builds/extra-well-kneel.png` | FAIL |
-| 14 | Doghouse | `pages/builds/extra-doghouse.png` | FAIL |
-| 15 | Fence | `pages/builds/extra-fence.png` | FAIL |
-| 16 | Set a post | `pages/builds/extra-post.png` | FAIL |
-| 17 | Window trim | `pages/builds/extra-trim.png` | FAIL |
-| 18 | Cabinets | `pages/builds/extra-cabinets.png` | FAIL |
-| 19 | Clean up | `pages/close/19-cleanup.png` | FAIL |
-| 20 | Crouch, pick up a board | `references/kody-crouch-pickup.png` | FAIL |
+Reply with 25 numbers in book order. Keep, drop, or ask for a redraw.
 
-### Not drawn yet
+| # | Page | Review file |
+| --- | --- | --- |
+| 1 | This book belongs to | `pages/review/r01-belongs-to.png` |
+| 2 | Meet Kody | `pages/review/r02-meet.png` |
+| 3 | Workshop | `pages/review/r03-workshop.png` |
+| 4 | Hammer | `pages/review/r04-hammer.png` |
+| 5 | Saw | `pages/review/r05-saw.png` |
+| 6 | Tape measure | `pages/review/r06-tape.png` |
+| 7 | Level | `pages/review/r07-level.png` |
+| 8 | Safety | `pages/review/r08-safety.png` |
+| 9 | Carry boards | `pages/review/r09-carry.png` |
+| 10 | Carpenter’s square | `pages/review/r10-square.png` |
+| 11 | Picnic table | `pages/review/r11-picnic.png` |
+| 12 | Well, shingles on ladder | `pages/review/r12-well-ladder.png` |
+| 13 | Well, kneeling | `pages/review/r13-well-kneel.png` |
+| 14 | Doghouse | `pages/review/r14-doghouse.png` |
+| 15 | Fence | `pages/review/r15-fence.png` |
+| 16 | Set a post | `pages/review/r16-post.png` |
+| 17 | Window trim | `pages/review/r17-trim.png` |
+| 18 | Cabinets | `pages/review/r18-cabinets.png` |
+| 19 | Clean up | `pages/review/r19-cleanup.png` |
+| 20 | Crouch, pick up a board | `pages/review/r20-crouch.png` |
+| 21 | Birdhouse | `pages/review/r21-birdhouse.png` |
+| 22 | Planter | `pages/review/r22-planter.png` |
+| 23 | Stool | `pages/review/r23-stool.png` |
+| 24 | Picture frame | `pages/review/r24-frame.png` |
+| 25 | Toy box | `pages/review/r25-toybox.png` |
+| 26 | Bookshelf | `pages/review/r26-bookshelf.png` |
+| 27 | Lemonade stand | `pages/review/r27-lemonade.png` |
+| 28 | Fort | `pages/review/r28-fort.png` |
+| 29 | Pegboard | `pages/review/r29-pegboard.png` |
+| 30 | Your turn | `pages/review/r30-your-turn.png` |
+| 31 | High five | `pages/review/r31-highfive.png` |
 
-| # | Page |
-| --- | --- |
-| 21 | Birdhouse |
-| 22 | Planter |
-| 23 | Stool |
-| 24 | Picture frame |
-| 25 | Toy box |
-| 26 | Bookshelf |
-| 27 | Lemonade stand |
-| 28 | Fort |
-| 29 | Pegboard |
-| 30 | Your turn |
-| 31 | High five |
-
-Example reply: `1, 2, 4, 5, 6, 8, 9, 20, 21, 22, 23, 24, 25, 26, 11, 12, 14, 15, 16, 19, 27, 28, 29, 30, 31`
+Honest: dimples are stronger on the lock sheet than on every action page. Hands still slip to four fingers when gripping tools. Say which numbers to redraw.
 
 ---
 

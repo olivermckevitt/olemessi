@@ -12,7 +12,7 @@ This folder is the design kit for the book. Use it to keep every page looking li
 - `TOOLS.md` — free ways to generate more character options
 - `pages/opening/` — first 8 colouring pages
 - `pages/builds/` — picnic table (15), well with ladder and shingles (18), extras (doghouse, well kneel, fence, post, trim, cabinets)
-- `pages/front/` — This book belongs to
+- `pages/review/` — 31 remakes for Oliver to pick 25 from. New lock: `references/kody-character-locked-v2.png`
 - `references/source/` — user jobsite sheets (do not copy bricklaying or duplicates)
 - `references/kody-character-locked.png` — locked look (option D, five-digit hands)
 - `references/kody-crouch-pickup.png` — action pose study (crouch, pick up a board)
@@ -34,9 +34,9 @@ This folder is the design kit for the book. Use it to keep every page looking li
 
 ## Drawn so far
 
-Opening 1 to 8 (redraw pending). Picnic table. Well. Clean up (19). Belongs-to front page. Extras parked.
+Review set of 31 remakes in `pages/review/`. Old pages kept as backups.
 
-Still needed: Oliver picks 25. Then missing pages, dimple pass, five-finger pass, his cover photo.
+Still needed: Oliver picks 25 and names keep/redraw. Then his cover photo.
 
 ## Start here
 
