@@ -24,7 +24,7 @@ Do not: color, grey shading, crosshatching, tiny texture, realistic anatomy, adu
 
 ## How to run it
 
-1. Attach `kody-character-v1.jpg`.
+1. Attach `kody-character-locked.png`.
 2. Paste locked character block + negative block + the page prompt below.
 3. If the hat comes off, the shirt becomes overalls, or the hair turns into a black scribble, reject and rerun.
 4. Crop to leave a caption band at the bottom (about 1.5 inches empty). You will typeset the caption in the layout file, not inside the drawing.
