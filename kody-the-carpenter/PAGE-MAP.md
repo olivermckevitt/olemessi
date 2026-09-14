@@ -17,7 +17,7 @@ Kody full-body, hard hat, tool belt, hammer up, thumbs up. Colour the hat yellow
 
 ## Opening (pages 1 to 8)
 
-Eleven intro pages was half a 22-page book. This is the same ritual, compressed.
+Eleven intro pages was half a 22-page book. This is the same ritual, compressed. Every page has a simple colourable background (floor, wall, window, bench). Not a white void.
 
 ### Page 1 — Meet Kody
 **Visual:** Full body, ta-da or thumbs up. Hat on. Belt on. No workshop.
