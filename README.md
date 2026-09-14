@@ -101,7 +101,7 @@ Name: **File jobsite note**
    - Request Body: Form
      - `text` = `Transcript`
      - `project` = `Store 1184`
-     - `image` = `Photo` as a File. Not `photo`.
+     - `photo` = `Photo` as a File. The field name must be the word `photo`. The value must be the File, not text.
 6. **Get Dictionary from Input** using Contents of URL
 7. **Get Dictionary Value** `category` → Show Notification
 8. **Get Dictionary Value** `url` → Open URLs
@@ -123,7 +123,7 @@ Autosave. You do not confirm the folder first.
 
 `POST /api/classify`
 
-Form fields: `text`, `project` (optional), `image` (optional file).
+Form fields: `text`, `project` (optional), `photo` (optional file). `image` also works.
 
 Or JSON:
 
