@@ -3,8 +3,9 @@ import {
   type KanbanType,
   type Urgency,
 } from "./folders";
+import type { ImageInput } from "./parse";
 
-const NOTION_VERSION = "2022-06-28";
+const NOTION_VERSION = "2025-09-03";
 const RICH_TEXT_LIMIT = 2000;
 
 export type NotionNote = {
@@ -23,6 +24,7 @@ export type NotionNote = {
   alertStatus?: "red_flag";
   skillAssessment?: string;
   photoUrl?: string;
+  photoFileId?: string;
   photoName?: string;
   phone?: string;
   email?: string;
@@ -43,6 +45,49 @@ export function lessonsPagePayload(databaseId: string, note: NotionNote) {
     properties: noteProperties(note, { includeContacts: false, includeStatus: false }),
     children: pageChildren(note),
   };
+}
+
+export async function uploadNotionFile(
+  token: string,
+  image: ImageInput,
+): Promise<{ id: string }> {
+  const created = await notionRequest<{ id?: string; message?: string }>(
+    token,
+    "https://api.notion.com/v1/file_uploads",
+    {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        filename: image.filename,
+        content_type: image.mime,
+      }),
+    },
+  );
+
+  if (!created.ok || !created.body.id) {
+    throw new Error(created.body.message ?? `Notion file create failed (${created.status})`);
+  }
+
+  const bytes = Buffer.from(image.base64, "base64");
+  const copy = new Uint8Array(bytes.byteLength);
+  copy.set(bytes);
+  const form = new FormData();
+  form.set("file", new Blob([copy], { type: image.mime }), image.filename);
+
+  const sent = await notionRequest<{ status?: string; message?: string }>(
+    token,
+    `https://api.notion.com/v1/file_uploads/${created.body.id}/send`,
+    {
+      method: "POST",
+      body: form,
+    },
+  );
+
+  if (!sent.ok || sent.body.status !== "uploaded") {
+    throw new Error(sent.body.message ?? `Notion file send failed (${sent.status})`);
+  }
+
+  return { id: created.body.id };
 }
 
 export async function createNotionPage(
@@ -160,15 +205,10 @@ function noteProperties(
     properties["Skill Assessment"] = richText(note.skillAssessment);
   }
 
-  if (note.photoUrl) {
+  const photo = photoAttachment(note);
+  if (photo) {
     properties.Photo = {
-      files: [
-        {
-          name: clip(note.photoName ?? "photo.jpg", 100),
-          type: "external",
-          external: { url: note.photoUrl },
-        },
-      ],
+      files: [photo.filesValue],
     };
   }
 
@@ -201,14 +241,12 @@ function pageChildren(note: NotionNote) {
     });
   }
 
-  if (note.photoUrl) {
+  const photo = photoAttachment(note);
+  if (photo) {
     children.push({
       object: "block",
       type: "image",
-      image: {
-        type: "external",
-        external: { url: note.photoUrl },
-      },
+      image: photo.imageValue,
     });
   }
 
@@ -264,4 +302,55 @@ function chunk(value: string, size: number): string[] {
 
 function clip(value: string, size: number): string {
   return value.slice(0, size);
+}
+
+function photoAttachment(note: NotionNote): {
+  filesValue: Record<string, unknown>;
+  imageValue: Record<string, unknown>;
+} | undefined {
+  const name = clip(note.photoName ?? "photo.jpg", 100);
+
+  if (note.photoFileId) {
+    return {
+      filesValue: {
+        name,
+        type: "file_upload",
+        file_upload: { id: note.photoFileId },
+      },
+      imageValue: {
+        type: "file_upload",
+        file_upload: { id: note.photoFileId },
+      },
+    };
+  }
+
+  if (note.photoUrl) {
+    return {
+      filesValue: {
+        name,
+        type: "external",
+        external: { url: note.photoUrl },
+      },
+      imageValue: {
+        type: "external",
+        external: { url: note.photoUrl },
+      },
+    };
+  }
+
+  return undefined;
+}
+
+async function notionRequest<T extends { message?: string }>(
+  token: string,
+  url: string,
+  init: RequestInit,
+): Promise<{ ok: boolean; status: number; body: T }> {
+  const headers = new Headers(init.headers);
+  headers.set("Authorization", `Bearer ${token}`);
+  headers.set("Notion-Version", NOTION_VERSION);
+
+  const response = await fetch(url, { ...init, headers });
+  const body = (await response.json()) as T;
+  return { ok: response.ok, status: response.status, body };
 }
