@@ -1,0 +1,9 @@
+# This repo's Netlify site publishes from public/.
+# Docs-only branches still need that folder plus a no-op build, or
+# deploy previews fail and take Header / Pages / Redirect checks with them.
+[build]
+  command = "mkdir -p public"
+  publish = "public"
+
+[build.environment]
+  NODE_VERSION = "20"
