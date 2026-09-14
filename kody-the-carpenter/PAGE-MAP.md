@@ -39,9 +39,9 @@ The opening is a workday, not a pose reel. Kody arrives, plans, hammers, cuts, m
 **Visual:** Kneeling, stretching the tape along the board on the horses. Numbers 1, 2, 3. Yard through the open door.
 **Caption:** "Kody always measures first."
 
-### Page 6 — Tool belt
-**Visual:** Looking down, sliding the hammer into his belt. Drill on the bench. Pegboard behind him.
-**Caption:** "Everything Kody needs is on his belt."
+### Page 6 — Level
+**Visual:** Kody sets a spirit level on the board on the sawhorses and checks the bubble. Workshop, open door to the yard. Not the belt close-up.
+**Caption:** "Is it straight? Kody checks."
 
 ### Page 7 — Safety
 **Visual:** Pulling on a glove. Glasses and ear muffs already on. Drill on the bench. Lumber rack behind.
@@ -65,7 +65,7 @@ Each page: Kody building it, object big enough to colour, safety glasses on. One
 | 12 | Picture frame | "A frame for a favourite picture." | Finished frame. Blank rectangle inside for the kid to doodle. |
 | 13 | Toy box | "A box for toys." | Open toy box, 3 chunky toys. |
 | 14 | Bookshelf | "Books have a home." | Short 3-shelf bookcase, 5 chunky books. |
-| 15 | Doghouse | "A house for a dog." | Doghouse with round door. Simple floppy-ear dog in the door. |
+| 15 | Doghouse | "A house for a dog." | Backyard. Kody hammers a roof board onto a half-built doghouse with a round door. Floppy-ear dog watching. Fence, tree, sawhorses. |
 | 16 | Picnic table | "A table for outside." | Picnic table, plate and apple. |
 | 17 | Lemonade stand | "Cold lemonade! Come and get it!" | Stand, outline letters LEMONADE, pitcher, 2 cups. The colouring party page. |
 | 18 | Fort | "Kody built a fort!" | Kid-sized fort, one square window, blank flag. Kody in the doorway, ta-da. Same pose as page 1. |
@@ -104,7 +104,7 @@ Blank frames. Caption: "Draw your build here."
 3. Kody's hammer. Bang, bang, bang!
 4. Kody's saw cuts the wood.
 5. Kody always measures first.
-6. Everything Kody needs is on his belt.
+6. Is it straight? Kody checks.
 7. Glasses, ears, gloves. Safety first!
 8. Kody is ready. Let's build something!
 9. Kody builds a birdhouse.
