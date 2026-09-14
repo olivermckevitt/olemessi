@@ -8,11 +8,13 @@ Print file: **A5, 50 pages, single-sided** (25 art + 25 blank backs).
 
 ## Review set (use this to pick)
 
-All 31 remade with the new lock: sparse white space, both-cheek dimples in the prompt, five-finger prompt, hat, curls, belt. Folder: `pages/review/`. Old pages stay as backups.
+26 remakes left. Oliver cut 10, 13, 20, 27, 28. Folder: `pages/review/`.
 
 Lock sheet: `references/kody-character-locked-v2.png`
 
-Reply with 25 numbers in book order. Keep, drop, or ask for a redraw.
+Dropped: carpenter’s square, kneeling well, crouch pickup, lemonade stand, fort.
+
+Reply with 25 numbers in book order.
 
 | # | Page | Review file |
 | --- | --- | --- |
@@ -25,30 +27,25 @@ Reply with 25 numbers in book order. Keep, drop, or ask for a redraw.
 | 7 | Level | `pages/review/r07-level.png` |
 | 8 | Safety | `pages/review/r08-safety.png` |
 | 9 | Carry boards | `pages/review/r09-carry.png` |
-| 10 | Carpenter’s square | `pages/review/r10-square.png` |
 | 11 | Picnic table | `pages/review/r11-picnic.png` |
 | 12 | Well, shingles on ladder | `pages/review/r12-well-ladder.png` |
-| 13 | Well, kneeling | `pages/review/r13-well-kneel.png` |
 | 14 | Doghouse | `pages/review/r14-doghouse.png` |
 | 15 | Fence | `pages/review/r15-fence.png` |
 | 16 | Set a post | `pages/review/r16-post.png` |
 | 17 | Window trim | `pages/review/r17-trim.png` |
 | 18 | Cabinets | `pages/review/r18-cabinets.png` |
 | 19 | Clean up | `pages/review/r19-cleanup.png` |
-| 20 | Crouch, pick up a board | `pages/review/r20-crouch.png` |
 | 21 | Birdhouse | `pages/review/r21-birdhouse.png` |
 | 22 | Planter | `pages/review/r22-planter.png` |
 | 23 | Stool | `pages/review/r23-stool.png` |
 | 24 | Picture frame | `pages/review/r24-frame.png` |
 | 25 | Toy box | `pages/review/r25-toybox.png` |
 | 26 | Bookshelf | `pages/review/r26-bookshelf.png` |
-| 27 | Lemonade stand | `pages/review/r27-lemonade.png` |
-| 28 | Fort | `pages/review/r28-fort.png` |
 | 29 | Pegboard | `pages/review/r29-pegboard.png` |
 | 30 | Your turn | `pages/review/r30-your-turn.png` |
 | 31 | High five | `pages/review/r31-highfive.png` |
 
-Honest: dimples are stronger on the lock sheet than on every action page. Hands still slip to four fingers when gripping tools. Say which numbers to redraw.
+Page 23 foot fix: both boots on the ground. No blob on the seat.
 
 ---
 
