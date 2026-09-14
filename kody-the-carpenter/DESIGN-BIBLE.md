@@ -159,13 +159,9 @@ Write like a parent reading at bedtime. Short. Present tense. Kody's name often.
 
 | Section | Pages | Job |
 | --- | --- | --- |
-| Cover | printed, not a colouring page | Sell the character |
-| Opening | 8 | Meet Kody, workshop, hammer, saw, measure, level, safety, carry boards |
-| Builds | 10 | One page each. Picnic table and well are drawn. |
-| Close | 4 | Clean up, pegboard, your turn, high five |
-| **Total colouring pages** | **22** | Interior PDF is 48 pages (art + blank reverse) |
-
-Cover is coloured art (or colour-hold line art with a yellow hat and one accent). Interior is line art only.
+| Cover | Oliver’s designed photo | Title type on the photo. Not a colouring page. |
+| Interior | **25** | Oliver picks from the catalog in `PAGE-MAP.md` |
+| **Print file** | **50** | 25 art + 25 blank backs. A5. |
 
 ## The 10 builds
 
