@@ -4,7 +4,13 @@
 
 Print file is **A5, 48 pages, single-sided.** Each colouring page faces a blank reverse so markers do not bleed.
 
-One page per build. No Plan / Build / Done.
+---
+
+## Front (before page 1)
+
+### This book belongs to
+**Visual:** **drawn** `pages/front/belongs-to.png`. Kody stands beside a big blank name plate. Outline letters: THIS BOOK BELONGS TO. One writing line. Lots of white to colour.
+**Not numbered** in the 22. Sits after title/copyright, before Meet Kody.
 
 ---
 
@@ -19,7 +25,7 @@ Kody full-body, hard hat, tool belt, working pose (not a wave). Colour the hat y
 
 ## Opening (pages 1 to 8)
 
-Already drawn in `pages/opening/`. Workday, not a pose reel. Different body positions each page.
+Drawn, but **style is stale.** Redraw these into the sparse 70 to 80% white-space look before upload. Keep the captions and the workday order.
 
 ### Page 1 — Meet Kody
 **Visual:** Kody walks up the driveway toward his open garage, a board under his arm.

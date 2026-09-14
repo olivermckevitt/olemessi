@@ -12,7 +12,7 @@ This folder is the design kit for the book. Use it to keep every page looking li
 - `TOOLS.md` — free ways to generate more character options
 - `pages/opening/` — first 8 colouring pages
 - `pages/builds/` — picnic table (15), well with ladder and shingles (18), extras (doghouse, well kneel, fence, post, trim, cabinets)
-- `pages/close/` — clean up (19)
+- `pages/front/` — This book belongs to
 - `references/source/` — user jobsite sheets (do not copy bricklaying or duplicates)
 - `references/kody-character-locked.png` — locked look (option D, five-digit hands)
 - `references/kody-crouch-pickup.png` — action pose study (crouch, pick up a board)
@@ -24,17 +24,19 @@ This folder is the design kit for the book. Use it to keep every page looking li
 1. Ages 3 to 6. Extra-bold 5 to 7 pt lines. 70 to 80% white space.
 2. Hard hat on from page 1. Curls, tool belt, big eyes, dimples on every page.
 3. Plain t-shirt. No overalls. Five fingers. Handsaw only. No skill saw.
-4. **22 colouring pages.** Opening 8. Ten builds. Four close pages.
-5. Print: **A5**, single-sided, **48-page** interior (blank reverse per drawing).
+4. **22 colouring pages** plus a belongs-to front page. Opening 8. Ten builds. Four close.
+5. Print: **A5**, single-sided, **48-page** interior. Amazon KDP only. **$6.99 to $7.99**.
 6. Cover is a separate coloured file. Not designed yet.
 7. No Koda Built logo anywhere.
-8. Well is the 10th build. Doghouse and carpenter's square stay extra.
+8. Five fingers on every hand or the page fails. No upload until that pass.
+9. Finish this one book. No series until sales data.
+10. Opening 1 to 8 get redrawn sparse after the remaining builds are in.
 
 ## Drawn so far
 
-Opening 1 to 8. Picnic table. Well with ladder and shingles. Clean up (19). Crouch pose study. Extras: doghouse, kneeling well, fence, post, trim, cabinets, square.
+Opening 1 to 8 (redraw pending). Picnic table. Well. Clean up (19). Belongs-to front page. Extras parked.
 
-Still needed: birdhouse, planter, stool, frame, toy box, bookshelf, lemonade, fort, pegboard, your turn, high five, coloured cover.
+Still needed: birdhouse, planter, stool, frame, toy box, bookshelf, lemonade, fort, pegboard, your turn, high five, sparse opening redraw, 5-finger pass, coloured cover.
 
 ## Start here
 

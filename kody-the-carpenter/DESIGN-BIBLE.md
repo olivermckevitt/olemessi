@@ -16,7 +16,40 @@ Three things to fix before drawing the rest of the book:
 2. **Page 10 fights the character lock.** The approved Kody already wears a hard hat. If the hat is on from page 1 (it should be), page 10 cannot be "now put on the hard hat." Make page 10 **gloves**. Hat stays as his look. Glasses, ears, and gloves are the gear he adds.
 3. **Do not turn the builds into dad's jobsite.** Birdhouse, stool, lemonade stand. Not decks, framing, or kitchen reno. Kids colour things they want. Keep the adult trade in the values (measure first, safety first, clean up) and out of the subject matter.
 
-The book is **22 colouring pages.** Opening is 8. Builds are 10 (one page each). Close is 4. Interior print file is **48 pages**: each colouring page faces a blank reverse so markers do not bleed through. That is 22 art + 22 blanks = 44, plus title, copyright, and two draw-here sheets.
+The book is **22 colouring pages** plus a front **This book belongs to** page. Opening is 8. Builds are 10 (one page each). Close is 4. Interior print file is **48 pages**: title, copyright, belongs-to, blank reverse, then 22 colouring + 22 blank backs.
+
+## Product lock
+
+Locked from the 14 Sep 2026 call. Change only if Oliver overrides.
+
+### Niche
+
+- Buyer: parents of 3 to 6 year olds on **Amazon KDP**
+- Job of book 1: test if “kid carpenter” sells. Not a client gift. Not a series yet.
+- Age: **3 to 6**
+- Channel: Amazon only
+- Price target: **$6.99 to $7.99** USD paperback
+- Sister / friend book: later. Not this file.
+- Series / catalog: **finish this one book.** No book 2 until sales data. No series name yet. Title stays **Kody the Carpenter**
+
+### Construction feel (recommended)
+
+Oliver was unsure. Recommendation for a $7 Amazon test: **kid builds in the 22.** Birdhouse, fort, lemonade, well, picnic. Fence and post can wait. Trim and cabinets stay extra. They read as dad’s job.
+
+### Quality
+
+- Oliver signs off pages. Screen only until all 22 plus belongs-to are drawn.
+- **Five fingers on every hand or the page fails.** No upload until a 5-finger pass.
+- Curls, belt, dimples: mandatory on every page, including belongs-to.
+- Redraw opening 1 to 8 into the sparse 70 to 80% white-space style after the remaining builds exist. Same Kody. Less clutter.
+
+### Tools kids may copy (proposed, 13 still open)
+
+In: hammer, tape measure, handsaw, spirit level, cordless drill, shovel, broom, short step ladder.
+
+Out: skill saw, circular saw, table saw, mitre saw, nail gun, angle grinder, utility knife.
+
+Trim caulk gun and kitchen cabinets: extra pages only, not in the 22, until Oliver lists his no’s.
 
 ## Character lock
 
@@ -184,8 +217,10 @@ Locked for production. Change only if print method changes.
 - Line art: true black (`#000000`), not dark grey. Extra-bold, about 5 to 7 pt.
 - No bleed. Keep all art **10 mm** from every edge. Gutter **10 mm**.
 - **Single-sided colouring.** Interior file is **48 pages.** Odd pages: art. Even pages: blank. Markers will not bleed onto the next drawing.
-- 48-page breakdown: title, copyright, 22 colouring + 22 blank backs, two draw-here sheets.
+- 48-page breakdown: title, copyright, belongs-to, blank, 22 colouring + 22 blank backs.
+- List price target: **$6.99 to $7.99** USD.
 - Cover is a **separate coloured file.** Not designed yet. No colouring on the cover.
+- Do not upload until every visible hand has five digits.
 
 Cover type: paperback. Title in a chunky rounded sans. Yellow hard hat as the colour hook. No Koda Built logo anywhere. On the cover. In the drawings. Nowhere.
 
@@ -201,6 +236,7 @@ Do not generate the whole book at once. Order:
 6. The other nine builds, cloning that template.
 7. Close pages 19 to 22.
 8. Cover last, once the character is stable.
+9. Five-finger QC pass on every page. Then upload.
 
 If page 5's Kody looks different from page 1's Kody, stop and fix the character sheet before continuing.
 
@@ -208,7 +244,7 @@ If page 5's Kody looks different from page 1's Kody, stop and fix the character 
 
 A page is done when all of these are true:
 
-- You can recognise Kody from the silhouette (hat + curls + belt + boots).
+- Every visible hand has **five digits** (four fingers plus thumb). If not, the page is not done.
 - Dimples are visible. Eyes are big.
 - A 4-year-old has at least five big shapes to colour.
 - About 70 to 80% of the page is empty white.
