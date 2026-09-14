@@ -1,16 +1,57 @@
 # Kody the Carpenter — Page Map
 
-**22 colouring pages.** Cover is a separate coloured file, not designed yet.
+**25 colouring pages.** Oliver picks them. Cover is his favourite designed photo, not a generated illustration.
 
-Print file is **A5, 48 pages, single-sided.** Each colouring page faces a blank reverse so markers do not bleed.
+Print file: **A5, 50 pages, single-sided** (25 art + 25 blank backs).
 
 ---
 
-## Front (before page 1)
+## Pick the 25
 
-### This book belongs to
-**Visual:** **drawn** `pages/front/belongs-to.png`. Kody stands beside a big blank name plate. Outline letters: THIS BOOK BELONGS TO. One writing line. Lots of white to colour.
-**Not numbered** in the 22. Sits after title/copyright, before Meet Kody.
+Reply with 25 numbers, in book order. Drawn pages can go in now. Not-drawn pages get made after you pick.
+
+### Drawn
+
+| # | Page | File | Dimples |
+| --- | --- | --- | --- |
+| 1 | This book belongs to | `pages/front/belongs-to.png` | FAIL |
+| 2 | Meet Kody | `pages/opening/01-meet.png` | FAIL |
+| 3 | Workshop | `pages/opening/02-workshop.png` | FAIL |
+| 4 | Hammer | `pages/opening/03-hammer.png` | FAIL |
+| 5 | Saw | `pages/opening/04-saw.png` | FAIL |
+| 6 | Tape measure | `pages/opening/05-tape.png` | FAIL |
+| 7 | Level | `pages/opening/06-level.png` | FAIL |
+| 8 | Safety | `pages/opening/07-safety.png` | FAIL |
+| 9 | Carry boards | `pages/opening/08-ready.png` | FAIL |
+| 10 | Carpenter’s square | `pages/opening/square-mark.png` | FAIL |
+| 11 | Picnic table | `pages/builds/15-picnic.png` | FAIL |
+| 12 | Well, shingles on ladder | `pages/builds/18-well.png` | FAIL |
+| 13 | Well, kneeling | `pages/builds/extra-well-kneel.png` | FAIL |
+| 14 | Doghouse | `pages/builds/extra-doghouse.png` | FAIL |
+| 15 | Fence | `pages/builds/extra-fence.png` | FAIL |
+| 16 | Set a post | `pages/builds/extra-post.png` | FAIL |
+| 17 | Window trim | `pages/builds/extra-trim.png` | FAIL |
+| 18 | Cabinets | `pages/builds/extra-cabinets.png` | FAIL |
+| 19 | Clean up | `pages/close/19-cleanup.png` | FAIL |
+| 20 | Crouch, pick up a board | `references/kody-crouch-pickup.png` | FAIL |
+
+### Not drawn yet
+
+| # | Page |
+| --- | --- |
+| 21 | Birdhouse |
+| 22 | Planter |
+| 23 | Stool |
+| 24 | Picture frame |
+| 25 | Toy box |
+| 26 | Bookshelf |
+| 27 | Lemonade stand |
+| 28 | Fort |
+| 29 | Pegboard |
+| 30 | Your turn |
+| 31 | High five |
+
+Example reply: `1, 2, 4, 5, 6, 8, 9, 20, 21, 22, 23, 24, 25, 26, 11, 12, 14, 15, 16, 19, 27, 28, 29, 30, 31`
 
 ---
 
@@ -19,7 +60,7 @@ Print file is **A5, 48 pages, single-sided.** Each colouring page faces a blank 
 **Title:** Kody the Carpenter
 **Subtitle:** A Colouring Book
 
-Kody full-body, hard hat, tool belt, working pose (not a wave). Colour the hat yellow. No Koda Built logo.
+**Art:** Oliver’s favourite designed photo. He names or drops the file. No Koda Built logo.
 
 ---
 

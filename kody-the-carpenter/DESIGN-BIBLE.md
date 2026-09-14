@@ -16,7 +16,7 @@ Three things to fix before drawing the rest of the book:
 2. **Page 10 fights the character lock.** The approved Kody already wears a hard hat. If the hat is on from page 1 (it should be), page 10 cannot be "now put on the hard hat." Make page 10 **gloves**. Hat stays as his look. Glasses, ears, and gloves are the gear he adds.
 3. **Do not turn the builds into dad's jobsite.** Birdhouse, stool, lemonade stand. Not decks, framing, or kitchen reno. Kids colour things they want. Keep the adult trade in the values (measure first, safety first, clean up) and out of the subject matter.
 
-The book is **22 colouring pages** plus a front **This book belongs to** page. Opening is 8. Builds are 10 (one page each). Close is 4. Interior print file is **48 pages**: title, copyright, belongs-to, blank reverse, then 22 colouring + 22 blank backs.
+The book is **25 colouring pages.** Oliver picks the 25 from the catalog. Interior print file is **50 pages** (each colouring page faces a blank reverse). Title lives on the cover photo. Cover is Oliver’s favourite designed photo, not a generated illustration.
 
 ## Product lock
 
@@ -29,27 +29,30 @@ Locked from the 14 Sep 2026 call. Change only if Oliver overrides.
 - Age: **3 to 6**
 - Channel: Amazon only
 - Price target: **$6.99 to $7.99** USD paperback
+- Title: **Kody the Carpenter**
 - Sister / friend book: later. Not this file.
-- Series / catalog: **finish this one book.** No book 2 until sales data. No series name yet. Title stays **Kody the Carpenter**
+- Series / catalog: **finish this one book.** No book 2 until sales data.
+- **Oliver picks each of the 25 interior pages** from the catalog in `PAGE-MAP.md`. Mix of kid builds and jobsite pages is his call.
 
-### Construction feel (recommended)
+### Cover
 
-Oliver was unsure. Recommendation for a $7 Amazon test: **kid builds in the 22.** Birdhouse, fort, lemonade, well, picnic. Fence and post can wait. Trim and cabinets stay extra. They read as dad’s job.
+Not illustrated by us. **Oliver’s favourite designed photo.** He names or drops the file. Title type sits on or above that photo. No Koda Built logo.
 
 ### Quality
 
-- Oliver signs off pages. Screen only until all 22 plus belongs-to are drawn.
-- **Five fingers on every hand or the page fails.** No upload until a 5-finger pass.
-- Curls, belt, dimples: mandatory on every page, including belongs-to.
-- Redraw opening 1 to 8 into the sparse 70 to 80% white-space style after the remaining builds exist. Same Kody. Less clutter.
+- Oliver signs off pages. Screen only until the 25 are chosen and drawn.
+- **Five fingers on every hand or the page fails.**
+- **Dimple check on every Kody page.** Pass = one small curved indent on the left cheek AND one on the right cheek, next to the smile. Round cheeks with no marks fail. The lock sheet currently fails this. Fix on the QC pass.
+- Curls and tool belt: mandatory on every page.
+- Redraw opening pages that make the 25 into the sparse 70 to 80% white-space style.
 
-### Tools kids may copy (proposed, 13 still open)
+### Tools kids may copy (locked)
 
 In: hammer, tape measure, handsaw, spirit level, cordless drill, shovel, broom, short step ladder.
 
 Out: skill saw, circular saw, table saw, mitre saw, nail gun, angle grinder, utility knife.
 
-Trim caulk gun and kitchen cabinets: extra pages only, not in the 22, until Oliver lists his no’s.
+Caulk gun and cabinets are allowed only if Oliver puts those pages in the 25.
 
 ## Character lock
 
@@ -216,27 +219,46 @@ Locked for production. Change only if print method changes.
 - Artwork: 300 dpi
 - Line art: true black (`#000000`), not dark grey. Extra-bold, about 5 to 7 pt.
 - No bleed. Keep all art **10 mm** from every edge. Gutter **10 mm**.
-- **Single-sided colouring.** Interior file is **48 pages.** Odd pages: art. Even pages: blank. Markers will not bleed onto the next drawing.
-- 48-page breakdown: title, copyright, belongs-to, blank, 22 colouring + 22 blank backs.
+- **Single-sided colouring.** Interior file is **50 pages** once Oliver picks 25. Odd pages: art. Even pages: blank.
+- Cover: **Oliver’s favourite designed photo.** Separate file. Title type on the cover. No generated illustrated cover unless he picks a drawing.
 - List price target: **$6.99 to $7.99** USD.
-- Cover is a **separate coloured file.** Not designed yet. No colouring on the cover.
-- Do not upload until every visible hand has five digits.
+- Do not upload until every visible hand has five digits AND every Kody face passes the dimple check.
 
-Cover type: paperback. Title in a chunky rounded sans. Yellow hard hat as the colour hook. No Koda Built logo anywhere. On the cover. In the drawings. Nowhere.
+Cover type: paperback. Title over Oliver’s photo. No Koda Built logo anywhere.
+
+## Dimple QC (14 Sep 2026)
+
+Pass rule: left cheek indent + right cheek indent. Not just round cheeks.
+
+| Page | Dimples |
+| --- | --- |
+| Lock sheet | FAIL |
+| Option D | FAIL |
+| Belongs-to | FAIL |
+| Opening 01 to 08 | FAIL |
+| Square | FAIL |
+| Picnic | FAIL |
+| Well ladder/shingles | FAIL |
+| Doghouse | FAIL |
+| Well kneel | FAIL |
+| Fence | FAIL |
+| Post | FAIL |
+| Trim | FAIL |
+| Cabinets | FAIL |
+| Cleanup | FAIL |
+| Crouch pickup | FAIL |
+
+No current page passes. After Oliver picks the 25: add dimples, then five fingers. Fix the lock sheet first so new pages copy the right face.
 
 ## Production order
 
 Do not generate the whole book at once. Order:
 
-1. Character turnaround (front, 3/4, side). Same clothes.
-2. Tool kit sheet (hammer, handsaw, tape, screwdriver, drill, pencil, level).
-3. Safety kit sheet (glasses, ear muffs, gloves).
-4. Opening pages 1 to 8.
-5. Birdhouse as the one-page build template.
-6. The other nine builds, cloning that template.
-7. Close pages 19 to 22.
-8. Cover last, once the character is stable.
-9. Five-finger QC pass on every page. Then upload.
+1. Oliver picks the 25 from the catalog.
+2. Draw any missing pages in the sparse style. Dimples + five fingers in the prompt.
+3. Redraw picked opening pages that are still busy.
+4. Dimple pass, then five-finger pass, on every picked page.
+5. Drop Oliver’s cover photo. Typeset the title. Upload.
 
 If page 5's Kody looks different from page 1's Kody, stop and fix the character sheet before continuing.
 
@@ -245,7 +267,7 @@ If page 5's Kody looks different from page 1's Kody, stop and fix the character 
 A page is done when all of these are true:
 
 - Every visible hand has **five digits** (four fingers plus thumb). If not, the page is not done.
-- Dimples are visible. Eyes are big.
+- Dimples pass: one small curved indent on the **left** cheek AND one on the **right** cheek, next to the smile. Round cheeks with no marks fail. Eyes are big.
 - A 4-year-old has at least five big shapes to colour.
 - About 70 to 80% of the page is empty white.
 - The caption can be read in one breath.
