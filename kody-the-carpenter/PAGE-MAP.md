@@ -70,7 +70,7 @@ Each page: Kody building it, object big enough to colour, 70 to 80% white space.
 | 15 | Picnic table | **drawn** `15-picnic.png` | "Kody builds a picnic table." | Bending over, nailing the tabletop. Two benches. |
 | 16 | Lemonade stand | not drawn | "Cold lemonade! Come and get it!" | Stand, outline letters LEMONADE, pitcher, 2 cups. |
 | 17 | Fort | not drawn | "Kody built a fort!" | Kid-sized fort, one square window, blank flag. Working pose, not ta-da. |
-| 18 | Well | **drawn** `18-well.png` | "Kody puts the roof on." | Short A-frame step ladder. Kody stands on the ladder, nailing shingles onto the well roof. Spare shingles on the grass. Bucket still hanging. |
+| 18 | Well | **drawn** `18-well.png` | "Kody puts the roof on." | Short A-frame step ladder. Vertical scalloped shingles (tall, rounded bottom, not timber planks). One in his hand, more on the roof, two on the grass. Bucket hanging. |
 
 No house-roof climbing. Short step ladder is OK on the well page. He stands on the ladder, not on the roof. Step stool OK on the fort page.
 

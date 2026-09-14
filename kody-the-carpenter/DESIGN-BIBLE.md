@@ -146,7 +146,7 @@ Ramp difficulty. Start small. Fort is 9. Well is 10. Each one is something a kid
 | 7 | Picnic table | Outdoor. Two benches. Drawn: Kody bending, nailing. |
 | 8 | Lemonade stand | Sign, pitcher, cups. Kids go wild colouring this. |
 | 9 | Fort | The dream build. Boards, window, flag. No ta-da. |
-| 10 | Well | Confirmed. Kid wishing well. Drawn: Kody on a short step ladder, nailing shingles on the roof. |
+| 10 | Well | Confirmed. Kid wishing well. Drawn: Kody on a short step ladder, nailing vertical scalloped shingles. |
 
 Drawn but **not slotted:** doghouse (`pages/builds/extra-doghouse.png`), kneeling well (`pages/builds/extra-well-kneel.png`), carpenter's square (`pages/opening/square-mark.png`). Crouch/pickup is a pose study, not a numbered page.
 
