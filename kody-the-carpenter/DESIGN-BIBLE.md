@@ -16,30 +16,40 @@ Three things to fix before drawing the rest of the book:
 2. **Page 10 fights the character lock.** The approved Kody already wears a hard hat. If the hat is on from page 1 (it should be), page 10 cannot be "now put on the hard hat." Make page 10 **gloves**. Hat stays as his look. Glasses, ears, and gloves are the gear he adds.
 3. **Do not turn the builds into dad's jobsite.** Birdhouse, stool, lemonade stand. Not decks, framing, or kitchen reno. Kids colour things they want. Keep the adult trade in the values (measure first, safety first, clean up) and out of the subject matter.
 
-The book is **22 colouring pages** (20 to 25). Eleven intro pages would be half the book. Opening is now 8 pages. Each build is 1 page, not 3. If you publish on Amazon KDP, add 2 blank draw-here pages to hit the 24-page minimum.
+The book is **22 colouring pages.** Opening is 8. Builds are 10 (one page each). Close is 4. Interior print file is **48 pages**: each colouring page faces a blank reverse so markers do not bleed through. That is 22 art + 22 blanks = 44, plus title, copyright, and two draw-here sheets.
 
 ## Character lock
 
 Source: `references/kody-character-locked.png` (option D, five-digit hands)
+Work pose study: `references/kody-crouch-pickup.png`
 Original ChatGPT look: `references/kody-character-v1.jpg`
 
 If a page does not look like this kid, throw it out.
 
+### Locked landmarks (every page)
+
+These three must appear on every colouring page. If one is missing, redraw.
+
+1. Curls under the hat (both sides, colourable gaps)
+2. Tool belt with buckle
+3. Big round eyes and **dimples** (one indent in each cheek beside the smile)
+
 ### Face and hair
 
 - Boy, about 5. Big head, small body.
-- Round cheeks. Open smile. Two little upper teeth. No adult jaw.
-- Huge oval eyes. Simple iris. One round highlight per eye. No eyelashes.
+- Round cheeks with dimples. Open smile. Two little upper teeth. No adult jaw.
+- Huge round eyes. Simple iris. One round highlight per eye. No eyelashes.
 - Eyebrows are short curves. Keep them.
 - **Curly hair is the signature.** Tight ringlets in a readable cloud around the hat brim. About 15 to 25 curls, not 100. Kids need gaps to colour. Do not turn hair into a scribble texture.
 - Hair pokes out under the hard hat on both sides and a little in front.
+- Skin stays **neutral and unshaded.** Kids pick the colour.
 
 ### Body and clothes
 
 - Short-sleeve t-shirt. Not overalls. Not a tank. Not bare-chested.
 - Work pants. Simple front. One back pocket is enough. No cargo-pocket clutter.
 - Chunky work boots. Thick sole, round toe, visible laces. Tread is 3 to 4 big rectangles, not a realistic tire pattern.
-- Soft round hands. **Five digits:** four fingers plus a thumb. No cartoon three-finger gloves. No knuckles. No nails. On a wave or thumbs-up, all five digits must be readable.
+- Soft round hands. **Five digits:** four fingers plus a thumb. No cartoon three-finger gloves. No four-finger mittens. No knuckles. No nails. When a hand is on wood or a tool, the thumb still has to read.
 
 ### Hard hat
 
@@ -55,15 +65,30 @@ Right pouch: carpenter pencil + small spirit level.
 
 Hammer lives in his hand or in a belt loop. Do not invent extra pouches.
 
+### Signature tools
+
+Only these three are Kody's tools of record:
+
+1. Hammer
+2. Tape measure
+3. Handsaw (not a skill saw, not a circular saw)
+
+Cordless drill may sit on a bench as a prop on the safety page. It is not a signature tool.
+
 ### Body language
 
-Kody is proud, not frantic. Default poses:
+Kody is working, not posing. Different body position every page. Use the crouch/pickup study as the action lock.
 
-- Ta-da / arms out
-- Thumbs up
-- Holding one tool up like a trophy
-- Kneeling to measure
-- Standing next to a finished thing, presenting it
+Good poses:
+
+- Crouching to pick up a board
+- Bending over a table, nailing
+- Kneeling to hammer or measure
+- Carrying lumber
+- Sawing on two horses
+- Checking a level
+
+Do not default to waving, thumbs-up, or ta-da. Save the high five for page 22.
 
 He looks at the reader. He does not look grim. He does not look like a tiny adult tradesman.
 
@@ -72,10 +97,10 @@ He looks at the reader. He does not look grim. He does not look like a tiny adul
 These are colouring pages. They fail if a crayon has nowhere to go.
 
 1. **Black line, white fill. No grey. No beige. No hatching.**
-2. **Thick outer contour.** About 4 to 6 pt at 8.5 x 11. Inner details thinner, but still crayon-friendly.
-3. **One hero per page, actually working.** Kody hammers, saws, measures, carries. Do not default to waving or thumbs-up. Different pose every page.
-4. **Colourable environments.** Yard, garage, workshop. Floor, walls, trees, windows. Kids need big background shapes, not a white void.
-5. **Big colour-in shapes.** Shirt, pants, hat, boots, wood, sky. If a shape is smaller than a thumbnail, delete it.
+2. **Extra-bold outer contour.** About 5 to 7 pt at A5. Inner details thinner, but still crayon-friendly.
+3. **One hero per page, actually working.** Kody hammers, saws, measures, crouches, carries. Do not default to waving or thumbs-up. Different pose every page.
+4. **1 to 2 oversized objects per page. 70 to 80% white space.** Tiny grass tufts are enough. Do not fill the yard with fence, bushes, and sky.
+5. **Big colour-in shapes.** Shirt, pants, hat, boots, wood. If a shape is smaller than a thumbnail, delete it.
 6. **Leave skin unshaded.** Kids choose the colour.
 7. **No text inside the drawing** except a tiny workshop sign if needed. Captions sit below the art, in a clear print font, not hand-lettered inside the picture.
 8. **No scary tools.** Handsaw only. Cordless drill OK. No circular saw, mitre saw, table saw, nail gun, angle grinder, utility knife.
@@ -98,16 +123,16 @@ Write like a parent reading at bedtime. Short. Present tense. Kody's name often.
 | Section | Pages | Job |
 | --- | --- | --- |
 | Cover | printed, not a colouring page | Sell the character |
-| Opening | 8 | Meet Kody, workshop, 3 tools, belt, safety, ready |
-| Builds | 10 | One page each |
+| Opening | 8 | Meet Kody, workshop, hammer, saw, measure, level, safety, carry boards |
+| Builds | 10 | One page each. Picnic table and well are drawn. |
 | Close | 4 | Clean up, pegboard, your turn, high five |
-| **Total colouring pages** | **22** | Add 2 blanks if using KDP |
+| **Total colouring pages** | **22** | Interior PDF is 48 pages (art + blank reverse) |
 
 Cover is coloured art (or colour-hold line art with a yellow hat and one accent). Interior is line art only.
 
 ## The 10 builds
 
-Ramp difficulty. Start small. End with a fort. Each one is something a kid would actually want.
+Ramp difficulty. Start small. Fort is 9. Well is 10. Each one is something a kid would actually want.
 
 | # | Build | Why it is in the book |
 | --- | --- | --- |
@@ -117,10 +142,12 @@ Ramp difficulty. Start small. End with a fort. Each one is something a kid would
 | 4 | Picture frame | Tiny, recognisable, can "hold" a drawing. |
 | 5 | Toy box | Bigger box. Lid. Personality. |
 | 6 | Bookshelf | Measure twice. Straight and proud. |
-| 7 | Doghouse | Character moment. A friend to build for. |
-| 8 | Picnic table | Outdoor. Two benches. Looks impressive. |
-| 9 | Lemonade stand | Sign, pitcher, cups. Kids go wild colouring this. |
-| 10 | Fort | The dream build. Boards, window, flag. |
+| 7 | Picnic table | Outdoor. Two benches. Drawn: Kody bending, nailing. |
+| 8 | Lemonade stand | Sign, pitcher, cups. Kids go wild colouring this. |
+| 9 | Fort | The dream build. Boards, window, flag. No ta-da. |
+| 10 | Well | Confirmed. Kid wishing well, bucket, roof. Drawn: Kody kneeling, hammering. |
+
+Drawn but **not slotted:** doghouse (`pages/builds/extra-doghouse.png`), carpenter's square (`pages/opening/square-mark.png`). Crouch/pickup is a pose study, not a numbered page.
 
 Each build is **one page.** Kody plus the object, mid-build or just finished, big enough to colour. Safety glasses on. Do not split Plan / Build / Done at this page count.
 
@@ -149,17 +176,17 @@ This book is **Kody the Carpenter**. It is not a Koda Built catalogue.
 
 Locked for production. Change only if print method changes.
 
-- Trim: **8.5 x 11 in**
+- Trim: **A5** (148 x 210 mm / 5.83 x 8.27 in)
 - Interior: black and white
 - Paper: white
 - Artwork: 300 dpi
-- Line art: true black (`#000000`), not dark grey
-- No bleed needed if art sits in a white margin. Safer for colouring books. Keep all art **0.5 in** from every edge. Gutter **0.5 in**.
-- If any page bleeds, the whole file must bleed. Then upload at **8.625 x 11.25 in** and keep live art 0.375 in inside trim.
-- Double-sided is OK for crayon age. Markers will show through KDP paper. If you want marker-safe, put art on odd pages and leave even pages blank (page count doubles).
-- Minimum KDP length is 24 pages. This book is 22 colouring pages. Add 2 blank draw-here pages for KDP. Self-print can stay at 22.
+- Line art: true black (`#000000`), not dark grey. Extra-bold, about 5 to 7 pt.
+- No bleed. Keep all art **10 mm** from every edge. Gutter **10 mm**.
+- **Single-sided colouring.** Interior file is **48 pages.** Odd pages: art. Even pages: blank. Markers will not bleed onto the next drawing.
+- 48-page breakdown: title, copyright, 22 colouring + 22 blank backs, two draw-here sheets.
+- Cover is a **separate coloured file.** Not designed yet. No colouring on the cover.
 
-Cover type: paperback. Title in a chunky rounded sans. Yellow hard hat as the colour hook.
+Cover type: paperback. Title in a chunky rounded sans. Yellow hard hat as the colour hook. No Koda Built logo anywhere. On the cover. In the drawings. Nowhere.
 
 ## Production order
 
@@ -181,7 +208,9 @@ If page 5's Kody looks different from page 1's Kody, stop and fix the character 
 A page is done when all of these are true:
 
 - You can recognise Kody from the silhouette (hat + curls + belt + boots).
+- Dimples are visible. Eyes are big.
 - A 4-year-old has at least five big shapes to colour.
+- About 70 to 80% of the page is empty white.
 - The caption can be read in one breath.
 - Nothing on the page would get a kid in trouble if they copied it for real (no climbing on roofs, no power saws, no "don't need goggles").
 - It still looks like a colouring page in a cheap photocopy. If the photocopy turns to mud, there is too much detail.

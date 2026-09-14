@@ -13,13 +13,13 @@ Character: Kody, a cute cartoon boy about 5 years old. Big round head, small chi
 
 Clothes: short-sleeve t-shirt (NOT overalls, NOT sleeveless), simple work pants, chunky lace-up work boots with thick soles. A carpenter tool belt with a square buckle, tape measure in the left pouch, carpenter pencil and a small spirit level in the right pouch.
 
-Hard hat is ALWAYS on. Friendly, not realistic. Hands have FIVE digits: four fingers plus a thumb. No cartoon three-finger gloves. Thick clean outlines, large colour-in shapes, very little inner detail. Full figure unless the page says close-up. Looking at the viewer. Print-ready colouring book illustration, single character, lots of white space, no background clutter, no text, no watermark, no logo.
+Hard hat is ALWAYS on. Dimples in both cheeks. Friendly, not realistic. Hands have FIVE digits: four fingers plus a clearly separate thumb. No cartoon three-finger gloves. No four-finger mittens. Thick extra-bold outlines (5-7pt), large colour-in shapes, very little inner detail. 70-80% white space. 1-2 oversized objects only. Tiny grass tufts OK. Full figure unless the page says close-up. Looking at the viewer. Print-ready colouring book illustration, A5 portrait, single character, no background clutter, no text, no watermark, no logo, no Koda Built.
 ```
 
 ## Negative block (paste every time)
 
 ```
-Do not: color, grey shading, crosshatching, tiny texture, realistic anatomy, adult face, overalls, bare chest, tank top, three-finger cartoon hands, circular saw, table saw, mitre saw, nail gun, blood, injury, extra kids, parents, photorealism, 3D render, busy background, written words, brand logos, extra pouches, skinny fashion legs, small un-colourable details in the hair.
+Do not: color, grey shading, crosshatching, tiny texture, realistic anatomy, adult face, overalls, bare chest, tank top, three-finger cartoon hands, four-finger mittens, circular saw, table saw, mitre saw, skill saw, nail gun, blood, injury, extra kids, parents, photorealism, 3D render, busy background, fence clutter, written words, brand logos, Koda Built, extra pouches, skinny fashion legs, small un-colourable details in the hair, waving pose, thumbs-up, ta-da.
 ```
 
 ## How to run it
@@ -33,29 +33,31 @@ Do not: color, grey shading, crosshatching, tiny texture, realistic anatomy, adu
 
 ## Opening pages
 
+Match `pages/opening/` which is already drawn. Do not regenerate unless a page fails the lock.
+
 ### Page 1 — Meet Kody
-Full-body Kody, standing tall, arms out in a ta-da pose, big grin, tool belt on, hard hat on, empty white space all around. No workshop. No extra tools in his hands.
+Kody walking toward a garage with a board under his arm. Working pose, not a wave.
 
 ### Page 2 — Workshop
-Kody standing in a very simple workshop: one workbench, one pegboard with 5 empty tool outlines (hammer, saw, tape measure, screwdriver, drill), one small three-legged stool, one square window. Lots of white. No clutter.
+Kody leaning over a plan on the workbench.
 
 ### Page 3 — Hammer
-Kody holding a claw hammer up proudly in one hand, other hand thumbs-up. Optional: one nail and a small scrap of wood on the floor. No other tools.
+Kody hammering a nail into a board. Other hand steadies the wood.
 
 ### Page 4 — Saw
-Kody using a handsaw on a plank resting on a simple sawhorse. Two hands on the saw. A few big sawdust dots. Friendly, not dangerous. Handsaw only.
+A long timber on TWO sawhorses. Handsaw blade IN the wood, mid-cut. Handsaw only. Not a skill saw.
 
 ### Page 5 — Tape measure
-Kody stretching a tape measure across a wooden board. Tape is a long rectangle with the numbers 1, 2, and 3 only. Focused happy face.
+Kody kneeling, stretching a tape along the board. Numbers 1, 2, and 3 only.
 
-### Page 6 — Tool belt close-up
-Close-up of Kody's tool belt at waist height. T-shirt hem and pants visible. Pouches hold: tape measure, screwdriver, carpenter pencil, small level. Hammer in a belt loop. Optional chunky cordless drill on the bench beside him. Big, colourable, not a tiny product diagram.
+### Page 6 — Level
+Kody sets a spirit level on the board and checks the bubble. Not a belt close-up.
 
 ### Page 7 — Safety
-Kody putting on the last of his safety gear: glasses already on, ear muffs on, pulling on simple work gloves. Hard hat stays on. Big happy face. Optional drill on the bench as the reason for ear muffs. No extra people.
+Kody putting on a glove. Glasses and ear muffs already on. Hard hat stays on.
 
 ### Page 8 — Ready
-Full-body Kody in full gear (hat, glasses, ear muffs, gloves, tool belt) standing next to a neat stack of 5 wooden boards. Excited pose, arms wide. Clean white space.
+Kody carrying a stack of cut boards with both hands. Walking toward the yard.
 
 ---
 
@@ -63,20 +65,20 @@ Full-body Kody in full gear (hat, glasses, ear muffs, gloves, tool belt) standin
 
 One image per build. Not three.
 
-Kody building [OBJECT], which is finished enough to recognise. He uses [TOOL]. Safety glasses on. Ear muffs on only if the tool is a drill or saw. Object is simple, chunky, colourable. Minimal background. Large colour-in shapes.
+Kody building [OBJECT], which is finished enough to recognise. He uses [TOOL]. Working pose: crouch, kneel, or bend. Safety glasses on. Ear muffs on only if the tool is a drill or saw. Object is simple, chunky, colourable. 70-80% white space. 1-2 oversized objects only.
 
-| Build | Object | Tool | Extra |
-| --- | --- | --- | --- |
-| 1 | small birdhouse | hammer | one simple cartoon bird |
-| 2 | rectangular planter box | screwdriver | one flower and a dirt mound |
-| 3 | four-legged stool | hammer | Kody sitting on it, feet dangling |
-| 4 | square picture frame | screwdriver | blank rectangle inside the frame |
-| 5 | toy box with lid | screwdriver | 3 chunky toys inside |
-| 6 | short bookshelf, 3 shelves | level | 5 chunky books |
-| 7 | doghouse with round door | hammer | simple floppy-ear dog in the door |
-| 8 | picnic table with two benches | hammer | plate and apple |
-| 9 | lemonade stand with sign | hammer | outline letters LEMONADE, pitcher, 2 cups |
-| 10 | kid-sized wooden fort with one square window | hammer | blank flag, Kody in the doorway |
+| Build | Object | Tool | Extra | Pose |
+| --- | --- | --- | --- | --- |
+| 1 | small birdhouse | hammer | one simple cartoon bird | standing, nailing |
+| 2 | rectangular planter box | screwdriver | one flower and a dirt mound | kneeling |
+| 3 | four-legged stool | hammer | nailing a leg | crouching |
+| 4 | square picture frame | screwdriver | blank rectangle inside the frame | sitting at bench |
+| 5 | toy box with lid | screwdriver | 3 chunky toys inside | bending over the box |
+| 6 | short bookshelf, 3 shelves | level | 5 chunky books | standing, checking |
+| 7 | picnic table with two benches | hammer | drawn: `15-picnic.png` | bending, nailing the top |
+| 8 | lemonade stand with sign | hammer | outline letters LEMONADE, pitcher, 2 cups | assembling |
+| 9 | kid-sized wooden fort with one square window | hammer | blank flag | carrying a board into the door. Not ta-da. |
+| 10 | kid-sized wooden wishing well, roof, rope, bucket | hammer | drawn: `18-well.png` | kneeling, hammering the wall |
 
 ---
 
@@ -99,7 +101,7 @@ Close-up of Kody, one hand raised for a high five, hard hat and tool belt on, bi
 ## Cover prompt (coloured)
 
 ```
-Children's book cover illustration of Kody the carpenter, same character as the reference: curly hair, hard hat, t-shirt, tool belt, chunky boots, holding a hammer, thumbs up, big smile. Simple, bold, friendly. Yellow hard hat, otherwise limited flat colours, clean outlines, white or pale workshop background. Leave space at the top for the title. No other characters. Not a colouring page: this one may be coloured.
+Children's book cover illustration of Kody the carpenter, same character as the reference: curly hair with dimples, hard hat, t-shirt, tool belt, chunky boots, crouching or carrying a board, big smile. Simple, bold, friendly. Yellow hard hat, otherwise limited flat colours, clean outlines, lots of white. Leave space at the top for the title. No other characters. Not a colouring page: this one may be coloured. No Koda Built logo.
 ```
 
 Still no logos. Still no overalls.
