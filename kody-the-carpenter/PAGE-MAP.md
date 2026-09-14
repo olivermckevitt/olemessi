@@ -78,10 +78,8 @@ No house-roof climbing. Short step ladder is OK on the well page. He stands on t
 
 ## Close (pages 19 to 22)
 
-Not drawn yet.
-
 ### Page 19 — Clean up
-**Visual:** Sweeping. Tools going back.
+**Visual:** **drawn** `pages/close/19-cleanup.png`. Sweeping scraps with a broom. Dustpan. Hard hat on.
 **Caption:** "Build, then clean up."
 
 ### Page 20 — Pegboard
@@ -104,8 +102,14 @@ Not drawn yet.
 | --- | --- | --- |
 | `pages/builds/extra-doghouse.png` | Doghouse with a watching dog | Drawn before the 10th build was locked as the well |
 | `pages/builds/extra-well-kneel.png` | Kneeling, hammering the well wall | First well pass. Replaced by the ladder/shingles page. |
+| `pages/builds/extra-fence.png` | Kneeling, drilling a picket fence | From the jobsite sheet. Not one of the 10 kid builds. |
+| `pages/builds/extra-post.png` | Kneeling, leveling a post in a hole | From the jobsite sheet. Backyard, strong page. |
+| `pages/builds/extra-trim.png` | Kneeling, caulking window trim | From the jobsite sheet. Adult install. Keep extra unless you want a "house" chapter. |
+| `pages/builds/extra-cabinets.png` | Standing, hanging a wall cabinet | From the jobsite sheet. Adult install. Keep extra. |
 | `pages/opening/square-mark.png` | Carpenter's square | Tool study. Not an opening page. |
 | `references/kody-crouch-pickup.png` | Crouching, picking up a board | Pose lock for later pages. Not a numbered colouring page. |
+
+Skipped from the jobsite sheets: bricklaying, the coloured-hair panel, duplicate fence panels, duplicate sweep panels.
 
 ---
 
