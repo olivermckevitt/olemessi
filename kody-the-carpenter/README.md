@@ -7,16 +7,18 @@ This folder is the design kit for the book. Use it to keep every page looking li
 ## What's in here
 
 - `DESIGN-BIBLE.md` — character lock, visual rules, book structure, print specs
-- `PAGE-MAP.md` — every page, in order, with caption and art direction
+- `PAGE-MAP.md` — 22 pages, in order, with caption and art direction
 - `PROMPT-KIT.md` — copy-paste prompts so AI art stays consistent
-- `references/kody-character-v1.jpg` — approved character look (t-shirt, tool belt, curly hair, hard hat)
+- `TOOLS.md` — free ways to generate more character options
+- `references/kody-character-v1.jpg` — original ChatGPT look
+- `references/options/` — four new line-art variants to pick from
 
 ## Locked decisions
 
 1. Ages 3 to 6. Thick lines. Big colour-in areas.
 2. Hard hat is on from page 1. It is part of Kody, not a prop he finds later.
-3. Opening is 11 pages: meet Kody, workshop, tools, safety, then "let's build."
-4. Then 10 builds. Each build is 3 pages: Plan, Build, Done.
+3. **22 colouring pages.** Opening is 8 pages. Ten builds. Four close pages.
+4. One page per build. Not three.
 5. No power saws. Handsaw only. Cordless drill is OK.
 6. Pure black line on white. No grey fills. Kids pick the colours.
 

@@ -16,7 +16,7 @@ Three things to fix before drawing the rest of the book:
 2. **Page 10 fights the character lock.** The approved Kody already wears a hard hat. If the hat is on from page 1 (it should be), page 10 cannot be "now put on the hard hat." Make page 10 **gloves**. Hat stays as his look. Glasses, ears, and gloves are the gear he adds.
 3. **Do not turn the builds into dad's jobsite.** Birdhouse, stool, lemonade stand. Not decks, framing, or kitchen reno. Kids colour things they want. Keep the adult trade in the values (measure first, safety first, clean up) and out of the subject matter.
 
-Eleven intro pages is long for a 32-page book. It is fine for this book because the target is preschool, and preschool colouring books win with one big object per page. Commit to ~44 interior colouring pages so the intro is a third of the book, not half.
+The book is **22 colouring pages** (20 to 25). Eleven intro pages would be half the book. Opening is now 8 pages. Each build is 1 page, not 3. If you publish on Amazon KDP, add 2 blank draw-here pages to hit the 24-page minimum.
 
 ## Character lock
 
@@ -96,11 +96,10 @@ Write like a parent reading at bedtime. Short. Present tense. Kody's name often.
 | Section | Pages | Job |
 | --- | --- | --- |
 | Cover | printed, not a colouring page | Sell the character |
-| Dedication / title | 1 | Quiet beat before the fun |
-| Opening | 11 | Meet Kody, tools, safety, ready |
-| Builds | 30 | 10 projects x 3 pages |
-| Close | 2 | Clean up, then "what will you build?" |
-| **Total interior colouring** | **44** | Fits KDP 8.5 x 11 |
+| Opening | 8 | Meet Kody, workshop, 3 tools, belt, safety, ready |
+| Builds | 10 | One page each |
+| Close | 4 | Clean up, pegboard, your turn, high five |
+| **Total colouring pages** | **22** | Add 2 blanks if using KDP |
 
 Cover is coloured art (or colour-hold line art with a yellow hat and one accent). Interior is line art only.
 
@@ -121,13 +120,7 @@ Ramp difficulty. Start small. End with a fort. Each one is something a kid would
 | 9 | Lemonade stand | Sign, pitcher, cups. Kids go wild colouring this. |
 | 10 | Fort | The dream build. Boards, window, flag. |
 
-Each build uses the same 3-page recipe:
-
-1. **Plan.** Kody measures or looks at a simple sketch. Tape measure out.
-2. **Build.** One action: saw, hammer, or drill. Safety gear on.
-3. **Done.** Finished object, Kody presenting it. Big grin.
-
-That recipe is the book. Do not invent a new layout for each project.
+Each build is **one page.** Kody plus the object, mid-build or just finished, big enough to colour. Safety glasses on. Do not split Plan / Build / Done at this page count.
 
 ## Safety (the real point of the intro)
 
@@ -139,7 +132,7 @@ The opening is not a tool catalogue. It is a ritual:
 4. Then you build.
 
 Hard hat is already on. That is who he is.
-Glasses, ear muffs, and gloves are the "now I am ready" layer. By page 11, all three are on, and they stay on for every Build page. Plan pages can be hat + belt only. Done pages can drop ear muffs (the noise is over) but keep glasses and gloves if it still reads clearly. When in doubt, keep the glasses on.
+Glasses, ear muffs, and gloves are one safety page (page 7). By page 8 all three are on. Build pages keep glasses on. Ear muffs only if the tool is loud.
 
 ## What not to brand
 
@@ -162,7 +155,7 @@ Locked for production. Change only if print method changes.
 - No bleed needed if art sits in a white margin. Safer for colouring books. Keep all art **0.5 in** from every edge. Gutter **0.5 in**.
 - If any page bleeds, the whole file must bleed. Then upload at **8.625 x 11.25 in** and keep live art 0.375 in inside trim.
 - Double-sided is OK for crayon age. Markers will show through KDP paper. If you want marker-safe, put art on odd pages and leave even pages blank (page count doubles).
-- Minimum KDP length is 24 pages. This book should land at 44 to 48 interiors plus cover wrap.
+- Minimum KDP length is 24 pages. This book is 22 colouring pages. Add 2 blank draw-here pages for KDP. Self-print can stay at 22.
 
 Cover type: paperback. Title in a chunky rounded sans. Yellow hard hat as the colour hook.
 
@@ -173,10 +166,10 @@ Do not generate the whole book at once. Order:
 1. Character turnaround (front, 3/4, side). Same clothes.
 2. Tool kit sheet (hammer, handsaw, tape, screwdriver, drill, pencil, level).
 3. Safety kit sheet (glasses, ear muffs, gloves).
-4. Opening pages 1 to 11.
-5. One full build (birdhouse) as the template.
+4. Opening pages 1 to 8.
+5. Birdhouse as the one-page build template.
 6. The other nine builds, cloning that template.
-7. Close pages.
+7. Close pages 19 to 22.
 8. Cover last, once the character is stable.
 
 If page 5's Kody looks different from page 1's Kody, stop and fix the character sheet before continuing.

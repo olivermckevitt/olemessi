@@ -48,51 +48,35 @@ Kody using a handsaw on a plank resting on a simple sawhorse. Two hands on the s
 ### Page 5 — Tape measure
 Kody stretching a tape measure across a wooden board. Tape is a long rectangle with the numbers 1, 2, and 3 only. Focused happy face.
 
-### Page 6 — Screwdriver
-Kody using a Phillips screwdriver on a screw in a board. One tool only. No drill.
+### Page 6 — Tool belt close-up
+Close-up of Kody's tool belt at waist height. T-shirt hem and pants visible. Pouches hold: tape measure, screwdriver, carpenter pencil, small level. Hammer in a belt loop. Optional chunky cordless drill on the bench beside him. Big, colourable, not a tiny product diagram.
 
-### Page 7 — Tool belt close-up
-Close-up of Kody's tool belt at waist height. T-shirt hem and pants visible. Pouches hold: tape measure, screwdriver, carpenter pencil, small level. Hammer in a belt loop. Big, colourable, not a tiny product diagram.
+### Page 7 — Safety
+Kody putting on the last of his safety gear: glasses already on, ear muffs on, pulling on simple work gloves. Hard hat stays on. Big happy face. Optional drill on the bench as the reason for ear muffs. No extra people.
 
-### Page 8 — Safety glasses
-Head-and-shoulders plus torso of Kody putting on simple oval safety glasses with both hands. Hard hat stays on. Big happy face. No other props.
-
-### Page 9 — Ears and drill
-Full-body Kody wearing ear muffs and safety glasses, holding a chunky cordless drill. A few simple sound-effect marks around the drill. Friendly, not noisy-scary.
-
-### Page 10 — Gloves
-Kody pulling on simple work gloves, hard hat and glasses and ear muffs already on. One glove on, one going on, or both on with thumbs up. No extra props.
-
-### Page 11 — Ready
+### Page 8 — Ready
 Full-body Kody in full gear (hat, glasses, ear muffs, gloves, tool belt) standing next to a neat stack of 5 wooden boards. Excited pose, arms wide. Clean white space.
 
 ---
 
 ## Build template
 
-For each build, generate 3 images. Swap only the object.
+One image per build. Not three.
 
-**Plan prompt extra:**
-Kody at the workbench looking at a very simple paper sketch of [OBJECT], stretching a tape measure on a board. Hard hat and tool belt on. No ear muffs. Simple bench, lots of white.
+Kody building [OBJECT], which is finished enough to recognise. He uses [TOOL]. Safety glasses on. Ear muffs on only if the tool is a drill or saw. Object is simple, chunky, colourable. Minimal background. Large colour-in shapes.
 
-**Build prompt extra:**
-Kody building [OBJECT], which is half-finished. He uses [TOOL]. Safety glasses and gloves on. Ear muffs on if the tool is a drill or saw. Simple scene, large colour-in shapes.
-
-**Done prompt extra:**
-Kody presenting a finished [OBJECT], big proud smile, ta-da or arms out. Hard hat on. Object is simple, chunky, colourable. Minimal background.
-
-| Build | Object | Build-page tool | Extra on Done page |
+| Build | Object | Tool | Extra |
 | --- | --- | --- | --- |
 | 1 | small birdhouse | hammer | one simple cartoon bird |
-| 2 | rectangular planter box | screwdriver or drill | one flower and a dirt mound |
-| 3 | three-legged or four-legged stool | hammer | Kody sitting on it, feet dangling |
+| 2 | rectangular planter box | screwdriver | one flower and a dirt mound |
+| 3 | four-legged stool | hammer | Kody sitting on it, feet dangling |
 | 4 | square picture frame | screwdriver | blank rectangle inside the frame |
 | 5 | toy box with lid | screwdriver | 3 chunky toys inside |
-| 6 | short bookshelf, 3 shelves | drill + level | 5 chunky books |
-| 7 | doghouse with round door | handsaw then hammer | simple floppy-ear dog in the door |
+| 6 | short bookshelf, 3 shelves | level | 5 chunky books |
+| 7 | doghouse with round door | hammer | simple floppy-ear dog in the door |
 | 8 | picnic table with two benches | hammer | plate and apple |
 | 9 | lemonade stand with sign | hammer | outline letters LEMONADE, pitcher, 2 cups |
-| 10 | kid-sized wooden fort with one square window | hammer | blank flag on top, Kody in the doorway |
+| 10 | kid-sized wooden fort with one square window | hammer | blank flag, Kody in the doorway |
 
 ---
 
@@ -101,8 +85,14 @@ Kody presenting a finished [OBJECT], big proud smile, ta-da or arms out. Hard ha
 ### Clean up
 Kody sweeping with a broom. Pegboard now has tools hanging in the outlines. Small scrap bin. Happy, not tired.
 
+### Pegboard
+The workshop pegboard filled: hammer, saw, tape, screwdriver, drill each in a matching outline. Kody standing beside it, small. Big colourable tools.
+
 ### Your turn
 Kody holding a large blank rectangular board like a sign, facing the viewer, big grin, hard hat and tool belt on. The board is empty so a child can draw on it. No other objects.
+
+### High five
+Close-up of Kody, one hand raised for a high five, hard hat and tool belt on, big smile. Lots of white space.
 
 ---
 
