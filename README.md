@@ -157,6 +157,19 @@ Response:
 
 `folder` is one of the 10 folders. `category` is one of the 4 Kanban types.
 
+## Drawing wiki
+
+Index PDFs and DXF once. Query the JSON database after that. Do not send the drawings back to a model.
+
+```
+npm run index-drawings -- --input ./plans --output ./wiki
+npm run query-drawings -- --db ./wiki/database.json door width grid B
+```
+
+`--ai` is optional leftover-note extraction. Skip it unless regex missed notes. DWG is not parsed. Convert to DXF first.
+
+Sanity checks drop junk before it hits `wiki/database.json`. Conflicts stay in `wiki/_conflicts.md` for manual review. Newest revision wins.
+
 ## Local tests
 
 ```
