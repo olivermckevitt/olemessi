@@ -124,12 +124,13 @@ export function extractFactsFromText(text: string, source: Partial<DrawingSource
     const value = formatFeetInches(match[1], match[2], match[3]);
     const label = nearestLabel(text, index) || value;
     const location = locationNear(text, index);
+    const role = dimensionRole(text, index);
     push({
       type: "dimension",
       location,
       value,
       originalLabel: label,
-      key: factKey("dimension", location, `${label}-${value}`),
+      key: factKey("dimension", location, `${label}-${role}`),
     });
   }
 
@@ -143,7 +144,7 @@ export function extractFactsFromText(text: string, source: Partial<DrawingSource
       location,
       value,
       originalLabel: label,
-      key: factKey("dimension", location, `${label}-${value}`),
+      key: factKey("dimension", location, `${label}-mm`),
     });
   }
 
@@ -156,7 +157,7 @@ export function extractFactsFromText(text: string, source: Partial<DrawingSource
       location,
       value,
       originalLabel: match[2].toUpperCase(),
-      key: factKey("dimension", location, `${match[2]}-${value}`),
+      key: factKey("dimension", location, `${match[2].toUpperCase()}-thk`),
     });
   }
 
@@ -250,8 +251,19 @@ function formatFeetInches(feet: string, inches: string, fraction?: string): stri
 
 function nearestLabel(text: string, index: number): string | null {
   const before = text.slice(Math.max(0, index - 40), index);
-  const tag = before.match(/\b([A-Z]{1,4}[-.]?\d+[A-Z]?)\b/i);
-  return tag ? tag[1] : null;
+  const matches = [...before.matchAll(/\b([A-Z]{2,4}[-.]?\d+[A-Z]?)\b/gi)];
+  if (matches.length === 0) {
+    return null;
+  }
+  return matches[matches.length - 1][1];
+}
+
+function dimensionRole(text: string, index: number): "w" | "h" {
+  const before = text.slice(Math.max(0, index - 10), index);
+  if (/\bx\s*$/i.test(before)) {
+    return "h";
+  }
+  return "w";
 }
 
 function isDateContext(text: string, index: number): boolean {

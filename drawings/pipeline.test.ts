@@ -50,7 +50,7 @@ describe("compact leftover AI", () => {
   });
 
   it("builds a short user message and skips already-known lines", () => {
-    const leftover = leftoverText("DR-1 3'-0\"\nSTRANGE CALLOUT ON GRID C\n", [
+    const leftover = leftoverText("DR-1 3'-0\"\nSTRANGE CALLOUT ON GRID C PLEASE VERIFY IN FIELD\n", [
       {
         type: "dimension",
         location: null,
@@ -68,7 +68,10 @@ describe("compact leftover AI", () => {
   });
 
   it("parses residual JSON from a fake model", async () => {
-    const facts = await extractResidualFacts("STRANGE CALLOUT ON GRID C", [], {
+    const facts = await extractResidualFacts(
+      "STRANGE CALLOUT ON GRID C PLEASE VERIFY IN FIELD BEFORE POUR",
+      [],
+      {
       complete: async () =>
         JSON.stringify({
           facts: [{ type: "note", location: "Grid C", value: "Strange callout", originalLabel: "note" }],

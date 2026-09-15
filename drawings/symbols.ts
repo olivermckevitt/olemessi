@@ -76,5 +76,12 @@ export function extractSymbolLabels(text: string): MappedSymbol[] {
       }
     }
   }
-  return [...found.values()];
+
+  return [...found.values()].filter((item, _, all) => {
+    const label = item.originalLabel.toUpperCase();
+    return !all.some(
+      (other) =>
+        other.originalLabel.toUpperCase() !== label && other.originalLabel.toUpperCase().includes(label),
+    );
+  });
 }

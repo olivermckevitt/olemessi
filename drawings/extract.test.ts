@@ -56,6 +56,7 @@ describe("extractSymbolLabels", () => {
     expect(labels).toContain("Door [DR-1]");
     expect(labels).toContain("Door [DR-2]");
     expect(labels).toContain("Duplex Receptacle [WP-GFI]");
+    expect(labels).not.toContain("Duplex Receptacle [GFI]");
   });
 });
 
@@ -100,6 +101,15 @@ describe("extractFactsFromText", () => {
     const gfi = facts.find((fact) => fact.type === "symbol" && fact.originalLabel === "WP-GFI");
     expect(gfi?.value).toBe("Duplex Receptacle [WP-GFI]");
     expect(gfi?.category).toBe("Receptacle");
+  });
+
+  it("uses the same key for a door width when the number changes", () => {
+    const older = extractFactsFromText(SAMPLE, { path: "a-101.txt" });
+    const newer = extractFactsFromText(SAMPLE.replace("3'-0\"", "3'-6\""), { path: "a-101-rev.txt" });
+    const widthKey = (facts: typeof older) =>
+      facts.find((fact) => fact.type === "dimension" && fact.originalLabel === "DR-1" && fact.value.startsWith("3'"))?.key;
+    expect(widthKey(older)).toBe(widthKey(newer));
+    expect(widthKey(older)).toContain("-w");
   });
 
   it("keeps unstructured notes", () => {
