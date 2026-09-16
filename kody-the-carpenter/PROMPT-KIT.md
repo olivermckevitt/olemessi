@@ -69,8 +69,8 @@ Kody building [OBJECT], which is finished enough to recognise. He uses [TOOL]. W
 
 | Build | Object | Tool | Extra | Pose |
 | --- | --- | --- | --- | --- |
-| 1 | small birdhouse | hammer | one simple cartoon bird | standing, nailing |
-| 2 | rectangular planter box | screwdriver | one flower and a dirt mound | kneeling |
+| 1 | wooden stud wall frame, plates and studs | hammer | review: `r21-wall-frame.png` | standing, nailing a stud |
+| 2 | 4-pane window going into a wall opening | hands | review: `r22-window.png` | lifting the window in |
 | 3 | four-legged stool | hammer | nailing a leg | crouching |
 | 4 | square picture frame | screwdriver | blank rectangle inside the frame | sitting at bench |
 | 5 | toy box with lid | screwdriver | 3 chunky toys inside | bending over the box |

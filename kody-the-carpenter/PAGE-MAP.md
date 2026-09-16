@@ -35,8 +35,8 @@ Reply with 25 numbers in book order.
 | 17 | Window trim | `pages/review/r17-trim.png` |
 | 18 | Cabinets | `pages/review/r18-cabinets.png` |
 | 19 | Clean up | `pages/review/r19-cleanup.png` |
-| 21 | Birdhouse | `pages/review/r21-birdhouse.png` |
-| 22 | Planter | `pages/review/r22-planter.png` |
+| 21 | Wall frame | `pages/review/r21-wall-frame.png` |
+| 22 | Installing a window | `pages/review/r22-window.png` |
 | 23 | Stool | `pages/review/r23-stool.png` |
 | 24 | Picture frame | `pages/review/r24-frame.png` |
 | 25 | Toy box | `pages/review/r25-toybox.png` |
@@ -102,8 +102,8 @@ Each page: Kody building it, object big enough to colour, 70 to 80% white space.
 
 | Page | Build | Status | Caption | Visual |
 | --- | --- | --- | --- | --- |
-| 9 | Birdhouse | not drawn | "Kody builds a birdhouse." | Half-built birdhouse. One simple bird OK. |
-| 10 | Planter | not drawn | "A box for dirt and flowers." | Planter with a dirt mound and one flower. |
+| 9 | Wall frame | **review** `r21-wall-frame.png` | "Kody builds a wall." | Stud wall frame. Hammering a stud. |
+| 10 | Window | **review** `r22-window.png` | "In goes the window." | Setting a 4-pane window into a wall opening. |
 | 11 | Stool | not drawn | "Four legs. One seat." | Kody sitting on the new stool, or nailing a leg. |
 | 12 | Picture frame | not drawn | "A frame for a favourite picture." | Finished frame. Blank rectangle inside for the kid to doodle. |
 | 13 | Toy box | not drawn | "A box for toys." | Open toy box, 3 chunky toys. |
@@ -164,8 +164,8 @@ Skipped from the jobsite sheets: bricklaying, the coloured-hair panel, duplicate
 6. Is it straight? Kody checks.
 7. Glasses, ears, gloves. Safety first!
 8. Kody is ready. Let's build something!
-9. Kody builds a birdhouse.
-10. A box for dirt and flowers.
+9. Kody builds a wall.
+10. In goes the window.
 11. Four legs. One seat.
 12. A frame for a favourite picture.
 13. A box for toys.
