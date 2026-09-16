@@ -169,7 +169,7 @@ Ramp difficulty. Start small. Fort is 9. Well is 10. Each one is something a kid
 
 | # | Build | Why it is in the book |
 | --- | --- | --- |
-| 1 | Wall frame | Stud wall. Real carpenter energy. Review: `r21-wall-frame.png` |
+| 1 | Stairs | Three chunky steps. Review: `r21-stairs.png` |
 | 2 | Window | Installing a window into a wall. Review: `r22-window.png` |
 | 3 | Stool | Callback to the workshop stool on page 2. |
 | 4 | Picture frame | Tiny, recognisable, can "hold" a drawing. |
