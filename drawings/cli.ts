@@ -1,7 +1,8 @@
 import { join } from "node:path";
 import { openAiCompactClient } from "./openai-client";
-import { formatHitsCompact, loadDatabase, queryDatabase } from "./query";
+import { formatHitsCompact, loadDatabase, queryDatabase, queryStore } from "./query";
 import { indexDrawings } from "./pipeline";
+import { DrawingStore } from "./store";
 
 export function parseArgs(argv: string[]): {
   command: "index" | "query";
@@ -10,6 +11,7 @@ export function parseArgs(argv: string[]): {
   db?: string;
   query?: string;
   ai: boolean;
+  vision: boolean;
 } {
   const args = [...argv];
   let command: "index" | "query" | undefined;
@@ -29,6 +31,7 @@ export function parseArgs(argv: string[]): {
   const output = flagValue("--output");
   const db = flagValue("--db");
   const ai = args.includes("--ai");
+  const vision = args.includes("--vision");
   const query = args
     .filter((item, index) => {
       if (item.startsWith("--") || item === "index" || item === "query") {
@@ -51,6 +54,7 @@ export function parseArgs(argv: string[]): {
     db,
     query: query || undefined,
     ai,
+    vision,
   };
 }
 
@@ -58,14 +62,31 @@ export async function main(argv = process.argv.slice(2)): Promise<number> {
   const parsed = parseArgs(argv);
 
   if (parsed.command === "query") {
-    const dbPath = parsed.db || join(process.cwd(), "wiki", "database.json");
+    const sqlitePath = parsed.db?.endsWith(".sqlite")
+      ? parsed.db
+      : parsed.db
+        ? parsed.db
+        : join(process.cwd(), "wiki", "drawings.sqlite");
     if (!parsed.query) {
-      console.error("Usage: query-drawings --db ./wiki/database.json <search>");
+      console.error("Usage: query-drawings --db ./wiki/drawings.sqlite <search>");
       return 1;
     }
-    const db = await loadDatabase(dbPath);
-    const hits = queryDatabase(db, parsed.query);
-    console.log(formatHitsCompact(hits) || "No matches.");
+
+    if (sqlitePath.endsWith(".json")) {
+      const db = await loadDatabase(sqlitePath);
+      const hits = queryDatabase(db, parsed.query);
+      console.log(formatHitsCompact(hits) || "No matches.");
+      return 0;
+    }
+
+    const store = await DrawingStore.open(sqlitePath);
+    const result = await queryStore(store, parsed.query);
+    if (result.needsVision && !parsed.vision) {
+      console.log(result.rows.join("\n") || "No matches.");
+      console.log("needs_vision=true (pass --vision to crop a sheet; default skips raster)");
+      return 0;
+    }
+    console.log(result.rows.join("\n") || "No matches.");
     return 0;
   }
 
@@ -96,7 +117,7 @@ export async function main(argv = process.argv.slice(2)): Promise<number> {
       `conflicts ${result.database.conflictCount}`,
       `rejected ${result.database.rejectedCount}`,
       `errors ${result.errors.length}`,
-      `db ${join(output, "database.json")}`,
+      `db ${result.storePath}`,
     ].join("\n"),
   );
   return 0;

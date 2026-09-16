@@ -28,6 +28,9 @@ export const SYMBOL_CATEGORIES = [
   "Damper",
   "Fire extinguisher",
   "Exit",
+  "Footing",
+  "Slab",
+  "Conduit",
   "Unknown",
 ] as const;
 

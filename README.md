@@ -159,16 +159,16 @@ Response:
 
 ## Drawing wiki
 
-Index PDFs and DXF once. Query the JSON database after that. Do not send the drawings back to a model.
+Index PDFs and DXF once. Query `wiki/drawings.sqlite` after that. Do not send the drawings back to a model.
 
 ```
 npm run index-drawings -- --input ./plans --output ./wiki
-npm run query-drawings -- --db ./wiki/database.json door width grid B
+npm run query-drawings -- --db ./wiki/drawings.sqlite door width grid B
 ```
 
-`--ai` is optional leftover-note extraction. Skip it unless regex missed notes. DWG is not parsed. Convert to DXF first.
+`--ai` is optional leftover-note extraction. `--vision` is optional cropped raster fallback for low-confidence lengths only. Skip both unless you need them. DWG is not parsed. Convert to DXF first.
 
-Sanity checks drop junk before it hits `wiki/database.json`. Conflicts stay in `wiki/_conflicts.md` for manual review. Newest revision wins.
+`drawings.md` is the master map. Sanity checks and schedule macros drop or flag junk before it hits sqlite. Conflicts stay in `wiki/_conflicts.md`. Newest revision wins.
 
 ## Local tests
 

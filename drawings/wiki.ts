@@ -1,17 +1,35 @@
 import { mkdir, writeFile } from "node:fs/promises";
 import { join } from "node:path";
+import type { DrawingObject, Trade } from "./objects";
+import { tradeFor } from "./objects";
+import type { DrawingStore } from "./store";
 import { slug } from "./text";
 import type { DrawingDatabase, ResolvedFact } from "./types";
 
-export async function writeWiki(outputDir: string, db: DrawingDatabase): Promise<void> {
+export async function writeWiki(
+  outputDir: string,
+  db: DrawingDatabase,
+  store?: DrawingStore,
+): Promise<void> {
   await mkdir(join(outputDir, "by-type"), { recursive: true });
   await mkdir(join(outputDir, "by-location"), { recursive: true });
   await mkdir(join(outputDir, "drawings"), { recursive: true });
+  await mkdir(join(outputDir, "by-trade"), { recursive: true });
 
   await writeFile(join(outputDir, "index.md"), renderIndex(db));
   await writeFile(join(outputDir, "_conflicts.md"), renderConflicts(db));
   await writeFile(join(outputDir, "_rejected.md"), renderRejected(db));
   await writeFile(join(outputDir, "database.json"), JSON.stringify(db, null, 2));
+
+  if (store) {
+    await writeFile(join(outputDir, "drawings.md"), renderMasterMap(store, db));
+    const validations = store.validations();
+    await writeFile(join(outputDir, "_validation.md"), renderValidations(validations));
+    const trades = group(store.listObjects(), (object) => tradeFor(object.kind, object.discipline));
+    for (const trade of ["concrete", "electrical", "mechanical", "architectural"] as Trade[]) {
+      await writeFile(join(outputDir, "by-trade", `${trade}.md`), renderTradePage(trade, trades.get(trade) ?? []));
+    }
+  }
 
   const types = ["dimension", "material", "specification", "symbol", "note"] as const;
   for (const type of types) {
@@ -36,7 +54,7 @@ function renderIndex(db: DrawingDatabase): string {
     "",
     `Drawings: ${db.drawingCount}. Facts: ${db.factCount}. Conflicts: ${db.conflictCount}. Rejected: ${db.rejectedCount}.`,
     "",
-    "Query `database.json` next time. Do not re-upload PDFs.",
+    "Query `drawings.sqlite` next time. Do not re-upload PDFs.",
     "",
     "## Conflicts",
     "",
@@ -45,6 +63,10 @@ function renderIndex(db: DrawingDatabase): string {
     "## Rejected by sanity check",
     "",
     db.rejectedCount > 0 ? "See [_rejected.md](_rejected.md)." : "None.",
+    "",
+    "## Master map",
+    "",
+    "See [drawings.md](drawings.md).",
     "",
     "## By type",
     "",
@@ -56,6 +78,63 @@ function renderIndex(db: DrawingDatabase): string {
     "",
   ];
   return lines.join("\n");
+}
+
+function renderMasterMap(store: DrawingStore, db: DrawingDatabase): string {
+  const lines = [
+    "# Drawings",
+    "",
+    `Sheets: ${db.drawingCount}. Objects: ${store.kindCounts().reduce((sum, row) => sum + row.count, 0)}. Conflicts: ${db.conflictCount}.`,
+    "",
+    "Query sqlite. Do not send these sheets to a vision model.",
+    "",
+    "## Sheets",
+    "",
+  ];
+  for (const sheet of store.sheets()) {
+    lines.push(
+      `- **${sheet.sheetId}** · ${sheet.discipline} · rev ${sheet.revisionDate || "unknown"} · scale ${sheet.scaleText || "unset"}`,
+    );
+  }
+  lines.push("", "## Object counts", "");
+  for (const row of store.kindCounts()) {
+    lines.push(`- ${row.kind}: ${row.count}`);
+  }
+  return `${lines.join("\n")}\n`;
+}
+
+function renderTradePage(trade: string, objects: DrawingObject[]): string {
+  const lines = [`# ${trade}`, ""];
+  const notes = objects.filter((object) => object.kind === "note");
+  if (notes.length > 0) {
+    lines.push("## Notes", "");
+    for (const note of notes) {
+      lines.push(`> ${note.display}`);
+      lines.push("");
+    }
+  }
+  lines.push("## Objects", "");
+  if (objects.filter((object) => object.kind !== "note").length === 0) {
+    lines.push("None.");
+    return `${lines.join("\n")}\n`;
+  }
+  for (const object of objects.filter((item) => item.kind !== "note")) {
+    const loc = object.location ? ` @ ${object.location}` : "";
+    lines.push(`- ${object.display}${loc} · ${object.kind} · ${object.reliability} · ${object.sourceSheet}`);
+  }
+  return `${lines.join("\n")}\n`;
+}
+
+function renderValidations(rows: Array<{ status: string; detail: string }>): string {
+  const lines = ["# Macro validation", ""];
+  if (rows.length === 0) {
+    lines.push("None.");
+    return `${lines.join("\n")}\n`;
+  }
+  for (const row of rows) {
+    lines.push(`- ${row.status}: ${row.detail}`);
+  }
+  return `${lines.join("\n")}\n`;
 }
 
 function renderRejected(db: DrawingDatabase): string {

@@ -6,15 +6,20 @@ import {
   type CompactAiClient,
 } from "./compact-ai";
 import { factsFromSource, ingestFile } from "./ingest";
+import { extractMacros, parseScale } from "./macros";
+import { disciplineFromSheet, factsToObjects } from "./objects";
 import { factKey } from "./text";
 import { resolveFacts } from "./resolve";
+import { DrawingStore } from "./store";
 import type { DrawingDatabase, DrawingSource, Fact } from "./types";
+import { runMacroValidations } from "./validate";
 import { writeWiki } from "./wiki";
 
 const FACT_TYPES = new Set(["dimension", "material", "specification", "symbol", "note"]);
 
 export type IndexResult = {
   database: DrawingDatabase;
+  storePath: string;
   errors: Array<{ path: string; error: string }>;
 };
 
@@ -88,9 +93,10 @@ export async function indexDrawings(options: {
   }
 
   const { resolved, conflicts, rejected } = resolveFacts(facts);
+  const uniqueSheets = new Set(sources.map((source) => source.sheetId));
   const database: DrawingDatabase = {
     generatedAt: (options.now ?? (() => new Date().toISOString()))(),
-    drawingCount: sources.length,
+    drawingCount: uniqueSheets.size,
     factCount: resolved.length,
     conflictCount: conflicts.length,
     rejectedCount: rejected.length,
@@ -106,7 +112,41 @@ export async function indexDrawings(options: {
   };
 
   await mkdir(options.output, { recursive: true });
-  await writeWiki(options.output, database);
-  return { database, errors };
+  const store = await DrawingStore.create();
+  const latestBySheet = new Map<string, DrawingSource>();
+  for (const source of sources) {
+    const prev = latestBySheet.get(source.sheetId);
+    if (!prev || (source.revisionDate || "") >= (prev.revisionDate || "")) {
+      latestBySheet.set(source.sheetId, source);
+    }
+  }
+  for (const source of latestBySheet.values()) {
+    const scale = parseScale(source.rawText);
+    store.insertSheet(source, {
+      discipline: disciplineFromSheet(source.sheetId),
+      scaleText: scale.scaleText,
+      scaleRatio: scale.scaleRatio,
+    });
+    for (const macro of extractMacros(source.rawText)) {
+      store.insertMacro({
+        name: macro.name,
+        kind: macro.kind,
+        expectedValue: macro.expectedValue,
+        unit: macro.unit,
+        sourceSheet: source.sheetId,
+      });
+    }
+  }
+  for (const object of factsToObjects(resolved)) {
+    store.insertObject(object);
+  }
+  store.insertConflicts(conflicts);
+  store.insertRejected(rejected);
+  runMacroValidations(store);
+
+  const storePath = join(options.output, "drawings.sqlite");
+  await store.save(storePath);
+  await writeWiki(options.output, database, store);
+  return { database, storePath, errors };
 }
 

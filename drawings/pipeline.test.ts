@@ -96,6 +96,9 @@ describe("pipeline wiki + query", () => {
 
     const index = await readFile(join(output, "index.md"), "utf8");
     expect(index).toContain("Conflicts");
+    expect(index).toContain("drawings.md");
+    const master = await readFile(join(output, "drawings.md"), "utf8");
+    expect(master).toContain("S-101");
     const conflicts = await readFile(join(output, "_conflicts.md"), "utf8");
     expect(conflicts).toContain("kept");
 
@@ -118,6 +121,7 @@ describe("parseArgs", () => {
       command: "query",
       db: "./wiki/database.json",
       query: "door width",
+      vision: false,
     });
   });
 });
