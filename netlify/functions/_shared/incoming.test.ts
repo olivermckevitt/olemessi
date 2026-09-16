@@ -71,6 +71,23 @@ describe("readPayload", () => {
       expect(parsed.image?.filename).toBe("photo.jpg");
     }
   });
+
+  it("accepts a form image_base64 field from Shortcuts JSON mistakes", async () => {
+    const form = new FormData();
+    form.set("text", "painters on site");
+    form.set("image_base64", Buffer.from("jpeg-bytes").toString("base64"));
+    form.set("image_mime", "image/jpeg");
+
+    const parsed = await readPayload(
+      new Request("https://example.com/api/classify", { method: "POST", body: form }),
+    );
+
+    expect(parsed.ok).toBe(true);
+    if (parsed.ok) {
+      expect(parsed.image?.mime).toBe("image/jpeg");
+      expect(parsed.image?.filename).toBe("photo.jpg");
+    }
+  });
 });
 
 describe("secretFromRequest", () => {

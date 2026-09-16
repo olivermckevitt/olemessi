@@ -90,23 +90,43 @@ Not `/.netlify/functions/classify`. Open that URL in Safari. You should see `{"o
 
 Name: **File jobsite note**
 
-1. New Shortcut
-2. Add **Receive** → Text, from Share Sheet
-3. If input is empty, **Get Clipboard** → Set variable `Transcript`
-4. Optional photo: **Select Photos** → **Convert Image** JPEG → Set variable `Photo`
-5. Add **Get Contents of URL**
-   - URL: `https://superb-halva-c3d71d.netlify.app/api/classify` as plain text. No markdown.
-   - Method: POST
-   - Headers: key must be exactly `X-Classify-Secret`
-   - Request Body: Form
-     - `text` = `Transcript`
-     - `project` = `Store 1184`
-     - `photo` = `Photo` as a File. The field name must be the word `photo`. The value must be the File, not text.
-6. **Get Dictionary from Input** using Contents of URL
-7. **Get Dictionary Value** `category` → Show Notification
-8. **Get Dictionary Value** `url` → Open URLs
+Delete the old Shortcut. Do not edit it. iOS Form File fields are what kept eating the photo.
 
-If the header keeps getting truncated, add a Form field `secret` with the same value as `CLASSIFY_SECRET`.
+1. New Shortcut
+2. Add **Receive** → Text, from Share Sheet. If there’s no input: Continue
+3. **If** Shortcut Input has any value
+   - **Set variable** `Transcript` to Shortcut Input
+4. **Otherwise**
+   - **Ask for Text** `What happened on site?`
+   - **Set variable** `Transcript` to Provided Input
+5. **End If**
+6. **Select Photos**. Select Multiple: Off
+7. **If** Photos has any value
+   - **Resize** Photos to Width `1024`, Height Automatic
+   - **Convert** Resized Image to JPEG
+   - **Encode** Converted Image with Base64
+   - **Set variable** `PhotoB64` to Encoded Content
+8. **End If**
+9. **If** PhotoB64 has any value
+   - **Get Contents of URL**
+     - URL: typed text. Until PR 4 is merged use `https://deploy-preview-4--superb-halva-c3d71d.netlify.app/api/classify`. After merge use `https://superb-halva-c3d71d.netlify.app/api/classify`.
+     - Method: POST
+     - Headers: exactly one row. Key typed as `X-Classify-Secret`. Value is your Netlify `CLASSIFY_SECRET`. Delete empty header rows.
+     - Request Body: **JSON**. Not Form. Not File.
+     - Keys are typed text. Never drop a variable onto a key name.
+       - `text` = `Transcript`
+       - `project` = `Store 1184`
+       - `image_base64` = `PhotoB64`
+       - `image_mime` = `image/jpeg` as typed text
+10. **Otherwise**
+   - Duplicate that **Get Contents of URL**
+   - Delete the `image_base64` and `image_mime` keys. Leave `text` and `project`.
+11. **End If**
+12. **Get Dictionary from Input** using Contents of URL
+13. **Get Dictionary Value** `category` → Show Notification
+14. **Get Dictionary Value** `url` → Open URLs
+
+Play it once with a JPEG. If iOS says the network connection was lost, you still have a File field. Delete it. JSON only.
 
 Text-only JSON still works if you skip the photo:
 

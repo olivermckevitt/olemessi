@@ -63,7 +63,16 @@ async function readForm(
   }
 
   const fields: Record<string, unknown> = {};
-  for (const key of ["text", "project", "secret", "CLASSIFY_SECRET", "CLASSIFY_KEY"]) {
+  for (const key of [
+    "text",
+    "project",
+    "secret",
+    "CLASSIFY_SECRET",
+    "CLASSIFY_KEY",
+    "image_base64",
+    "image_mime",
+    "image_filename",
+  ]) {
     const value = form.get(key);
     if (typeof value === "string") {
       fields[key] = value;
@@ -73,6 +82,17 @@ async function readForm(
   const file = firstFile(form);
   if (file) {
     const parsed = await imageFromFile(file);
+    if ("error" in parsed) {
+      return { ok: false, error: parsed };
+    }
+    return { ok: true, fields, image: parsed };
+  }
+
+  if (typeof fields.image_base64 === "string" && fields.image_base64.trim().length > 0) {
+    const mime = typeof fields.image_mime === "string" ? fields.image_mime : "image/jpeg";
+    const filename =
+      typeof fields.image_filename === "string" ? fields.image_filename : "photo.jpg";
+    const parsed = imageFromBase64(fields.image_base64, mime, filename);
     if ("error" in parsed) {
       return { ok: false, error: parsed };
     }
