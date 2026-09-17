@@ -22,8 +22,6 @@ export type NotionNote = {
   redFlag: boolean;
   alertStatus?: "red_flag";
   skillAssessment?: string;
-  photoUrl?: string;
-  photoName?: string;
   phone?: string;
   email?: string;
   sourceUrl?: string;
@@ -160,18 +158,6 @@ function noteProperties(
     properties["Skill Assessment"] = richText(note.skillAssessment);
   }
 
-  if (note.photoUrl) {
-    properties.Photo = {
-      files: [
-        {
-          name: clip(note.photoName ?? "photo.jpg", 100),
-          type: "external",
-          external: { url: note.photoUrl },
-        },
-      ],
-    };
-  }
-
   if (note.sourceUrl) {
     properties.Source = { url: note.sourceUrl };
   }
@@ -197,17 +183,6 @@ function pageChildren(note: NotionNote) {
       type: "callout",
       callout: {
         rich_text: [{ type: "text", text: { content: clip(note.summary, RICH_TEXT_LIMIT) } }],
-      },
-    });
-  }
-
-  if (note.photoUrl) {
-    children.push({
-      object: "block",
-      type: "image",
-      image: {
-        type: "external",
-        external: { url: note.photoUrl },
       },
     });
   }

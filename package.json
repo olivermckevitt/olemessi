@@ -6,7 +6,6 @@
     "test": "vitest run"
   },
   "dependencies": {
-    "@netlify/blobs": "^10.0.10",
     "@netlify/functions": "^4.2.5",
     "openai": "^5.12.2"
   },

@@ -8,17 +8,12 @@ import {
 } from "./folders";
 import { readPayload, secretFromRequest } from "./incoming";
 import type { NotionNote } from "./notion";
-import {
-  parseClassifyRequest,
-  type ImageInput,
-  type ModelOutput,
-} from "./parse";
+import { parseClassifyRequest, type ModelOutput } from "./parse";
 
 export type ClassifyDeps = {
   getSecret: () => string | undefined;
   hasSkillBase: () => boolean;
-  classify: (input: { text: string; image?: ImageInput }) => Promise<ModelOutput>;
-  storePhoto?: (image: ImageInput) => Promise<{ url: string }>;
+  classify: (input: { text: string }) => Promise<ModelOutput>;
   saveNote: (note: NotionNote) => Promise<{ url: string }>;
   saveLesson: (note: NotionNote) => Promise<{ url: string }>;
   today: () => string;
@@ -35,7 +30,6 @@ export async function handleClassify(req: Request, deps: ClassifyDeps): Promise<
     secretFromRequest(req, payload.fields),
     deps.getSecret(),
     payload.fields,
-    payload.image,
   );
   if ("error" in parsed) {
     return json({ error: parsed.error }, parsed.status);
@@ -43,7 +37,7 @@ export async function handleClassify(req: Request, deps: ClassifyDeps): Promise<
 
   let classified: ModelOutput;
   try {
-    classified = await deps.classify({ text: parsed.text, image: parsed.image });
+    classified = await deps.classify({ text: parsed.text });
   } catch {
     return json({ error: "Classification failed" }, 502);
   }
@@ -60,15 +54,6 @@ export async function handleClassify(req: Request, deps: ClassifyDeps): Promise<
   );
   const fields = contactFields(folder, classified.phone, classified.email);
 
-  let photoUrl: string | undefined;
-  if (parsed.image && deps.storePhoto) {
-    try {
-      photoUrl = (await deps.storePhoto(parsed.image)).url;
-    } catch {
-      return json({ error: "Photo save failed" }, 502);
-    }
-  }
-
   const note: NotionNote = {
     title: classified.title,
     folder,
@@ -84,8 +69,6 @@ export async function handleClassify(req: Request, deps: ClassifyDeps): Promise<
     redFlag: skill.red_flag,
     alertStatus: skill.alert_status ?? undefined,
     skillAssessment: skill.skill_assessment ?? undefined,
-    photoUrl,
-    photoName: parsed.image?.filename,
     ...fields,
   };
 

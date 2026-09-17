@@ -20,23 +20,19 @@ describe("readPayload", () => {
     });
   });
 
-  it("accepts a photo file field as the image", async () => {
+  it("keeps only text fields and ignores a leftover photo file", async () => {
     const form = new FormData();
     form.set("text", "open shaft");
     form.set("photo", new File(["jpeg-bytes"], "shot.jpg", { type: "image/jpeg" }));
 
-    const req = new Request("https://example.com/api/classify", {
-      method: "POST",
-      body: form,
-    });
+    const parsed = await readPayload(
+      new Request("https://example.com/api/classify", { method: "POST", body: form }),
+    );
 
-    const parsed = await readPayload(req);
-    expect(parsed.ok).toBe(true);
-    if (parsed.ok) {
-      expect(parsed.fields.text).toBe("open shaft");
-      expect(parsed.image?.mime).toBe("image/jpeg");
-      expect(parsed.image?.filename).toBe("shot.jpg");
-    }
+    expect(parsed).toEqual({
+      ok: true,
+      fields: { text: "open shaft" },
+    });
   });
 });
 
