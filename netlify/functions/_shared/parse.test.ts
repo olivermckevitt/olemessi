@@ -41,7 +41,7 @@ describe("parseModelOutput", () => {
       "location": "Grid B stair",
       "subcontractor_or_trade": "Framing",
       "urgency": "critical",
-      "daily_log_summary": "Photo confirms the stair shaft has no guardrail.",
+      "daily_log_summary": "Stair shaft has no guardrail.",
       "route": { "kanban": true, "knowledge_base": true },
       "red_flag": true,
       "alert_status": "red_flag",

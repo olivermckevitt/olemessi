@@ -2,9 +2,9 @@
 
 Jobsite note classifier for a retail construction superintendent.
 
-Whisper Flow text, plus an optional photo from the Shortcut, posts here. This classifies the note, saves it to Notion, and returns JSON.
+Click the desktop icon, dictate with Wispr Flow into the “What happened on site?” box, then file. It categorizes the note and saves it to Notion.
 
-One dictation becomes one active Notion row. Long-term insights are copied to Lessons Learned. No website. No search.
+One dictation becomes one active Notion row. Long-term insights are copied to Lessons Learned. No photos. No search.
 
 ## Folders
 
@@ -31,8 +31,6 @@ Kanban types sit on top of the folder:
 Primary intent only. Wrong folder: change it in Notion.
 
 Contacts also extract phone and email when they are in the transcript. To-dos are a normal note. No checkbox.
-
-Photo is optional. Text-only still works. If you send a photo, it is analyzed with the transcript and attached to the Notion page. JPEG, PNG, WebP, or GIF. Max 4 MB. Convert iPhone HEIC to JPEG in the Shortcut.
 
 ## Notion
 
@@ -80,35 +78,46 @@ Do not set `OPENAI_API_KEY`. Netlify injects the gateway key.
 
 Paste or link the skill base and I will wire `NOTION_SKILL_BASE_PAGE_ID`. Until then, `red_flag` is always false.
 
-### 3. Apple Shortcut
+### 3. Desktop capture
 
-The live URL is:
+Live page:
 
-`https://superb-halva-c3d71d.netlify.app/api/classify`
+`https://superb-halva-c3d71d.netlify.app/`
 
-Not `/.netlify/functions/classify`. Open that URL in Safari. You should see `{"ok":true,"post":"/api/classify"}`. If Safari says Not Found, Netlify is still deploying `main`. Set the production branch to this PR branch, or merge the PR, then redeploy.
+1. Open that page.
+2. Paste `CLASSIFY_SECRET` once. It stays on that computer.
+3. Mac: File → Add to Dock. Windows: pin the tab or drag the URL to the desktop.
+4. Click the icon. The “What happened on site?” box is focused.
+5. Hold the Wispr Flow hotkey and talk. Default Mac hotkey is `fn`. Default Windows hotkey is `Ctrl+Win`.
+6. Click **File note**. Autosave. Notion opens the new row.
 
-Name: **File jobsite note**
+Wispr Flow cannot be started by the page. The box has to be focused, then you hold the Flow hotkey.
 
-1. New Shortcut
-2. Add **Receive** → Text, from Share Sheet
-3. If input is empty, **Get Clipboard** → Set variable `Transcript`
-4. Optional photo: **Select Photos** → **Convert Image** JPEG → Set variable `Photo`
-5. Add **Get Contents of URL**
-   - URL: `https://superb-halva-c3d71d.netlify.app/api/classify` as plain text. No markdown.
+### 4. Optional Mac popup Shortcut
+
+If you want the old Ask for Text popup instead of the page:
+
+1. New Shortcut named **File jobsite note**
+2. **Ask for Text** `What happened on site?`
+3. **Get Contents of URL**
+   - URL: `https://superb-halva-c3d71d.netlify.app/api/classify`
    - Method: POST
-   - Headers: key must be exactly `X-Classify-Secret`
-   - Request Body: Form
-     - `text` = `Transcript`
+   - Headers: key typed as `X-Classify-Secret`
+   - Request Body: JSON
+     - `text` = Provided Input
      - `project` = `Store 1184`
-     - `image` = `Photo` as a File. Not `photo`.
-6. **Get Dictionary from Input** using Contents of URL
-7. **Get Dictionary Value** `category` → Show Notification
-8. **Get Dictionary Value** `url` → Open URLs
+4. **Get Dictionary from Input**
+5. **Get Dictionary Value** `category` → Show Notification
+6. **Get Dictionary Value** `url` → Open URLs
+7. File → Add to Dock
 
-If the header keeps getting truncated, add a Form field `secret` with the same value as `CLASSIFY_SECRET`.
+Hold Flow in that text box, then tap OK.
 
-Text-only JSON still works if you skip the photo:
+## API
+
+`POST /api/classify`
+
+JSON:
 
 ```json
 {
@@ -117,41 +126,22 @@ Text-only JSON still works if you skip the photo:
 }
 ```
 
-Autosave. You do not confirm the folder first.
-
-## API
-
-`POST /api/classify`
-
-Form fields: `text`, `project` (optional), `image` (optional file).
-
-Or JSON:
-
-```json
-{
-  "text": "open shaft at grid B, no rail",
-  "project": "Store 1184",
-  "image_base64": "<optional>",
-  "image_mime": "image/jpeg"
-}
-```
-
 Response:
 
 ```json
 {
-  "category": "Safety Issues and Inspections",
-  "title": "Open shaft no rail",
-  "location": "Grid B stair",
-  "subcontractor_or_trade": "Framing",
-  "urgency": "critical",
-  "daily_log_summary": "Photo confirms the stair shaft has no guardrail.",
+  "category": "Daily Log / Site Progress",
+  "title": "Paint delivery at dock",
+  "location": "Dock",
+  "subcontractor_or_trade": null,
+  "urgency": "medium",
+  "daily_log_summary": "Paint delivery is at 7am at the dock.",
   "route": { "kanban": true, "knowledge_base": false },
   "red_flag": false,
   "alert_status": null,
   "skill_assessment": null,
   "url": "https://www.notion.so/...",
-  "folder": "Safety and Inspections"
+  "folder": "Logistics and Deliveries"
 }
 ```
 

@@ -46,48 +46,11 @@ describe("notionPagePayload", () => {
 
     const properties = payload.properties as Record<string, unknown>;
     expect(properties.Phone).toBeUndefined();
+    expect(properties.Photo).toBeUndefined();
     expect(properties.Status).toEqual({ select: { name: "To Do" } });
     expect(properties["Kanban Type"]).toEqual({
       select: { name: "Daily Log / Site Progress" },
     });
-  });
-
-  it("puts the photo on the page and in the Photo property", () => {
-    const payload = notionPagePayload("db-id", {
-      title: "Open shaft",
-      folder: "Safety and Inspections",
-      kanbanType: "Safety Issues and Inspections",
-      status: "To Do",
-      captured: "2026-09-10",
-      transcript: "no rail",
-      urgency: "high",
-      summary: "Open shaft, no rail.",
-      redFlag: false,
-      photoUrl: "https://example.com/uploads/shot.jpg",
-      photoName: "shot.jpg",
-    });
-
-    const properties = payload.properties as Record<string, unknown>;
-    expect(properties.Photo).toEqual({
-      files: [
-        {
-          name: "shot.jpg",
-          type: "external",
-          external: { url: "https://example.com/uploads/shot.jpg" },
-        },
-      ],
-    });
-    expect(payload.children).toEqual(
-      expect.arrayContaining([
-        expect.objectContaining({
-          type: "image",
-          image: {
-            type: "external",
-            external: { url: "https://example.com/uploads/shot.jpg" },
-          },
-        }),
-      ]),
-    );
   });
 });
 
@@ -174,29 +137,22 @@ describe("handleClassify", () => {
     expect(classify).not.toHaveBeenCalled();
   });
 
-  it("attaches a stored photo URL to the Notion note", async () => {
+  it("ignores leftover photo fields and still files the transcript", async () => {
     saveNote.mockClear();
-    const storePhoto = vi.fn(async () => ({ url: "https://preview.example/uploads/shot.jpg" }));
-
-    const form = new FormData();
-    form.set("text", "painter bucket on the floor");
-    form.set("photo", new File(["jpeg-bytes"], "shot.jpg", { type: "image/jpeg" }));
-
+    classify.mockClear();
     const response = await handleClassify(
-      new Request("https://example.com/api/classify", {
-        method: "POST",
-        headers: { "X-Classify-Secret": "secret" },
-        body: form,
+      request({
+        text: "painters on site",
+        image_base64: "not-a-real-photo",
       }),
-      { ...deps, storePhoto },
+      deps,
     );
 
     expect(response.status).toBe(200);
-    expect(storePhoto).toHaveBeenCalled();
+    expect(classify).toHaveBeenCalledWith({ text: "painters on site" });
     expect(saveNote).toHaveBeenCalledWith(
-      expect.objectContaining({
-        photoUrl: "https://preview.example/uploads/shot.jpg",
-        photoName: "shot.jpg",
+      expect.not.objectContaining({
+        photoUrl: expect.anything(),
       }),
     );
   });

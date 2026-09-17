@@ -7,8 +7,3 @@
 
 [build.environment]
   NODE_VERSION = "20"
-
-[[redirects]]
-  from = "/img/:key"
-  to = "/.netlify/images?url=/uploads/:key"
-  status = 200
