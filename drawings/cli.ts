@@ -102,10 +102,11 @@ export async function main(argv = process.argv.slice(2)): Promise<number> {
     ai: parsed.ai ? openAiCompactClient() : undefined,
   });
 
+  for (const error of result.errors) {
+    console.error(`${error.path}: ${error.error}`);
+  }
+
   if (result.database.drawingCount === 0) {
-    for (const error of result.errors) {
-      console.error(`${error.path}: ${error.error}`);
-    }
     console.error("No drawings indexed.");
     return 1;
   }
