@@ -18,7 +18,7 @@ export type ClassifyDeps = {
   getSecret: () => string | undefined;
   hasSkillBase: () => boolean;
   classify: (input: { text: string; image?: ImageInput }) => Promise<ModelOutput>;
-  storePhoto?: (image: ImageInput) => Promise<{ url: string }>;
+  storePhoto?: (image: ImageInput) => Promise<{ url?: string; fileId?: string }>;
   saveNote: (note: NotionNote) => Promise<{ url: string }>;
   saveLesson: (note: NotionNote) => Promise<{ url: string }>;
   today: () => string;
@@ -61,9 +61,12 @@ export async function handleClassify(req: Request, deps: ClassifyDeps): Promise<
   const fields = contactFields(folder, classified.phone, classified.email);
 
   let photoUrl: string | undefined;
+  let photoFileId: string | undefined;
   if (parsed.image && deps.storePhoto) {
     try {
-      photoUrl = (await deps.storePhoto(parsed.image)).url;
+      const stored = await deps.storePhoto(parsed.image);
+      photoUrl = stored.url;
+      photoFileId = stored.fileId;
     } catch {
       return json({ error: "Photo save failed" }, 502);
     }
@@ -85,6 +88,7 @@ export async function handleClassify(req: Request, deps: ClassifyDeps): Promise<
     alertStatus: skill.alert_status ?? undefined,
     skillAssessment: skill.skill_assessment ?? undefined,
     photoUrl,
+    photoFileId,
     photoName: parsed.image?.filename,
     ...fields,
   };
