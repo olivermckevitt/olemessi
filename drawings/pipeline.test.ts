@@ -130,4 +130,18 @@ describe("parseArgs", () => {
       vision: false,
     });
   });
+
+  it("reads Windows --flag=value paths with spaces", () => {
+    expect(
+      parseArgs([
+        "index",
+        "--input=C:\\Users\\olemc\\Desktop\\Construction Drawings",
+        "--output=.\\wiki",
+      ]),
+    ).toMatchObject({
+      command: "index",
+      input: "C:\\Users\\olemc\\Desktop\\Construction Drawings",
+      output: ".\\wiki",
+    });
+  });
 });

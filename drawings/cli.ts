@@ -20,11 +20,22 @@ export function parseArgs(argv: string[]): {
   }
 
   const flagValue = (flag: string): string | undefined => {
+    const prefix = `${flag}=`;
+    const equals = args.find((item) => item.startsWith(prefix));
+    if (equals) {
+      const value = equals.slice(prefix.length).replace(/^["']|["']$/g, "");
+      return value.length > 0 ? value : undefined;
+    }
+
     const index = args.indexOf(flag);
     if (index === -1) {
       return undefined;
     }
-    return args[index + 1];
+    const value = args[index + 1];
+    if (!value || value.startsWith("--")) {
+      return undefined;
+    }
+    return value.replace(/^["']|["']$/g, "");
   };
 
   const input = flagValue("--input");
