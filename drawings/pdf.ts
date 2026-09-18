@@ -1,7 +1,13 @@
 import { extractText, getDocumentProxy } from "unpdf";
 
+export function toPdfBytes(data: Uint8Array): Uint8Array {
+  const copy = new Uint8Array(data.byteLength);
+  copy.set(data);
+  return copy;
+}
+
 export async function extractPdfText(bytes: Uint8Array): Promise<string> {
-  const pdf = await getDocumentProxy(bytes);
+  const pdf = await getDocumentProxy(toPdfBytes(bytes));
   const result = await extractText(pdf, { mergePages: true });
   const text = result.text;
   if (Array.isArray(text)) {

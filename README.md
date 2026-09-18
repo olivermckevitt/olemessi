@@ -166,6 +166,12 @@ npm run index-drawings -- --input ./plans --output ./wiki
 npm run query-drawings -- --db ./wiki/drawings.sqlite door width grid B
 ```
 
+Windows paths with spaces need an equals sign, or npm drops the quotes:
+
+```
+npm run index-drawings -- --input="C:\Users\olemc\Desktop\Construction Drawings" --output=.\wiki
+```
+
 `--ai` is optional leftover-note extraction. `--vision` is optional cropped raster fallback for low-confidence lengths only. Skip both unless you need them. DWG is not parsed. Convert to DXF first.
 
 `drawings.md` is the master map. Sanity checks and schedule macros drop or flag junk before it hits sqlite. Conflicts stay in `wiki/_conflicts.md`. Newest revision wins.

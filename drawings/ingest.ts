@@ -2,7 +2,7 @@ import { readFile } from "node:fs/promises";
 import { basename, extname } from "node:path";
 import { dxfToText } from "./dxf";
 import { extractFactsFromText, parseTitleBlock } from "./extract";
-import { extractPdfText } from "./pdf";
+import { extractPdfText, toPdfBytes } from "./pdf";
 import type { DrawingSource, Fact } from "./types";
 
 export class UnsupportedDrawingError extends Error {
@@ -19,7 +19,7 @@ export async function ingestFile(filePath: string): Promise<DrawingSource> {
   }
 
   if (ext === ".pdf") {
-    const bytes = await readFile(filePath);
+    const bytes = toPdfBytes(await readFile(filePath));
     const rawText = await extractPdfText(bytes);
     return sourceFromText(filePath, "pdf", rawText);
   }

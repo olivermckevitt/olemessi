@@ -20,11 +20,22 @@ export function parseArgs(argv: string[]): {
   }
 
   const flagValue = (flag: string): string | undefined => {
+    const prefix = `${flag}=`;
+    const equals = args.find((item) => item.startsWith(prefix));
+    if (equals) {
+      const value = equals.slice(prefix.length).replace(/^["']|["']$/g, "");
+      return value.length > 0 ? value : undefined;
+    }
+
     const index = args.indexOf(flag);
     if (index === -1) {
       return undefined;
     }
-    return args[index + 1];
+    const value = args[index + 1];
+    if (!value || value.startsWith("--")) {
+      return undefined;
+    }
+    return value.replace(/^["']|["']$/g, "");
   };
 
   const input = flagValue("--input");
@@ -102,10 +113,11 @@ export async function main(argv = process.argv.slice(2)): Promise<number> {
     ai: parsed.ai ? openAiCompactClient() : undefined,
   });
 
+  for (const error of result.errors) {
+    console.error(`${error.path}: ${error.error}`);
+  }
+
   if (result.database.drawingCount === 0) {
-    for (const error of result.errors) {
-      console.error(`${error.path}: ${error.error}`);
-    }
     console.error("No drawings indexed.");
     return 1;
   }

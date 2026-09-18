@@ -31,6 +31,12 @@ describe("PDF ingest", () => {
     expect(text).toContain("A-201");
     expect(parseTitleBlock(text, "X").sheetId).toBe("A-201");
   });
+
+  it("accepts a Node Buffer, which pdf.js rejects", async () => {
+    const bytes = buildTextPdf("SHEET A-301 REV 1 DATE 2026-08-01 DR-8 3'-0\"");
+    const text = await extractPdfText(Buffer.from(bytes));
+    expect(text).toContain("A-301");
+  });
 });
 
 describe("DWG ingest", () => {
@@ -122,6 +128,20 @@ describe("parseArgs", () => {
       db: "./wiki/database.json",
       query: "door width",
       vision: false,
+    });
+  });
+
+  it("reads Windows --flag=value paths with spaces", () => {
+    expect(
+      parseArgs([
+        "index",
+        "--input=C:\\Users\\olemc\\Desktop\\Construction Drawings",
+        "--output=.\\wiki",
+      ]),
+    ).toMatchObject({
+      command: "index",
+      input: "C:\\Users\\olemc\\Desktop\\Construction Drawings",
+      output: ".\\wiki",
     });
   });
 });
