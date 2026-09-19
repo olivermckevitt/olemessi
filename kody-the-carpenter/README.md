@@ -36,7 +36,7 @@ This folder is the design kit for the book. Use it to keep every page looking li
 
 Review set in `pages/review/`. Cut: square, kneeling well, crouch, lemonade, fort. Stool foot fixed.
 
-Oliver locked 16 pages (order in `PAGE-MAP.md`). Cut: hammer, safety, picnic, clamps, jig, hang a door. Architrave is Victorian with a mitre. Skirting is small and simple. Still needed: leftover 9 in book order, then cover photo.
+Oliver locked 16 pages (order in `PAGE-MAP.md`). Cut: hammer, safety, picnic, clamps, jig, hang a door. Architrave is Victorian with a mitre. Skirting is a long fitted run plus a piece in his hand, no glasses. Still needed: leftover 9 in book order, then cover photo.
 
 ## Start here
 
