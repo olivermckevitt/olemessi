@@ -75,7 +75,7 @@ Kody building [OBJECT], which is finished enough to recognise. He uses [TOOL]. W
 | 4 | square picture frame | screwdriver | blank rectangle inside the frame | sitting at bench |
 | 5 | toy box with lid | screwdriver | 3 chunky toys inside | bending over the box |
 | 6 | short bookshelf, 3 shelves | level | 5 chunky books | standing, checking |
-| 7 | picnic table with two benches | hammer | drawn: `15-picnic.png` | bending, nailing the top |
+| 7 | picnic table with two benches | hammer | **cut** extra only: `15-picnic.png` | bending, nailing the top |
 | 8 | lemonade stand with sign | hammer | outline letters LEMONADE, pitcher, 2 cups | assembling |
 | 9 | kid-sized wooden fort with one square window | hammer | blank flag | carrying a board into the door. Not ta-da. |
 | 10 | kid-sized wooden wishing well, bucket, pitched roof | hammer | drawn: `18-well.png` | on a short step ladder, nailing VERTICAL scalloped shingles (tall with rounded bottoms, not horizontal timber) |

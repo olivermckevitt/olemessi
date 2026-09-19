@@ -1,14 +1,14 @@
 # Kody the Carpenter — Page Map
 
-**25 colouring pages.** Oliver is picking them. Cover is his favourite designed photo, not a generated illustration.
+**25 colouring pages** is the print target. Catalog is now **23** after cuts. Cover is Oliver’s favourite designed photo, not a generated illustration.
 
-Print file: **A5, 50 pages, single-sided** (25 art + 25 blank backs).
+Print file if we stay at 25: **A5, 50 pages, single-sided**. If we print the 23 that remain: **46 pages**.
 
 ---
 
-## Oliver's pick (17 of 25)
+## Oliver's pick (16 locked)
 
-Locked 19 Sep 2026 from his list. Periods read as commas. Blank after 9 skipped. Duplicate 19 dropped.
+Locked 19 Sep 2026 from his list. Picnic (11) cut on the second pass. Periods read as commas. Blank after 9 skipped. Duplicate 19 dropped.
 
 | Book order | Catalog # | Page | Review file |
 | --- | --- | --- | --- |
@@ -21,22 +21,19 @@ Locked 19 Sep 2026 from his list. Periods read as commas. Blank after 9 skipped.
 | 7 | 7 | Level | `pages/review/r07-level.png` |
 | 8 | 15 | Fence | `pages/review/r15-fence.png` |
 | 9 | 12 | Well, shingles on ladder | `pages/review/r12-well-ladder.png` |
-| 10 | 11 | Picnic table | `pages/review/r11-picnic.png` |
-| 11 | 14 | Doghouse | `pages/review/r14-doghouse.png` |
-| 12 | 18 | Cabinets | `pages/review/r18-cabinets.png` |
-| 13 | 19 | Clean up | `pages/review/r19-cleanup.png` |
-| 14 | 16 | Set a post | `pages/review/r16-post.png` |
-| 15 | 29 | Pegboard | `pages/review/r29-pegboard.png` |
-| 16 | 31 | High five | `pages/review/r31-highfive.png` |
-| 17 | 17 | Window trim | `pages/review/r17-trim.png` |
-| 18–25 | TBD | Need 8 more | Pick from leftover |
+| 10 | 14 | Doghouse | `pages/review/r14-doghouse.png` |
+| 11 | 18 | Cabinets | `pages/review/r18-cabinets.png` |
+| 12 | 19 | Clean up | `pages/review/r19-cleanup.png` |
+| 13 | 16 | Set a post | `pages/review/r16-post.png` |
+| 14 | 29 | Pegboard | `pages/review/r29-pegboard.png` |
+| 15 | 31 | High five | `pages/review/r31-highfive.png` |
+| 16 | 17 | Window trim | `pages/review/r17-trim.png` |
+| 17–25 | TBD | 7 leftover + 2 missing | See leftover. Need 2 new pages to hit 25. |
 
-### Leftover (pick 8)
+### Leftover (7)
 
 | # | Page | Review file |
 | --- | --- | --- |
-| 4 | Hammer | `pages/review/r04-hammer.png` |
-| 8 | Safety | `pages/review/r08-safety.png` |
 | 21 | Stairs | `pages/review/r21-stairs.png` |
 | 22 | Installing a window | `pages/review/r22-window.png` |
 | 23 | Stool | `pages/review/r23-stool.png` |
@@ -45,30 +42,27 @@ Locked 19 Sep 2026 from his list. Periods read as commas. Blank after 9 skipped.
 | 26 | Bookshelf | `pages/review/r26-bookshelf.png` |
 | 30 | Your turn | `pages/review/r30-your-turn.png` |
 
-Reply with 8 leftover numbers, in the order they should sit in the book. One leftover gets dropped.
+Reply with leftover numbers in book order. If all 7 stay, the catalog is 23. Hit 25 only with 2 new pages.
 
 ---
 
 ## Review set (full catalog)
 
-26 remakes. Oliver cut 10, 13, 20, 27, 28. Folder: `pages/review/`.
+23 remakes left. Cut: 4, 8, 10, 11, 13, 20, 27, 28. Folder: `pages/review/`.
 
 Lock sheet: `references/kody-character-locked-v2.png`
 
-Dropped: carpenter’s square, kneeling well, crouch pickup, lemonade stand, fort.
+Dropped: hammer, safety, picnic table, carpenter’s square, kneeling well, crouch pickup, lemonade stand, fort.
 
 | # | Page | Review file |
 | --- | --- | --- |
 | 1 | This book belongs to | `pages/review/r01-belongs-to.png` |
 | 2 | Meet Kody | `pages/review/r02-meet.png` |
 | 3 | Workshop | `pages/review/r03-workshop.png` |
-| 4 | Hammer | `pages/review/r04-hammer.png` |
 | 5 | Saw | `pages/review/r05-saw.png` |
 | 6 | Tape measure | `pages/review/r06-tape.png` |
 | 7 | Level | `pages/review/r07-level.png` |
-| 8 | Safety | `pages/review/r08-safety.png` |
 | 9 | Carry boards | `pages/review/r09-carry.png` |
-| 11 | Picnic table | `pages/review/r11-picnic.png` |
 | 12 | Well, shingles on ladder | `pages/review/r12-well-ladder.png` |
 | 14 | Doghouse | `pages/review/r14-doghouse.png` |
 | 15 | Fence | `pages/review/r15-fence.png` |
@@ -149,7 +143,7 @@ Each page: Kody building it, object big enough to colour, 70 to 80% white space.
 | 12 | Picture frame | not drawn | "A frame for a favourite picture." | Finished frame. Blank rectangle inside for the kid to doodle. |
 | 13 | Toy box | not drawn | "A box for toys." | Open toy box, 3 chunky toys. |
 | 14 | Bookshelf | not drawn | "Books have a home." | Short 3-shelf bookcase, 5 chunky books. |
-| 15 | Picnic table | **drawn** `15-picnic.png` | "Kody builds a picnic table." | Bending over, nailing the tabletop. Two benches. |
+| 15 | Picnic table | **cut** Oliver dropped review page 11 | "Kody builds a picnic table." | Extra only: `pages/builds/15-picnic.png` |
 | 16 | Lemonade stand | not drawn | "Cold lemonade! Come and get it!" | Stand, outline letters LEMONADE, pitcher, 2 cups. |
 | 17 | Fort | not drawn | "Kody built a fort!" | Kid-sized fort, one square window, blank flag. Working pose, not ta-da. |
 | 18 | Well | **drawn** `18-well.png` | "Kody puts the roof on." | Short A-frame step ladder. Vertical scalloped shingles (tall, rounded bottom, not timber planks). One in his hand, more on the roof, two on the grass. Bucket hanging. |
@@ -182,6 +176,9 @@ No house-roof climbing. Short step ladder is OK on the well page. He stands on t
 
 | File | What | Why it is extra |
 | --- | --- | --- |
+| `pages/builds/15-picnic.png` | Picnic table | Review page 11 cut. Old picnic sheet stays extra. |
+| `pages/opening/03-hammer.png` | Hammer | Review page 4 cut. Opening hammer stays extra. |
+| `pages/opening/07-safety.png` | Safety gear | Review page 8 cut. Opening safety stays extra. |
 | `pages/builds/extra-doghouse.png` | Doghouse with a watching dog | Drawn before the 10th build was locked as the well |
 | `pages/builds/extra-well-kneel.png` | Kneeling, hammering the well wall | First well pass. Replaced by the ladder/shingles page. |
 | `pages/builds/extra-fence.png` | Kneeling, drilling a picket fence | From the jobsite sheet. Not one of the 10 kid builds. |

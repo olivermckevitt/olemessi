@@ -32,7 +32,7 @@ Locked from the 14 Sep 2026 call. Change only if Oliver overrides.
 - Title: **Kody the Carpenter**
 - Sister / friend book: later. Not this file.
 - Series / catalog: **finish this one book.** No book 2 until sales data.
-- **Oliver locked 17 interior pages** in `PAGE-MAP.md`. He still picks 8 from leftover. Mix of kid builds and jobsite pages is his call.
+- **Oliver locked 16 interior pages** in `PAGE-MAP.md`. He cut hammer, safety, and picnic. 7 leftover remain. Mix of kid builds and jobsite pages is his call.
 
 ### Cover
 
@@ -175,7 +175,7 @@ Ramp difficulty. Start small. Fort is 9. Well is 10. Each one is something a kid
 | 4 | Picture frame | Tiny, recognisable, can "hold" a drawing. |
 | 5 | Toy box | Bigger box. Lid. Personality. |
 | 6 | Bookshelf | Measure twice. Straight and proud. |
-| 7 | Picnic table | Outdoor. Two benches. Drawn: Kody bending, nailing. |
+| 7 | Picnic table | **Cut.** Oliver dropped review page 11. Extra only. |
 | 8 | Lemonade stand | Sign, pitcher, cups. Kids go wild colouring this. |
 | 9 | Fort | The dream build. Boards, window, flag. No ta-da. |
 | 10 | Well | Confirmed. Kid wishing well. Drawn: Kody on a short step ladder, nailing vertical scalloped shingles. |
@@ -250,7 +250,7 @@ No current page passes. After Oliver picks the 25: add dimples, then five finger
 
 Do not generate the whole book at once. Order:
 
-1. Oliver locked 17 pages. He still picks 8 from leftover (see `PAGE-MAP.md`).
+1. Oliver locked 16 pages. Cut 4, 8, 11. He still orders the 7 leftover (see `PAGE-MAP.md`). Add 2 new pages to hit 25, or print 23.
 2. Draw any missing pages in the sparse style. Dimples + five fingers in the prompt.
 3. Redraw picked opening pages that are still busy.
 4. Dimple pass, then five-finger pass, on every picked page.

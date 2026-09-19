@@ -7,12 +7,12 @@ This folder is the design kit for the book. Use it to keep every page looking li
 ## What's in here
 
 - `DESIGN-BIBLE.md` — character lock, visual rules, book structure, print specs
-- `PAGE-MAP.md` — Oliver's pick (17 of 25) plus leftover catalog
+- `PAGE-MAP.md` — Oliver's pick (16 locked) plus leftover catalog
 - `PROMPT-KIT.md` — copy-paste prompts so AI art stays consistent
 - `TOOLS.md` — free ways to generate more character options
 - `pages/opening/` — first 8 colouring pages
 - `pages/builds/` — picnic table (15), well with ladder and shingles (18), extras (doghouse, well kneel, fence, post, trim, cabinets)
-- `pages/review/` — remakes for Oliver to pick 25 from (10, 13, 20, 27, 28 cut). New lock: `references/kody-character-locked-v2.png`
+- `pages/review/` — remakes for Oliver to pick from (4, 8, 10, 11, 13, 20, 27, 28 cut). New lock: `references/kody-character-locked-v2.png`
 - `references/source/` — user jobsite sheets (do not copy bricklaying or duplicates)
 - `references/kody-character-locked.png` — locked look (option D, five-digit hands)
 - `references/kody-crouch-pickup.png` — action pose study (crouch, pick up a board)
@@ -24,7 +24,7 @@ This folder is the design kit for the book. Use it to keep every page looking li
 1. Ages 3 to 6. Extra-bold 5 to 7 pt lines. 70 to 80% white space.
 2. Hard hat on from page 1. Curls, tool belt, big eyes, dimples on every page.
 3. Plain t-shirt. No overalls. Five fingers. Handsaw only. No skill saw.
-4. **25 colouring pages.** Oliver locked 17 in `PAGE-MAP.md`. Still needs 8 from leftover.
+4. **25 colouring pages** target. Catalog is 23 after cutting hammer, safety, picnic. Oliver locked 16 in `PAGE-MAP.md`. 7 leftover. Need 2 new pages to hit 25, or print 23.
 5. Print: **A5**, single-sided, **50-page** interior. Amazon KDP only. **$6.99 to $7.99**.
 6. Cover is Oliver’s favourite designed photo. He supplies it.
 7. No Koda Built logo anywhere.
@@ -36,7 +36,7 @@ This folder is the design kit for the book. Use it to keep every page looking li
 
 Review set in `pages/review/`. Cut: square, kneeling well, crouch, lemonade, fort. Stool foot fixed.
 
-Oliver locked 17 pages (order in `PAGE-MAP.md`). Still needed: 8 more from leftover, then keep/redraw notes, then his cover photo.
+Oliver locked 16 pages (order in `PAGE-MAP.md`). Cut: hammer, safety, picnic. Still needed: leftover order, then either 2 new pages or drop to 23. Then cover photo.
 
 ## Start here
 
