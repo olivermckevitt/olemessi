@@ -1,8 +1,8 @@
 # Kody the Carpenter — Page Map
 
-**25 colouring pages** is the print target. Catalog is now **23** after cuts. Cover is Oliver’s favourite designed photo, not a generated illustration.
+**25 colouring pages.** Catalog is **28**. Cover is Oliver’s favourite designed photo, not a generated illustration.
 
-Print file if we stay at 25: **A5, 50 pages, single-sided**. If we print the 23 that remain: **46 pages**.
+Print file: **A5, 50 pages, single-sided** (25 art + 25 blank backs).
 
 ---
 
@@ -28,9 +28,9 @@ Locked 19 Sep 2026 from his list. Picnic (11) cut on the second pass. Periods re
 | 14 | 29 | Pegboard | `pages/review/r29-pegboard.png` |
 | 15 | 31 | High five | `pages/review/r31-highfive.png` |
 | 16 | 17 | Window trim | `pages/review/r17-trim.png` |
-| 17–25 | TBD | 7 leftover + 2 missing | See leftover. Need 2 new pages to hit 25. |
+| 17–25 | TBD | Need 9 more | Pick 9 from leftover 12 |
 
-### Leftover (7)
+### Leftover (12). Pick 9.
 
 | # | Page | Review file |
 | --- | --- | --- |
@@ -41,14 +41,19 @@ Locked 19 Sep 2026 from his list. Picnic (11) cut on the second pass. Periods re
 | 25 | Toy box | `pages/review/r25-toybox.png` |
 | 26 | Bookshelf | `pages/review/r26-bookshelf.png` |
 | 30 | Your turn | `pages/review/r30-your-turn.png` |
+| 32 | Architrave | `pages/review/r32-architrave.png` |
+| 33 | Skirting | `pages/review/r33-skirting.png` |
+| 34 | Clamps | `pages/review/r34-clamps.png` |
+| 35 | Mitre-box jig | `pages/review/r35-jig.png` |
+| 36 | Hang a door | `pages/review/r36-door.png` |
 
-Reply with leftover numbers in book order. If all 7 stay, the catalog is 23. Hit 25 only with 2 new pages.
+Reply with 9 numbers in book order. Three leftover get dropped.
 
 ---
 
 ## Review set (full catalog)
 
-23 remakes left. Cut: 4, 8, 10, 11, 13, 20, 27, 28. Folder: `pages/review/`.
+28 remakes. Cut: 4, 8, 10, 11, 13, 20, 27, 28. Folder: `pages/review/`.
 
 Lock sheet: `references/kody-character-locked-v2.png`
 
@@ -79,6 +84,11 @@ Dropped: hammer, safety, picnic table, carpenter’s square, kneeling well, crou
 | 29 | Pegboard | `pages/review/r29-pegboard.png` |
 | 30 | Your turn | `pages/review/r30-your-turn.png` |
 | 31 | High five | `pages/review/r31-highfive.png` |
+| 32 | Architrave | `pages/review/r32-architrave.png` |
+| 33 | Skirting | `pages/review/r33-skirting.png` |
+| 34 | Clamps | `pages/review/r34-clamps.png` |
+| 35 | Mitre-box jig | `pages/review/r35-jig.png` |
+| 36 | Hang a door | `pages/review/r36-door.png` |
 
 Page 23 foot fix: both boots on the ground. No blob on the seat.
 
@@ -216,6 +226,13 @@ Skipped from the jobsite sheets: bricklaying, the coloured-hair panel, duplicate
 20. Every tool back in its place.
 21. Your turn. What will you build?
 22. High five, builder!
+
+New extras (use if Oliver slots them):
+- Kody puts on the architrave.
+- Skirting along the wall.
+- Clamps hold it tight.
+- The jig keeps the cut straight.
+- In goes the door.
 
 ---
 
