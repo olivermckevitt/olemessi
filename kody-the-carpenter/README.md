@@ -7,7 +7,7 @@ This folder is the design kit for the book. Use it to keep every page looking li
 ## What's in here
 
 - `DESIGN-BIBLE.md` — character lock, visual rules, book structure, print specs
-- `PAGE-MAP.md` — 22 pages, in order, with caption and art direction
+- `PAGE-MAP.md` — Oliver's pick (17 of 25) plus leftover catalog
 - `PROMPT-KIT.md` — copy-paste prompts so AI art stays consistent
 - `TOOLS.md` — free ways to generate more character options
 - `pages/opening/` — first 8 colouring pages
@@ -24,7 +24,7 @@ This folder is the design kit for the book. Use it to keep every page looking li
 1. Ages 3 to 6. Extra-bold 5 to 7 pt lines. 70 to 80% white space.
 2. Hard hat on from page 1. Curls, tool belt, big eyes, dimples on every page.
 3. Plain t-shirt. No overalls. Five fingers. Handsaw only. No skill saw.
-4. **25 colouring pages.** Oliver picks each one from the catalog in `PAGE-MAP.md`.
+4. **25 colouring pages.** Oliver locked 17 in `PAGE-MAP.md`. Still needs 8 from leftover.
 5. Print: **A5**, single-sided, **50-page** interior. Amazon KDP only. **$6.99 to $7.99**.
 6. Cover is Oliver’s favourite designed photo. He supplies it.
 7. No Koda Built logo anywhere.
@@ -36,7 +36,7 @@ This folder is the design kit for the book. Use it to keep every page looking li
 
 Review set in `pages/review/`. Cut: square, kneeling well, crouch, lemonade, fort. Stool foot fixed.
 
-Still needed: Oliver picks 25 and names keep/redraw. Then his cover photo.
+Oliver locked 17 pages (order in `PAGE-MAP.md`). Still needed: 8 more from leftover, then keep/redraw notes, then his cover photo.
 
 ## Start here
 

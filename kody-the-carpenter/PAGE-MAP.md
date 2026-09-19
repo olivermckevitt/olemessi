@@ -1,20 +1,61 @@
 # Kody the Carpenter — Page Map
 
-**25 colouring pages.** Oliver picks them. Cover is his favourite designed photo, not a generated illustration.
+**25 colouring pages.** Oliver is picking them. Cover is his favourite designed photo, not a generated illustration.
 
 Print file: **A5, 50 pages, single-sided** (25 art + 25 blank backs).
 
 ---
 
-## Review set (use this to pick)
+## Oliver's pick (17 of 25)
 
-26 remakes left. Oliver cut 10, 13, 20, 27, 28. Folder: `pages/review/`.
+Locked 19 Sep 2026 from his list. Periods read as commas. Blank after 9 skipped. Duplicate 19 dropped.
+
+| Book order | Catalog # | Page | Review file |
+| --- | --- | --- | --- |
+| 1 | 1 | This book belongs to | `pages/review/r01-belongs-to.png` |
+| 2 | 2 | Meet Kody | `pages/review/r02-meet.png` |
+| 3 | 3 | Workshop | `pages/review/r03-workshop.png` |
+| 4 | 6 | Tape measure | `pages/review/r06-tape.png` |
+| 5 | 5 | Saw | `pages/review/r05-saw.png` |
+| 6 | 9 | Carry boards | `pages/review/r09-carry.png` |
+| 7 | 7 | Level | `pages/review/r07-level.png` |
+| 8 | 15 | Fence | `pages/review/r15-fence.png` |
+| 9 | 12 | Well, shingles on ladder | `pages/review/r12-well-ladder.png` |
+| 10 | 11 | Picnic table | `pages/review/r11-picnic.png` |
+| 11 | 14 | Doghouse | `pages/review/r14-doghouse.png` |
+| 12 | 18 | Cabinets | `pages/review/r18-cabinets.png` |
+| 13 | 19 | Clean up | `pages/review/r19-cleanup.png` |
+| 14 | 16 | Set a post | `pages/review/r16-post.png` |
+| 15 | 29 | Pegboard | `pages/review/r29-pegboard.png` |
+| 16 | 31 | High five | `pages/review/r31-highfive.png` |
+| 17 | 17 | Window trim | `pages/review/r17-trim.png` |
+| 18–25 | TBD | Need 8 more | Pick from leftover |
+
+### Leftover (pick 8)
+
+| # | Page | Review file |
+| --- | --- | --- |
+| 4 | Hammer | `pages/review/r04-hammer.png` |
+| 8 | Safety | `pages/review/r08-safety.png` |
+| 21 | Stairs | `pages/review/r21-stairs.png` |
+| 22 | Installing a window | `pages/review/r22-window.png` |
+| 23 | Stool | `pages/review/r23-stool.png` |
+| 24 | Picture frame | `pages/review/r24-frame.png` |
+| 25 | Toy box | `pages/review/r25-toybox.png` |
+| 26 | Bookshelf | `pages/review/r26-bookshelf.png` |
+| 30 | Your turn | `pages/review/r30-your-turn.png` |
+
+Reply with 8 leftover numbers, in the order they should sit in the book. One leftover gets dropped.
+
+---
+
+## Review set (full catalog)
+
+26 remakes. Oliver cut 10, 13, 20, 27, 28. Folder: `pages/review/`.
 
 Lock sheet: `references/kody-character-locked-v2.png`
 
 Dropped: carpenter’s square, kneeling well, crouch pickup, lemonade stand, fort.
-
-Reply with 25 numbers in book order.
 
 | # | Page | Review file |
 | --- | --- | --- |

@@ -32,7 +32,7 @@ Locked from the 14 Sep 2026 call. Change only if Oliver overrides.
 - Title: **Kody the Carpenter**
 - Sister / friend book: later. Not this file.
 - Series / catalog: **finish this one book.** No book 2 until sales data.
-- **Oliver picks each of the 25 interior pages** from the catalog in `PAGE-MAP.md`. Mix of kid builds and jobsite pages is his call.
+- **Oliver locked 17 interior pages** in `PAGE-MAP.md`. He still picks 8 from leftover. Mix of kid builds and jobsite pages is his call.
 
 ### Cover
 
@@ -250,7 +250,7 @@ No current page passes. After Oliver picks the 25: add dimples, then five finger
 
 Do not generate the whole book at once. Order:
 
-1. Oliver picks the 25 from the catalog.
+1. Oliver locked 17 pages. He still picks 8 from leftover (see `PAGE-MAP.md`).
 2. Draw any missing pages in the sparse style. Dimples + five fingers in the prompt.
 3. Redraw picked opening pages that are still busy.
 4. Dimple pass, then five-finger pass, on every picked page.
