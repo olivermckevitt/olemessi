@@ -1,16 +1,16 @@
 # Kody the Carpenter — Page Map
 
-**25 colouring pages.** Catalog is **25**. Cover is Oliver’s favourite designed photo, not a generated illustration.
+**25 colouring pages, locked 19 Sep 2026.** Cover is Oliver’s favourite designed photo, not a generated illustration.
 
 Print file: **A5, 50 pages, single-sided** (25 art + 25 blank backs).
 
 ---
 
-## Oliver's pick (16 locked)
+## Locked 25 (book order)
 
-Locked 19 Sep 2026 from his list. Picnic (11) cut on the second pass. Periods read as commas. Blank after 9 skipped. Duplicate 19 dropped.
+First 16 from Oliver’s list. Last 9 in the order he confirmed: 21, 22, 32, 33, 23, 24, 25, 26, 30.
 
-| Book order | Catalog # | Page | Review file |
+| Book | Catalog # | Page | Review file |
 | --- | --- | --- | --- |
 | 1 | 1 | This book belongs to | `pages/review/r01-belongs-to.png` |
 | 2 | 2 | Meet Kody | `pages/review/r02-meet.png` |
@@ -28,23 +28,17 @@ Locked 19 Sep 2026 from his list. Picnic (11) cut on the second pass. Periods re
 | 14 | 29 | Pegboard | `pages/review/r29-pegboard.png` |
 | 15 | 31 | High five | `pages/review/r31-highfive.png` |
 | 16 | 17 | Window trim | `pages/review/r17-trim.png` |
-| 17–25 | TBD | Need 9 more | Leftover is now 9. Confirm order. |
+| 17 | 21 | Stairs | `pages/review/r21-stairs.png` |
+| 18 | 22 | Installing a window | `pages/review/r22-window.png` |
+| 19 | 32 | Victorian architrave, mitre | `pages/review/r32-architrave.png` |
+| 20 | 33 | Simple skirting (no glasses) | `pages/review/r33-skirting.png` |
+| 21 | 23 | Stool | `pages/review/r23-stool.png` |
+| 22 | 24 | Picture frame | `pages/review/r24-frame.png` |
+| 23 | 25 | Toy box | `pages/review/r25-toybox.png` |
+| 24 | 26 | Bookshelf | `pages/review/r26-bookshelf.png` |
+| 25 | 30 | Your turn | `pages/review/r30-your-turn.png` |
 
-### Leftover (9). Confirm book order.
-
-| # | Page | Review file |
-| --- | --- | --- |
-| 21 | Stairs | `pages/review/r21-stairs.png` |
-| 22 | Installing a window | `pages/review/r22-window.png` |
-| 23 | Stool | `pages/review/r23-stool.png` |
-| 24 | Picture frame | `pages/review/r24-frame.png` |
-| 25 | Toy box | `pages/review/r25-toybox.png` |
-| 26 | Bookshelf | `pages/review/r26-bookshelf.png` |
-| 30 | Your turn | `pages/review/r30-your-turn.png` |
-| 32 | Victorian architrave, mitre | `pages/review/r32-architrave.png` |
-| 33 | Simple skirting (no glasses) | `pages/review/r33-skirting.png` |
-
-If all 9 stay, the 25 is full. Reply with those 9 numbers in book order.
+Oliver reviews this set. Keep / redraw / move notes go against these 25 numbers.
 
 ---
 

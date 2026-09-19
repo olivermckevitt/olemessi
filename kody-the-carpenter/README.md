@@ -7,7 +7,7 @@ This folder is the design kit for the book. Use it to keep every page looking li
 ## What's in here
 
 - `DESIGN-BIBLE.md` — character lock, visual rules, book structure, print specs
-- `PAGE-MAP.md` — Oliver's pick (16 locked) plus leftover 9
+- `PAGE-MAP.md` — locked 25 in book order
 - `PROMPT-KIT.md` — copy-paste prompts so AI art stays consistent
 - `TOOLS.md` — free ways to generate more character options
 - `pages/opening/` — first 8 colouring pages
@@ -24,7 +24,7 @@ This folder is the design kit for the book. Use it to keep every page looking li
 1. Ages 3 to 6. Extra-bold 5 to 7 pt lines. 70 to 80% white space.
 2. Hard hat on from page 1. Curls, tool belt, big eyes, dimples on every page.
 3. Plain t-shirt. No overalls. Five fingers. Handsaw only. No skill saw.
-4. **25 colouring pages.** Catalog is 25. Oliver locked 16 in `PAGE-MAP.md`. Confirm order for leftover 9.
+4. **25 colouring pages, locked.** Order is in `PAGE-MAP.md`. Oliver reviews keep / redraw / move.
 5. Print: **A5**, single-sided, **50-page** interior. Amazon KDP only. **$6.99 to $7.99**.
 6. Cover is Oliver’s favourite designed photo. He supplies it.
 7. No Koda Built logo anywhere.
@@ -36,7 +36,7 @@ This folder is the design kit for the book. Use it to keep every page looking li
 
 Review set in `pages/review/`. Cut: square, kneeling well, crouch, lemonade, fort. Stool foot fixed.
 
-Oliver locked 16 pages (order in `PAGE-MAP.md`). Cut: hammer, safety, picnic, clamps, jig, hang a door. Architrave is Victorian with a mitre. Skirting is a long fitted run plus a piece in his hand, no glasses. Still needed: leftover 9 in book order, then cover photo.
+Locked 25 in `PAGE-MAP.md`. Still needed: keep/redraw notes, then his cover photo.
 
 ## Start here
 
