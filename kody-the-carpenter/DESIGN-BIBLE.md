@@ -32,7 +32,7 @@ Locked from the 14 Sep 2026 call. Change only if Oliver overrides.
 - Title: **Kody the Carpenter**
 - Sister / friend book: later. Not this file.
 - Series / catalog: **finish this one book.** No book 2 until sales data.
-- **Oliver locked 16 interior pages** in `PAGE-MAP.md`. He cut hammer, safety, and picnic. Catalog is 28. He still picks 9 from leftover 12. Mix of kid builds and jobsite pages is his call.
+- **Oliver locked 16 interior pages** in `PAGE-MAP.md`. He cut hammer, safety, picnic, clamps, jig, and hang a door. Catalog is 25. He still confirms leftover 9 in book order. Mix of kid builds and jobsite pages is his call.
 
 ### Cover
 
@@ -48,7 +48,7 @@ Not illustrated by us. **Oliver’s favourite designed photo.** He names or drop
 
 ### Tools kids may copy (locked)
 
-In: hammer, tape measure, handsaw, spirit level, cordless drill, shovel, broom, short step ladder, F-clamps, wooden mitre box.
+In: hammer, tape measure, handsaw, spirit level, cordless drill, shovel, broom, short step ladder.
 
 Out: skill saw, circular saw, table saw, mitre saw, nail gun, angle grinder, utility knife.
 
@@ -180,7 +180,7 @@ Ramp difficulty. Start small. Fort is 9. Well is 10. Each one is something a kid
 | 9 | Fort | The dream build. Boards, window, flag. No ta-da. |
 | 10 | Well | Confirmed. Kid wishing well. Drawn: Kody on a short step ladder, nailing vertical scalloped shingles. |
 
-Drawn but **not slotted:** doghouse, kneeling well, fence, post, window trim, cabinets, carpenter's square, architrave, skirting, clamps, mitre-box jig, hanging door. Crouch/pickup is a pose study. Sweep is slotted as page 19.
+Drawn but **not slotted:** doghouse, kneeling well, fence, post, window trim, cabinets, carpenter's square, Victorian architrave, Victorian skirting. Crouch/pickup is a pose study. Sweep is slotted as page 19.
 
 Each build is **one page.** Kody plus the object, mid-build or just finished, big enough to colour. Safety glasses on. Do not split Plan / Build / Done at this page count.
 
@@ -250,7 +250,7 @@ No current page passes. After Oliver picks the 25: add dimples, then five finger
 
 Do not generate the whole book at once. Order:
 
-1. Oliver locked 16 pages. Cut 4, 8, 11. He still picks 9 from leftover 12 (see `PAGE-MAP.md`).
+1. Oliver locked 16 pages. Cut 4, 8, 11, 34, 35, 36. He still confirms leftover 9 in book order (see `PAGE-MAP.md`).
 2. Draw any missing pages in the sparse style. Dimples + five fingers in the prompt.
 3. Redraw picked opening pages that are still busy.
 4. Dimple pass, then five-finger pass, on every picked page.

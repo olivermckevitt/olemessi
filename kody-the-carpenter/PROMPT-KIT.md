@@ -79,11 +79,8 @@ Kody building [OBJECT], which is finished enough to recognise. He uses [TOOL]. W
 | 8 | lemonade stand with sign | hammer | outline letters LEMONADE, pitcher, 2 cups | assembling |
 | 9 | kid-sized wooden fort with one square window | hammer | blank flag | carrying a board into the door. Not ta-da. |
 | 10 | kid-sized wooden wishing well, bucket, pitched roof | hammer | drawn: `18-well.png` | on a short step ladder, nailing VERTICAL scalloped shingles (tall with rounded bottoms, not horizontal timber) |
-| extra | door architrave / casing | hammer | review: `r32-architrave.png` | nailing a long vertical casing board beside the door |
-| extra | skirting board against a wall | hammer | review: `r33-skirting.png` | kneeling, holding skirting at the wall-floor join |
-| extra | two boards in F-clamps | clamps | review: `r34-clamps.png` | tightening clamp handles |
-| extra | wooden mitre-box jig | handsaw | review: `r35-jig.png` | saw blade in the jig slot |
-| extra | hanging a simple door | hands | review: `r36-door.png` | lifting the door, two chunky hinges |
+| extra | Victorian door architrave with 45-degree mitre | hammer | review: `r32-architrave.png` | nailing the mitred head corner, stepped ogee casing |
+| extra | Victorian ogee skirting with mitred corner | hammer | review: `r33-skirting.png` | kneeling at the corner, profile visible |
 
 ---
 
