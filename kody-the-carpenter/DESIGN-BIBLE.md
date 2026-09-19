@@ -180,7 +180,7 @@ Ramp difficulty. Start small. Fort is 9. Well is 10. Each one is something a kid
 | 9 | Fort | The dream build. Boards, window, flag. No ta-da. |
 | 10 | Well | Confirmed. Kid wishing well. Drawn: Kody on a short step ladder, nailing vertical scalloped shingles. |
 
-Drawn but **not slotted:** doghouse, kneeling well, fence, post, window trim, cabinets, carpenter's square, Victorian architrave, Victorian skirting. Crouch/pickup is a pose study. Sweep is slotted as page 19.
+Drawn but **not slotted:** doghouse, kneeling well, fence, post, window trim, cabinets, carpenter's square, Victorian architrave, simple skirting. Crouch/pickup is a pose study. Sweep is slotted as page 19.
 
 Each build is **one page.** Kody plus the object, mid-build or just finished, big enough to colour. Safety glasses on. Do not split Plan / Build / Done at this page count.
 

@@ -80,7 +80,7 @@ Kody building [OBJECT], which is finished enough to recognise. He uses [TOOL]. W
 | 9 | kid-sized wooden fort with one square window | hammer | blank flag | carrying a board into the door. Not ta-da. |
 | 10 | kid-sized wooden wishing well, bucket, pitched roof | hammer | drawn: `18-well.png` | on a short step ladder, nailing VERTICAL scalloped shingles (tall with rounded bottoms, not horizontal timber) |
 | extra | Victorian door architrave with 45-degree mitre | hammer | review: `r32-architrave.png` | nailing the mitred head corner, stepped ogee casing |
-| extra | Victorian ogee skirting with mitred corner | hammer | review: `r33-skirting.png` | kneeling at the corner, profile visible |
+| extra | simple slim skirting board | hammer | review: `r33-skirting.png` | kneeling, holding a boot-height bevelled board |
 
 ---
 
