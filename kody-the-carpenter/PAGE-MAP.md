@@ -42,7 +42,7 @@ Locked 19 Sep 2026 from his list. Picnic (11) cut on the second pass. Periods re
 | 26 | Bookshelf | `pages/review/r26-bookshelf.png` |
 | 30 | Your turn | `pages/review/r30-your-turn.png` |
 | 32 | Victorian architrave, mitre | `pages/review/r32-architrave.png` |
-| 33 | Simple skirting | `pages/review/r33-skirting.png` |
+| 33 | Simple skirting (no glasses) | `pages/review/r33-skirting.png` |
 
 If all 9 stay, the 25 is full. Reply with those 9 numbers in book order.
 
@@ -82,9 +82,10 @@ Dropped: hammer, safety, picnic table, carpenter’s square, kneeling well, crou
 | 30 | Your turn | `pages/review/r30-your-turn.png` |
 | 31 | High five | `pages/review/r31-highfive.png` |
 | 32 | Victorian architrave, mitre | `pages/review/r32-architrave.png` |
-| 33 | Simple skirting | `pages/review/r33-skirting.png` |
+| 33 | Simple skirting (no glasses) | `pages/review/r33-skirting.png` |
 
 Page 23 foot fix: both boots on the ground. No blob on the seat.
+Page 33: no safety glasses. Long fitted skirting on the wall plus a matching profiled piece in his hand.
 
 ---
 
