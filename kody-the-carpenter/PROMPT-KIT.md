@@ -79,8 +79,10 @@ Kody building [OBJECT], which is finished enough to recognise. He uses [TOOL]. W
 | 8 | lemonade stand with sign | hammer | outline letters LEMONADE, pitcher, 2 cups | assembling |
 | 9 | kid-sized wooden fort with one square window | hammer | blank flag | carrying a board into the door. Not ta-da. |
 | 10 | kid-sized wooden wishing well, bucket, pitched roof | hammer | drawn: `18-well.png` | on a short step ladder, nailing VERTICAL scalloped shingles (tall with rounded bottoms, not horizontal timber) |
-| extra | Victorian door architrave with 45-degree mitre | hammer | review: `r32-architrave.png` | nailing the mitred head corner, stepped ogee casing |
-| extra | long simple skirting, matching board in hand | hammer | review: `r33-skirting.png` | kneeling, NO glasses. Fitted run on the wall plus a profiled piece in his hand |
+| extra | Victorian door architrave, full frame | hammer | review: `r32-architrave.png` | faces the door, nailing complete casing |
+| extra | simple skirting, matching profile in hand | hammer | review: `r33-skirting.png` | kneeling, NO glasses |
+| extra | 4-pane window opening | hands | review: `r22-window.png` | pushing a casement open |
+| extra | hanging picture frame with rubber duck | hands | review: `r24-frame.png` | hanging the frame on the wall |
 
 ---
 
@@ -89,14 +91,14 @@ Kody building [OBJECT], which is finished enough to recognise. He uses [TOOL]. W
 ### Clean up
 Kody sweeping with a broom. Pegboard now has tools hanging in the outlines. Small scrap bin. Happy, not tired.
 
+### High five / Hi I'm Kody
+Close-up of Kody, one hand raised for a high five, hat and belt on, big smile. Small text top left: Hi! I'm Kody.
+
 ### Pegboard
-The workshop pegboard filled: hammer, saw, tape, screwdriver, drill each in a matching outline. Kody standing beside it, small. Big colourable tools.
+The workshop pegboard filled: hammer, saw, tape, screwdriver, drill. Kody pointing at the tools.
 
 ### Your turn
-Kody holding a large blank rectangular board like a sign, facing the viewer, big grin, hard hat and tool belt on. The board is empty so a child can draw on it. No other objects.
-
-### High five
-Close-up of Kody, one hand raised for a high five, hard hat and tool belt on, big smile. Lots of white space.
+Kody holding a HUGE blank rectangle that fills most of the page so a child can draw on it. He peeks over the top. Hard hat on. No writing on the board.
 
 ---
 

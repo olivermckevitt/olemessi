@@ -1,6 +1,6 @@
 # Kody the Carpenter — Page Map
 
-**25 colouring pages, locked 19 Sep 2026.** Cover is Oliver’s favourite designed photo, not a generated illustration.
+**25 colouring pages, locked.** Cover is Oliver’s favourite designed photo, not a generated illustration.
 
 Print file: **A5, 50 pages, single-sided** (25 art + 25 blank backs).
 
@@ -8,35 +8,35 @@ Print file: **A5, 50 pages, single-sided** (25 art + 25 blank backs).
 
 ## Locked 25 (book order)
 
-First 16 from Oliver’s list. Last 9 in the order he confirmed: 21, 22, 32, 33, 23, 24, 25, 26, 30.
+High five is page 2 with “Hi! I'm Kody.” Pegboard is page 3, pointing at tools. Carry boards sit after workshop.
 
 | Book | Catalog # | Page | Review file |
 | --- | --- | --- | --- |
 | 1 | 1 | This book belongs to | `pages/review/r01-belongs-to.png` |
-| 2 | 2 | Meet Kody | `pages/review/r02-meet.png` |
-| 3 | 3 | Workshop | `pages/review/r03-workshop.png` |
-| 4 | 6 | Tape measure | `pages/review/r06-tape.png` |
-| 5 | 5 | Saw | `pages/review/r05-saw.png` |
+| 2 | 31 | Hi! I'm Kody / high five | `pages/review/r31-highfive.png` |
+| 3 | 29 | Pegboard, pointing at tools | `pages/review/r29-pegboard.png` |
+| 4 | 2 | Meet Kody | `pages/review/r02-meet.png` |
+| 5 | 3 | Workshop, birdhouse plan | `pages/review/r03-workshop.png` |
 | 6 | 9 | Carry boards | `pages/review/r09-carry.png` |
-| 7 | 7 | Level | `pages/review/r07-level.png` |
-| 8 | 15 | Fence | `pages/review/r15-fence.png` |
-| 9 | 12 | Well, shingles on ladder | `pages/review/r12-well-ladder.png` |
-| 10 | 14 | Doghouse | `pages/review/r14-doghouse.png` |
-| 11 | 18 | Cabinets | `pages/review/r18-cabinets.png` |
-| 12 | 19 | Clean up | `pages/review/r19-cleanup.png` |
-| 13 | 16 | Set a post | `pages/review/r16-post.png` |
-| 14 | 29 | Pegboard | `pages/review/r29-pegboard.png` |
-| 15 | 31 | High five | `pages/review/r31-highfive.png` |
+| 7 | 6 | Tape measure (1–4) | `pages/review/r06-tape.png` |
+| 8 | 5 | Saw | `pages/review/r05-saw.png` |
+| 9 | 7 | Level | `pages/review/r07-level.png` |
+| 10 | 15 | Fence | `pages/review/r15-fence.png` |
+| 11 | 12 | Well, hammering a nail | `pages/review/r12-well-ladder.png` |
+| 12 | 14 | Doghouse | `pages/review/r14-doghouse.png` |
+| 13 | 18 | Cabinets | `pages/review/r18-cabinets.png` |
+| 14 | 19 | Clean up | `pages/review/r19-cleanup.png` |
+| 15 | 16 | Set a post | `pages/review/r16-post.png` |
 | 16 | 17 | Window trim | `pages/review/r17-trim.png` |
 | 17 | 21 | Stairs | `pages/review/r21-stairs.png` |
-| 18 | 22 | Installing a window | `pages/review/r22-window.png` |
-| 19 | 32 | Victorian architrave, mitre | `pages/review/r32-architrave.png` |
+| 18 | 22 | Opening a window | `pages/review/r22-window.png` |
+| 19 | 32 | Victorian architrave, full frame | `pages/review/r32-architrave.png` |
 | 20 | 33 | Simple skirting (no glasses) | `pages/review/r33-skirting.png` |
 | 21 | 23 | Stool | `pages/review/r23-stool.png` |
-| 22 | 24 | Picture frame | `pages/review/r24-frame.png` |
+| 22 | 24 | Hanging a frame, rubber duck | `pages/review/r24-frame.png` |
 | 23 | 25 | Toy box | `pages/review/r25-toybox.png` |
 | 24 | 26 | Bookshelf | `pages/review/r26-bookshelf.png` |
-| 25 | 30 | Your turn | `pages/review/r30-your-turn.png` |
+| 25 | 30 | Your turn, big blank | `pages/review/r30-your-turn.png` |
 
 Oliver reviews this set. Keep / redraw / move notes go against these 25 numbers.
 
@@ -54,7 +54,7 @@ Dropped: hammer, safety, picnic table, carpenter’s square, kneeling well, crou
 | --- | --- | --- |
 | 1 | This book belongs to | `pages/review/r01-belongs-to.png` |
 | 2 | Meet Kody | `pages/review/r02-meet.png` |
-| 3 | Workshop | `pages/review/r03-workshop.png` |
+| 3 | Workshop, birdhouse plan | `pages/review/r03-workshop.png` |
 | 5 | Saw | `pages/review/r05-saw.png` |
 | 6 | Tape measure | `pages/review/r06-tape.png` |
 | 7 | Level | `pages/review/r07-level.png` |
@@ -79,7 +79,12 @@ Dropped: hammer, safety, picnic table, carpenter’s square, kneeling well, crou
 | 33 | Simple skirting (no glasses) | `pages/review/r33-skirting.png` |
 
 Page 23 foot fix: both boots on the ground. No blob on the seat.
-Page 33: no safety glasses. Long fitted skirting on the wall plus a matching profiled piece in his hand.
+Page 2: small text top left, Hi! I'm Kody.
+Page 3: Kody points at the pegboard tools.
+Page 7 tape: numbers 1, 2, 3, 4.
+Page 20 skirting: no glasses. Handheld piece matches the wall profile.
+Page 22: hanging frame with a rubber duck.
+Page 25: oversized blank board.
 
 ---
 

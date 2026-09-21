@@ -7,7 +7,7 @@ This folder is the design kit for the book. Use it to keep every page looking li
 ## What's in here
 
 - `DESIGN-BIBLE.md` — character lock, visual rules, book structure, print specs
-- `PAGE-MAP.md` — locked 25 in book order
+- `PAGE-MAP.md` — locked 25 in book order (high five is page 2, pegboard is page 3)
 - `PROMPT-KIT.md` — copy-paste prompts so AI art stays consistent
 - `TOOLS.md` — free ways to generate more character options
 - `pages/opening/` — first 8 colouring pages
@@ -36,7 +36,7 @@ This folder is the design kit for the book. Use it to keep every page looking li
 
 Review set in `pages/review/`. Cut: square, kneeling well, crouch, lemonade, fort. Stool foot fixed.
 
-Locked 25 in `PAGE-MAP.md`. Still needed: keep/redraw notes, then his cover photo.
+Locked 25 in `PAGE-MAP.md`. High five is page 2. Pegboard is page 3. Carry sits after workshop. Still needed: keep/redraw notes, then cover photo.
 
 ## Start here
 
