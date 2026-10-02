@@ -6,6 +6,8 @@ Whisper Flow text, plus an optional photo from the Shortcut, posts here. This cl
 
 One dictation becomes one active Notion row. Long-term insights are copied to Lessons Learned. No website. No search.
 
+Also in this repo: `kody-the-carpenter/` — design kit for the Kody the Carpenter kids colouring book.
+
 ## Folders
 
 Still the original 10:
