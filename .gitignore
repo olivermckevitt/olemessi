@@ -1,5 +1,5 @@
 # dependencies
-/node_modules
+node_modules/
 /.pnp
 .pnp.*
 .yarn/*
@@ -18,15 +18,21 @@
 # production
 /build
 
+# netlify / local data
+.netlify/
+wiki/
+
 # misc
 .DS_Store
 *.pem
+*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
 # env
+.env
 .env*.local
 
 # typescript
