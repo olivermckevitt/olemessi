@@ -1,1 +1,5 @@
-.netlify
+node_modules/
+.netlify/
+.env
+*.log
+wiki/
