@@ -1,0 +1,20 @@
+Activity ID,Activity Name,Start,Finish,Trade,Type
+A1010,Mobilize site,2026-10-05,2026-10-09,GC,Task
+A1020,Footing and foundation inspection,2026-10-14,2026-10-14,City,Inspection
+A1030,Foundation walls,2026-10-15,2026-10-22,Concrete,Task
+A2010,Structural steel erection L1,2026-10-23,2026-11-04,Steel,Task
+A2020,Special inspection - structural steel,2026-11-05,2026-11-05,Testing Agency,Special Inspection
+A2030,Framing Level 1,2026-11-06,2026-11-18,Framer,Task
+A2040,Framing inspection L1,2026-11-19,2026-11-19,City,Inspection
+A3010,Electrical rough-in L1,2026-11-20,2026-12-02,Electrician,Task
+A3020,Electrical rough-in inspection L1,2026-12-03,2026-12-03,City,Inspection
+A3030,Plumbing rough-in L1,2026-11-20,2026-12-01,Plumber,Task
+A3040,Plumbing rough-in inspection L1,2026-12-02,2026-12-02,City,Inspection
+A3050,Mechanical rough-in L1,2026-11-20,2026-12-01,HVAC,Task
+A3060,Mechanical rough-in inspection L1,2026-12-02,2026-12-02,City,Inspection
+A4010,Insulation L1,2026-12-08,2026-12-11,Insulator,Task
+A4020,Insulation / close-in inspection L1,2026-12-14,2026-12-14,City,Inspection
+A5010,Fire sprinkler rough,2026-12-15,2026-12-22,Fire Protection,Task
+A5020,Fire sprinkler inspection,2026-12-23,2026-12-23,AHJ,Inspection
+A6010,Interior finishes,2027-01-04,2027-02-12,GC,Task
+A6020,Final building inspection / TCO,2027-02-18,2027-02-18,City,Inspection

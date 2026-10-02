@@ -1,10 +1,12 @@
 # olemessi
 
-Jobsite note classifier for a retail construction superintendent.
+Jobsite tools for a retail construction superintendent.
 
 Whisper Flow text, plus an optional photo from the Shortcut, posts here. This classifies the note, saves it to Notion, and returns JSON.
 
-One dictation becomes one active Notion row. Long-term insights are copied to Lessons Learned. No website. No search.
+One dictation becomes one active Notion row. Long-term insights are copied to Lessons Learned.
+
+This repo also has a drawing wiki and InspectAhead, a look-ahead to inspection calendar tool.
 
 ## Folders
 
@@ -169,6 +171,32 @@ npm run query-drawings -- --db ./wiki/drawings.sqlite door width grid B
 `--ai` is optional leftover-note extraction. `--vision` is optional cropped raster fallback for low-confidence lengths only. Skip both unless you need them. DWG is not parsed. Convert to DXF first.
 
 `drawings.md` is the master map. Sanity checks and schedule macros drop or flag junk before it hits sqlite. Conflicts stay in `wiki/_conflicts.md`. Newest revision wins.
+
+## InspectAhead
+
+Turn a construction look-ahead into phone-calendar reminders for inspections, readiness walks, and subcontractor report chases.
+
+This is a personal utility, not a Procore replacement. Spreadsheets are the real input. Photos need OCR review. Re-export the calendar when the look-ahead changes.
+
+```bash
+npm install
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000).
+
+1. Load the sample look-ahead, or drop a `.csv` / `.xlsx`.
+2. Review every inspection date. Uncheck junk. Add missed rows.
+3. Download the `.ics` file and import it on the superintendent's phone.
+4. Do it again next week when the look-ahead changes.
+
+Each inspection becomes three events:
+
+1. `CHASE SUBS` (default 5 business days before)
+2. `READY CHECK` (default 2 business days before)
+3. `INSPECTION` (morning of)
+
+If the schedule lists City or AHJ as the trade, chase reminders call the responsible sub, not the inspector.
 
 ## Local tests
 
